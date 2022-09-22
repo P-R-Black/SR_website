@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/27e86509c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Investment Newsletter">
+    <meta name="keywords" content="Investments, Investing, Stocks, Stock Market, Wall Street">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <title>{% block title %}The Seville Report{% endblock %}</title>
+</head>
+<body>
+<!-- ========== NAVIGATION ========== -->
+<header class="navbar">
+    <div class="navbar_container">
+        <logo id="navbar_logo">
+            <a href="#home" class="logo" id="top_logo">The Seville Report</a>
+            <a href="#home" class="logo" id="bottom_logo">The Investment Newsletter</a>
+        </logo>
+        <div class="navbar_toggle" id="mobile_menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul class="navbar_menu">
+                <li class="navbar_items">
+                    <a href="#home" class="navbar_links" id="home_page">Home</a>
+                </li>
+                <li class="navbar_items">
+                    <a href="#newsletter" class="navbar_links" id="newsletter_page">Newsletter</a>
+                </li>
+                <li class="navbar_items">
+                    <a href="#blog" class="navbar_links" id="blog_page">Blog</a>
+                </li>
+                <li class="navbar_items">
+                    <a href="#insights" class="navbar_links" id="insights_page">Insights</a>
+                </li>
+                <li class="navbar_items">
+                    <a href="#about" class="navbar_links" id="about_page">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<hr>
+<!-- ========== HOME ==========-->
+<section class="home" id="bg" style="background-image: url('{% static 'img/pexels-mirsad-mujanovic-original-691034.jpeg' %}'), radial-gradient(#9F9F9F, #888);">
+    <div class="home_box">
+        <div class="inner_home_box">
+            <h1 class="home_title">Where are your investments taking you?</h1>
+            <!-- <h2 class="home_title_two">Reach new heights with the right investments.</h2>  -->
+            <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
+            <button class="btn">newsletter</button>
+        </div>
+    </div>
+    <div class="social_block">
+        <div class="social_media_block">
+            <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- ========== RECENT RECOMMENDATIONS ==========-->
+<section class="recent_recommendations">
+    <div class="section_title">
+        <h1 class="recom_title">Recent Recommendation</h1>
+    </div>
+    <div class="recomend_wrapper">
+        <div class="recommend_items">
+            <h3>Symbol</h3>
+            <a href="#">BDSI</a>
+        </div>
+        <div class="recommend_items">
+            <h3>Company Name</h3>
+            <a href="#">BioDelivery Sciences</a>
+        </div>
+        <div class="recommend_items">
+            <h3>Gain</h3>
+            <a href="#">+35%</a>
+        </div>
+        <div class="recommend_items">
+            <h3>Recommended</h3>
+            <a href="#">Dec. 2021</a>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- ========== THE NEWSLETTER ==========-->
+<section class="newsletter_section" id="bg" style="background-image: url('{% static 'img/BusinessBackground_Pexels_Jessica_Lewis.png' %}'), radial-gradient(#6196B1, #000);" >
+    <div class="section_title">
+        <h1 class="newsletter_title">The Seville Report Newsletter</h1>
+    </div>
+    <newsletter class="newsletter">
+        <div class="newsletter_description">
+            <h2 class="news_desc">Our quarterly newsletter provides the information that investors need to know to build wealth. We discuss traditional investments, alternative investments, and investment education. The Seville Report has you covered.</h2>
+            <div>
+                <p class="discover"><a href="#" class="discover_link" target="_blank"><span class="highlights">Discover</span></a> what makes The Seville Report different.</p>
+            </div>
+        </div>
+        <div class="description_two">
+            <p class="curr_desc">This quarter's newsletter features a researched investment idea. In addition, we discuss if an Index Universal Life Insurance plicy can be an infinite bank in retirement and why gas prices have been so high in 2022.</p>
+        </div>
+        <div class="newsletter_image">
+            <img src="{% static 'img/SR_Sept_22.jpeg' %}" alt="picture of newsletter cover" class="curr_newsletter">
+            <button href="#" class="newsletter_btn">Purchase Now</button>
+        </div>
+    </newsletter>
+    <div class="social_block">
+        <div class="social_media_block">
+            <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- ========== SR BLOG ==========-->
+<section class="blog_section">
+    <div class="section_title">
+        <h1 class="blog_section_title">The SR Blog</h1>
+    </div>
+    <div class="blog_block">
+        <div class="home_page_block_details">
+            <h3 class="home_page_blog_title">Ford's Time to Shine</h3>
+            <p class="home_page_blog_publish_date">Published: 7/31/2022 | 12:00PM</p>
+            <p class="home_page_blog_excerpt">After a Q2 earnings call where Ford ($F) announced that the company increased earnings by 385% year-over-year during the quarter, and revenue by over 50% year-over-year, the big Mo (momentum) is on Ford’s side. But, rumors of the company laying off 8,000 of its employees has dampened the celebration from the earnings call...<span class="home_page_block_link"><a href="#">More</a></span></p>
+        </div>
+    </div>
+    <div class="home_page_blog_button">
+        <button class="blog_btn">Past Blogs</button>
+    </div>
+    <div class="social_block">
+        <div class="blue_social_media_block">
+            <a href="https://www.facebook.com/SevilleReport" class="blue_social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/the_seville_report/" class="blue_social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/SevilleReport" class="blue_social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+</section>
+<!-- ========== FOOTER ==========-->
+<section class="footer_container">
+    <div class="footer_links">
+        <div class="footer_links_wrapper">
+            <div class="footer_link_items">
+                <h2>About Us</h2>
+                <a href="#">About</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer_link_items">
+                <h2>Contact Us</h2>
+                <a href="#">Contact</a>
+                <a href="#">FAQs</a>
+            </div>
+        </div>
+        <div class="footer_links_wrapper">
+            <div class="footer_link_items">
+                <h2>Privacy Policy</h2>
+                <a href="#">Privacy</a>
+                <span href="#" id="no-show">Privacy</span>
+            </div>
+            <div class="footer_link_items">
+                <h2 id="disclaim">Disclaimer/Legal</h2>
+                <a href="#">Disclaimer</a>
+                <a href="#">FAQs</a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="social_media">
+    <div class="social_media_wrap">
+        <div class="footer_logo">
+            <a href="#" id="footer_logo_top">The Seville Report</a>
+            <a href="#" id="footer_logo_bottom">The Investment Newsletter</a>
+        </div>
+        <p class="website_rights">&copy; The Seville Report 2022. All Rights Reserved</p>
+        <div class="social_icons">
+            <a href="https://www.facebook.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/the_seville_report/" class="social_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
