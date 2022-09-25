@@ -138,6 +138,76 @@ hr {
 
 
 
+/* List HTML */
+.library_container {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    margin: 3rem 0 0 3.50rem;
+    width: 8.5rem;
+    
+}
+
+#sidebar ul li {
+    list-style: none;
+    text-decoration: none;
+
+}
+
+#sidebar h3{
+    font-size: 1rem;
+}
+
+#sidebar li {
+    font-size: .75rem;
+}
+
+
+#sidebar ul li a {
+    display: block;
+}
+
+#sidebar ul li.selected {
+    background-color: #6196B1;
+    border-radius: 4px;
+    height: 1rem;
+}
+
+#sidebar ul li.selected a{
+    color: #ffffff;
+}
+
+ul li a {
+    text-decoration: none;
+    margin: 0 0 0 .5rem;
+}
+
+#main {
+    margin: 3rem 0 0 0;
+    margin-left: 4rem;
+    width: 78%;
+}
+
+.product_list .item {
+    float: left;
+    margin: 0 0 0 3.25rem;
+    line-height: 1.25;
+    text-align: center;
+    width: 20%;
+
+
+}
+
+.product_list .item img {
+    width: 12rem;
+    height: 16rem;
+    margin-bottom: .5rem;
+    box-shadow: 3px 3px 3px black;
+}
+
+
 /* Footer Section */ 
 .footer_container {
     align-items: center;
