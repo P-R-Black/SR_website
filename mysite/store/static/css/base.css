@@ -89,27 +89,31 @@ hr {
 
 
 
+
 /* Details */
 .product_details_container {
+    align-items: center;
     display: flex;
     height: 100vh;
-    align-items: center;
+    
 }
 
 .product_details_image {
-    margin-left: 3rem;
     justify-content: center;
+    margin-left: 3rem;
+    
 
 }
 
 .curr_newsletter {
-    width: 24rem;
     height: 31rem;
     box-shadow: 6px 6px 6px;
+    width: 24rem;
+    
 
 }
 
-.description_block h1{
+.description_block h1 {
     margin: auto;
     text-align: left;
     width: 75%;
@@ -120,20 +124,58 @@ hr {
     font-weight: 100;
 }
 
+.category_block {
+    color: #6196B1;
+    float: left;
+    font-weight: 100;
+    font-size: 1rem;
+    margin: 0 0 0 7.25rem;
+    text-align: left;
+}
 
 .product_description {
-    text-align: left;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    text-align: left;
     width: 75%;
 }
 
 .product_price {
-    text-align: left;
+    font-size: 1.25rem;
     margin: auto;
     margin-top: 2rem;
+    text-align: left;
     width: 75%;
-    font-size: 1.25rem;
+}
+
+#cart_add {
+    background-color: #6196B1;
+    border: 1px solid #5C5757;
+    border-radius: 5px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 200;
+    line-height: 1;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    padding: .25rem .50rem .25rem .50rem;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: capitalize;
+    transition-property: box-shadow, transform;
+    user-select: none;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+
+#quantity_selection {
+    font-size: 1rem;
+    margin-top: -1.25rem;
+    align-items: center;
 }
 
 
@@ -142,6 +184,7 @@ hr {
 .library_container {
     display: flex;
     flex-direction: row;
+    height: 100vh;
 }
 
 #sidebar {
@@ -206,6 +249,8 @@ ul li a {
     margin-bottom: .5rem;
     box-shadow: 3px 3px 3px black;
 }
+
+
 
 
 /* Footer Section */ 
@@ -282,7 +327,7 @@ ul li a {
 
 #footer_logo_bottom {
     align-items: center;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     font-size: .96rem;

@@ -30,8 +30,8 @@
                 <li class="navbar_items">
                     <a href="#home" class="navbar_links" id="home_page">Home</a>
                 </li>
-                <li class="navbar_items">
-                    <a href="#newsletter" class="navbar_links" id="newsletter_page">Newsletter</a>
+                <li {% if not category %}class="selected"{% endif %}class="navbar_items">
+                    <a href="{% url 'store:product_list' %}" class="navbar_links" id="newsletter_page">Newsletter</a>
                 </li>
                 <li class="navbar_items">
                     <a href="#blog" class="navbar_links" id="blog_page">Blog</a>
@@ -47,8 +47,23 @@
     </div>
 </header>
 <hr>
+
+<div class="cart">
+    {% with total_items=cart|length %}
+    {% if total_items > 0 %}
+    Your cart:
+    <a href="{% url 'cart:cart_detail' %}">
+        {{ total_items }} item{{ total_items|pluralize }}:
+        ${{ cart.get_total_price }}
+    </a>
+    {% else %}
+    Your cart is empty.
+    {% endif %}
+    {% endwith %}
+</div>
 {% block content %}
 {% endblock %}
+
 <!-- ========== NEWSLETTER ==========-->
 
 
