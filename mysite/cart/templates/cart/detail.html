@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    Your Shopping Cart
+    <h1 class="cart_title">Your Shopping Cart</h1>
 {% endblock %}
 
 {% block content %}
@@ -24,7 +24,7 @@
             <tr>
                 <td>
                     <a href="{{ product.get_absolute_url }}">
-                        <img src="{% if product.image %}{{ product.image.url }} 
+                        <img class="cart_image" src="{% if product.image %}{{ product.image.url }} 
                         {% else %}{% static 'img/no_image.png' %}{% endif %}">
                     </a>
                 </td>

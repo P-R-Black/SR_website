@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
     <meta name="description" content="Investment Newsletter">
     <meta name="keywords" content="Investments, Investing, Stocks, Stock Market, Wall Street">
-    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
     <title>{% block title %}The Seville Report{% endblock %}</title>
 </head>
 <body>
@@ -17,8 +18,8 @@
 <header class="navbar">
     <div class="navbar_container">
         <logo id="navbar_logo">
-            <a href="#home" class="logo" id="top_logo">The Seville Report</a>
-            <a href="#home" class="logo" id="bottom_logo">The Investment Newsletter</a>
+            <a href="{% url 'home_page:home_page_view' %}" class="logo" id="top_logo">The Seville Report</a>
+            <a href="{% url 'home_page:home_page_view' %}" class="logo" id="bottom_logo">The Investment Newsletter</a>
         </logo>
         <div class="navbar_toggle" id="mobile_menu">
             <span class="bar"></span>
@@ -28,10 +29,10 @@
         <nav>
             <ul class="navbar_menu">
                 <li class="navbar_items">
-                    <a href="#home" class="navbar_links" id="home_page">Home</a>
+                    <a href="{% url 'home_page:home_page_view' %}" class="navbar_links" id="home_page">Home</a>
                 </li>
                 <li class="navbar_items">
-                    <a href="store.html" class="navbar_links" id="newsletter_page">Newsletter</a>
+                    <a href="{% url 'store:product_list' %}" class="navbar_links" id="newsletter_page">Newsletter</a>
                 </li>
                 <li class="navbar_items">
                     <a href="#blog" class="navbar_links" id="blog_page">Blog</a>
@@ -47,6 +48,7 @@
     </div>
 </header>
 <hr>
+
 <!-- ========== HOME ==========-->
 <section class="home" id="bg" style="background-image: url('{% static 'img/pexels-mirsad-mujanovic-original-691034.jpeg' %}'), radial-gradient(#9F9F9F, #888);">
     <div class="home_box">
