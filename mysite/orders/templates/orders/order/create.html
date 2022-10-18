@@ -1,35 +1,31 @@
 {% extends 'store/base.html' %}
+{% load static %}
 
 {% block title %}
     Checkout
 {% endblock %}
 
-{% block content %}
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>THe Newsletter</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="mysite/payments/static/js/main.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-  </head>
-<h1>Checkout</h1>
-<div class="order_info">
-    <h3>Your Order</h3>
-    <ul>
-        {% for item in cart %}
-        <li>
-            {{ item.quantity }} x {{ item.product.name }} |
-            <span>${{ item.total_price }}</span>
-        </li>
-        {% endfor %}
-    </ul>
-    <p>Total: ${{ cart.get_total_price }}</p>
-</div>
-<form method="post" class="order_form">
-    {{ form.as_p }}
-    <p><input type="submit" value="Place Order"></p>
-    {% csrf_token %}
-</form>
-{% endblock %}
+
+    {% block content %}
+        <section class="checkout_section">
+            <h1 class="checkout_title">Checkout</h1>
+            <div class="order_info">
+                <h3>Your Order</h3>
+                <ul>
+                    {% for item in cart %}
+                    <li>
+                        {{ item.quantity }} x {{ item.product.name }} |
+                        <span>${{ item.total_price }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p>Total: ${{ cart.get_total_price }}</p>
+            </div>
+            <form method="post" class="order_form">
+                {{ form.as_p }}
+                <p><input type="submit" value="Place Order"></p>
+                {% csrf_token %}
+            </form>
+        </section>
+    {% endblock %}
+

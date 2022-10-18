@@ -57,8 +57,9 @@
 </table>
 <p class="text_right">
     <a href="{% url 'store:product_list' %}" class="button light">Continue Shopping</a>
-    <a href="{% url 'orders:order_create' %}" class="button">Checkout</a>
-    <a href="{% url 'payments:process' %}" class="button">Checkout Two</a>
-    <a href="{% url 'payments:process' %}" class="button">Checkout Three</a>
+    <a href="{% url 'orders:order_create' %}" class="button dark">Checkout</a>
+    <a href="{% url 'orders:order_create' %}" class="button dark">Checkout Two</a>
+    <a href="{% url 'payments:create-checkout-session' %}" class="button dark">Checkout Three</a>
+    {% csrf_token %}
 </p>
 {% endblock %}

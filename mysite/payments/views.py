@@ -6,6 +6,8 @@ from django.urls import reverse
 from django.http.response import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
+from .forms import OrderCreateForm
+from cart.cart import Cart
 
 
 # Create your views here.
@@ -18,7 +20,17 @@ def stripe_config(request):
 
 @csrf_exempt
 def create_checkout_session(request):
+    order_id = request.session.get('order_id', None)
+    print(f'order_id: {order_id}')
+    the_orders = get_object_or_404(Order, id=order_id)
+    print(f'order: {the_orders}')
+    total_cost = the_orders.get_total_cost() * 100
+    print(f'total cost: {total_cost}')
 
+
+
+
+    
     if request.method == 'GET':
         domain_url = 'http://localhost:8000/'
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -39,10 +51,10 @@ def create_checkout_session(request):
                 mode='payment',
                 line_items=[
                     {
-                        'name': 'T-Shirt',
+                        'name': order_id,
                         'quantity': 1,
                         'currency': 'usd',
-                        'amount': '2000',
+                        'amount': int(total_cost),
                     }
                 ]
             )
@@ -50,9 +62,6 @@ def create_checkout_session(request):
         except Exception as e:
             return JsonResponse({'error': str(e)})
 
-
-
-  
 
 def payment_process(request):
     return render(request, 'payments/process.html')

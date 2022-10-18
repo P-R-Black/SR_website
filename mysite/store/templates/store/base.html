@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/27e86509c5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
     <meta name="description" content="Investment Newsletter">
     <meta name="keywords" content="Investments, Investing, Stocks, Stock Market, Wall Street">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -50,19 +53,22 @@
 </header>
 <hr>
 
-<div class="cart">
-    {% with total_items=cart|length %}
-    {% if total_items > 0 %}
-    Your cart:
-    <a href="{% url 'cart:cart_detail' %}">
-        {{ total_items }} item{{ total_items|pluralize }}:
-        ${{ cart.get_total_price }}
-    </a>
-    {% else %}
-    Your cart is empty.
-    {% endif %}
-    {% endwith %}
-</div>
+<section class="cart_section">
+    <div class="site_cart">
+        {% with total_items=cart|length %}
+        {% if total_items > 0 %}
+        <p class="your_cart">Your cart:
+            <a href="{% url 'cart:cart_detail' %}">
+                {{ total_items }} item{{ total_items|pluralize }}:
+                ${{ cart.get_total_price }}
+            </a>
+        </p>
+        {% else %}
+        Your cart is empty.
+        {% endif %}
+        {% endwith %}
+    </div>
+</section>
 {% block content %}
 {% endblock %}
 

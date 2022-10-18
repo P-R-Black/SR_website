@@ -1,9 +1,55 @@
 {% extends "store/base.html" %}
 {% load static %}
 
+
 {% block content %}
 <!DOCTYPE html>
 <html>
+  <style>
+    .section {
+      background-color: aqua;
+      height: 100vh;
+    }
+
+    form p label, form p input {
+    float:left;
+    clear:both;
+    }
+
+    form p label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+form p input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+
+.new_order_form {
+    float:left;
+}
+
+form div.field {
+    font-size:13px;
+    color:#666;
+    width:300px;
+    height:22px;
+    margin-bottom:10px;
+    padding:6px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+  </style>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,11 +60,15 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <button class="button is-primary" id="submitBtn">Purchase!</button>
-    </div>
-  </section>
+    <section class="section">
+        <div class="container">
+          <form method="post" class="new_order_form">
+            {{ form.as_p }}
+          </form>
+          <button class="button is-primary" id="submitBtn">Purchase!</button>
+        {% csrf_token %}
+      </div>
+    </section>
   </body>
 </html>
 {% endblock %}
