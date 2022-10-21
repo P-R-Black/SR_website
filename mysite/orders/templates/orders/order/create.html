@@ -5,7 +5,6 @@
     Checkout
 {% endblock %}
 
-
     {% block content %}
         <section class="checkout_section">
             <h1 class="checkout_title">Checkout</h1>
@@ -23,9 +22,11 @@
             </div>
             <form method="post" class="order_form">
                 {{ form.as_p }}
-                <p><input type="submit" value="Place Order"></p>
+                <p><input type="submit" value="Place Order" class="button is-primary" id="submitBtn"></p>
                 {% csrf_token %}
             </form>
+            <button class="button is-primary" id="submitBtn">Purchase!</button>
+            {% csrf_token %}
         </section>
     {% endblock %}
 

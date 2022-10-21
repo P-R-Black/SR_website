@@ -137,6 +137,7 @@ CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-STRIPE_PUBLIC_KEY = "pk_live_Vkxq2Lym5YouhVRjT2aZfte1"
-STRIPE_SECRET_KEY = "sk_live_gpaJQPmSMth5gDqcxFFqet24"
+STRIPE_PUBLIC_KEY = "pk_test_AGjSQt22JrGKa4oNjln8Bqyw"
+STRIPE_SECRET_KEY = "sk_test_VmpbnhQIjrod258uv0LA20m6"
 STRIPE_WEBHOOK_SECRET = ""
+STRIPE_ENDPOINT_SECRET = 'whsec_8dafad77f335c5a42ea353d7ba5d537bf62c989854ee32dfd9854218ac965eb3'

@@ -1,13 +1,12 @@
 {% extends "store/base.html" %}
+
 {% load static %}
-
-
 {% block content %}
 <!DOCTYPE html>
 <html>
   <style>
-    .section {
-      background-color: aqua;
+    /* .section {
+      background-color: grey;
       height: 100vh;
     }
 
@@ -47,28 +46,73 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+} */
+.order_form {
+    float:left;
+}
+
+
+.order_form label, .order_form input {
+    float:left;
+    clear:both;
+}
+
+.order_form label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+.order_form input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
 }
   </style>
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Buy Newsletter</title>
-    {% comment %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">{% endcomment %}
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-  </head>
-  <body>
-    <section class="section">
-        <div class="container">
-          <form method="post" class="new_order_form">
-            {{ form.as_p }}
-          </form>
-          <button class="button is-primary" id="submitBtn">Purchase!</button>
-        {% csrf_token %}
+    <section class="checkout_section">
+      <h1 class="checkout_title">Checkout</h1>
+      <div class="order_info">
+          <h3>Your Order</h3>
+          <ul>
+              {% for item in cart %}
+              <li>
+                  {{ item.quantity }} x {{ item.product.name }} |
+                  <span>${{ item.total_price }}</span>
+              </li>
+              {% endfor %}
+          </ul>
+          <p>Total: ${{ cart.get_total_price }}</p>
       </div>
-    </section>
+      <div id="payment_form">
+          <div class="order_form">
+              <div>
+                <label class="form_label" for="first_name">First Name</label>
+                <input name="first_name" type="text" class="form_control" id="customer_first_name" placeholder="" required />
+              </div>
+              <div>
+                <label class="form_label" for="first_name">Last Name</label>
+                <input name="last_name" type="text" class="form_control" id="customer_last_name" placeholder="" required />
+              </div>
+              <div>
+                <label class="form_label" for="first_name">Email Address</label>
+                <input name="email" type="text" class="form_control" id="customer_last_name" placeholder="" required />
+              </div>
+                <button onclick="buy(event)" >
+                  <p><input 
+                    
+                    type="submit"
+                    value="Place Order">
+                  </p>
+                </button>
+                {% csrf_token %} 
+            </div>
+        </div>
+     
+  </section>
   </body>
 </html>
+
 {% endblock %}

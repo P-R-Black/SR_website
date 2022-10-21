@@ -431,6 +431,20 @@ form p input {
 }
 
 
+/* * * * * * * *  Success Section * * * * * * * */ 
+.success_section {
+    height: 100vh;
+}
+.success_section h1 {
+    width: 100%;
+}
+
+.success_section p {
+    margin: 0 0 0 4rem;
+    width: 100%;
+    text-transform: capitalize;
+    
+}
 
 /* * * * * * * *  Footer Section * * * * * * * */ 
 .footer_container {
