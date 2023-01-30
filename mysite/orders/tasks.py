@@ -10,7 +10,11 @@ def order_created(order_id):
     """
 
     order = Order.objects.get(id=order_id)
-    subject = f'Order nr. {order.id}'
-    message = f'Dear {order.first_name}\n\n You have successfully placed an order. Your order ID is {order.id}.\nThanks for supporting The Seville Report.\n\nSincerely\nPaul'
+    subject = f'Order No. {order.id}'
+    message = f'Dear {order.first_name}\n\n Thank you for checking out The Seville Report. Your order ID is {order.id}.\nThanks for supporting The Seville Report.\n\nSincerely\nPaul'
+
+    mail_sent = send_mail(subject, message, 'pblack@sevillereport.com', [order.email])
+
+    return mail_sent
 
 

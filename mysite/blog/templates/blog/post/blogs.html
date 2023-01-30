@@ -1,0 +1,103 @@
+{% extends "blog/base.html" %}
+
+{% block title %}The Seville Report Blog{% endblock %}
+
+{% block main %}
+<section class="blog_page_header">
+    <div class="title_social">
+        <h1 class="all_posts_title">All Posts</h1>
+    </div>
+    <h4 class="all_posts_slug">Our thoughts on the events shaping the market</h4>
+    <div class="blog_categories">
+        <h4 class="categories">All Posts</h4>
+        <h4 class="categories">Investing</h4>
+        <h4 class="categories">Tech Investing</h4>
+        <h4 class="categories">Technical Analysis</h4>
+        <h4 class="categories">Funadamental Analysis</h4>
+        <h4 class="categories">More</h4>
+    </div>
+</section> 
+<section class="blog_page_body">
+    <div class="post_section">
+        <div class="pic_title_snip">
+            <img src='/media/blog_images/default.jpeg' alt="blog post image" class="post_image">
+            <div class="post_desc">
+                <h1 class="post_title">Ford's Time To Shine</h1>
+                <p class="post_snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam velit quo sunt, excepturi quaerat nemo sit perspiciatis cumque placeat non.</p>
+                <div class="auth_and_opinion">
+                    <h3 class="author">Paul Black</h3>
+                    <h3 class="opinion">Opinion</h3>
+                </div>
+                <div class="pubdate_readtime">
+                    <h3 class="publish_date">Published Jan. 26, 2023 • 3:30PM</h3>
+                    <h3 class="read_time">3 min read</h3>
+                </div>
+            </div>
+        </div>
+        <div class="blog_divider"></div> 
+    </div>
+    <div class="post_section">
+        <div class="pic_title_snip">
+            <img src='/media/blog_images/default.jpeg' alt="blog post image" class="post_image">
+            <div class="post_desc">
+                <h1 class="post_title">Ford's Time To Shine</h1>
+                <p class="post_snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam velit quo sunt, excepturi quaerat nemo sit perspiciatis cumque placeat non.</p>
+                <div class="auth_and_opinion">
+                    <h3 class="author">Paul Black</h3>
+                    <h3 class="opinion">Opinion</h3>
+                </div>
+                <div class="pubdate_readtime">
+                    <h3 class="publish_date">Published Jan. 26, 2023 • 3:30PM</h3>
+                    <h3 class="read_time">3 min read</h3>
+                </div>
+            </div>
+        </div>
+        <div class="blog_divider"></div> 
+    </div>
+    <div class="post_section">
+        <div class="pic_title_snip">
+            <img src='/media/blog_images/default.jpeg' alt="blog post image" class="post_image">
+            <div class="post_desc">
+                <h1 class="post_title">Ford's Time To Shine</h1>
+                <p class="post_snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam velit quo sunt, excepturi quaerat nemo sit perspiciatis cumque placeat non.</p>
+                <div class="auth_and_opinion">
+                    <h3 class="author">Paul Black</h3>
+                    <h3 class="opinion">Opinion</h3>
+                </div>
+                <div class="pubdate_readtime">
+                    <h3 class="publish_date">Published Jan. 26, 2023 • 3:30PM</h3>
+                    <h3 class="read_time">3 min read</h3>
+                </div>
+            </div>
+        </div>
+        <div class="blog_divider"></div> 
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+<!-- 
+<h1 class="all_posts_title">All Posts</h1>
+<h3 class="all_posts_slug">Our thoughts on the events shaping the market</h3>
+{% if tag %}
+<h2>Posts tagged with "{{ tag.name }}"</h2>
+{% endif %}
+{% for post in posts %}
+<h2>
+    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+
+</h2>
+<p class="tags">Tags: {% for tag in post.tags.all %}
+    <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
+        {{ tag.name }}
+    </a>
+    {% if not forloop.last %}, {% endif %}
+    {% endfor %}
+</p>
+<p class="date">Published {{ post.publish }} by {{ post.author }}</p>
+
+{% endfor %}
+{% include "pagination.html" with page=posts %}
+ -->

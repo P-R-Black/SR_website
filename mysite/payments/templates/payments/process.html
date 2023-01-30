@@ -1,77 +1,8 @@
-{% extends "store/base.html" %}
+{% extends 'store/base.html' %}
 
-{% load static %}
-{% block content %}
+{% block main %}
 <!DOCTYPE html>
 <html>
-  <style>
-    /* .section {
-      background-color: grey;
-      height: 100vh;
-    }
-
-    form p label, form p input {
-    float:left;
-    clear:both;
-    }
-
-    form p label {
-    font-size:14px;
-    padding-bottom:4px;
-}
-
-form p input {
-    width:300px;
-    font-size:13px;
-    margin-bottom:10px;
-    padding:10px 12px;
-    border:0;
-    background:#efefef;
-    color:#666;
-    border-radius:4px;
-}
-
-.new_order_form {
-    float:left;
-}
-
-form div.field {
-    font-size:13px;
-    color:#666;
-    width:300px;
-    height:22px;
-    margin-bottom:10px;
-    padding:6px 12px;
-    border:0;
-    background:#efefef;
-    color:#666;
-    border-radius:4px;
-} */
-.order_form {
-    float:left;
-}
-
-
-.order_form label, .order_form input {
-    float:left;
-    clear:both;
-}
-
-.order_form label {
-    font-size:14px;
-    padding-bottom:4px;
-}
-
-.order_form input {
-    width:300px;
-    font-size:13px;
-    margin-bottom:10px;
-    padding:10px 12px;
-    background:#efefef;
-    color:#666;
-    border-radius:4px;
-}
-  </style>
     <section class="checkout_section">
       <h1 class="checkout_title">Checkout</h1>
       <div class="order_info">
@@ -114,5 +45,4 @@ form div.field {
   </section>
   </body>
 </html>
-
 {% endblock %}

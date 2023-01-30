@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payments.apps.PaymentsConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
+# STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -141,3 +143,14 @@ STRIPE_PUBLIC_KEY = "pk_test_AGjSQt22JrGKa4oNjln8Bqyw"
 STRIPE_SECRET_KEY = "sk_test_VmpbnhQIjrod258uv0LA20m6"
 STRIPE_WEBHOOK_SECRET = ""
 STRIPE_ENDPOINT_SECRET = 'whsec_8dafad77f335c5a42ea353d7ba5d537bf62c989854ee32dfd9854218ac965eb3'
+
+
+#SMTP Configuratoin
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'pblack@sevillereport.com'
+EMAIL_HOST_PASSWORD = 'wqcjpjgbogxwppim'
+EMAIL_PORT = 587 #465
+EMAIL_USE_TLS = True
+
+# smtp.login("sevillereport@gmail.com", "erpylyugqnmbnxjf")

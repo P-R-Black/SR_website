@@ -1,56 +1,16 @@
+{% extends "layout.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/27e86509c5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Investment Newsletter">
-    <meta name="keywords" content="Investments, Investing, Stocks, Stock Market, Wall Street">
-    <link rel="stylesheet" href="{% static 'index.css' %}">
-    <title>{% block title %}The Seville Report{% endblock %}</title>
-</head>
-<body>
-<!-- ========== NAVIGATION ========== -->
-<header class="navbar">
-    <div class="navbar_container">
-        <logo id="navbar_logo">
-            <a href="{% url 'home_page:home_page_view' %}" class="logo" id="top_logo">The Seville Report</a>
-            <a href="{% url 'home_page:home_page_view' %}" class="logo" id="bottom_logo">The Investment Newsletter</a>
-        </logo>
-        <div class="navbar_toggle" id="mobile_menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav>
-            <ul class="navbar_menu">
-                <li class="navbar_items">
-                    <a href="{% url 'home_page:home_page_view' %}" class="navbar_links" id="home_page">Home</a>
-                </li>
-                <li class="navbar_items">
-                    <a href="{% url 'store:product_list' %}" class="navbar_links" id="newsletter_page">Newsletter</a>
-                </li>
-                <li class="navbar_items">
-                    <a href="#blog" class="navbar_links" id="blog_page">Blog</a>
-                </li>
-                <li class="navbar_items">
-                    <a href="#insights" class="navbar_links" id="insights_page">Insights</a>
-                </li>
-                <li class="navbar_items">
-                    <a href="#about" class="navbar_links" id="about_page">About Us</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<hr>
 
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
 <!-- ========== HOME ==========-->
+
 <section class="home" id="bg" style="background-image: url('{% static 'img/pexels-mirsad-mujanovic-original-691034.jpeg' %}'), radial-gradient(#9F9F9F, #888);">
+
     <div class="home_box">
         <div class="inner_home_box">
             <h1 class="home_title">Where are your investments taking you?</h1>
@@ -94,6 +54,7 @@
 </section>
 <hr>
 <!-- ========== THE NEWSLETTER ==========-->
+
 <section class="newsletter_section" id="bg" style="background-image: url('{% static 'img/pexels-markus-spiske-143577.jpeg'%}'), radial-gradient(#9F9F9F, #222);" >
     <div class="section_title">
         <h1 class="newsletter_title">The Seville Report Newsletter</h1>
@@ -206,48 +167,4 @@
         </div>
     </div>
 </section>
-<!-- ========== FOOTER ==========-->
-<section class="footer_container">
-    <div class="footer_links">
-        <div class="footer_links_wrapper">
-            <div class="footer_link_items">
-                <h2>About Us</h2>
-                <a href="#">About</a>
-                <a href="#">FAQs</a>
-            </div>
-            <div class="footer_link_items">
-                <h2>Contact Us</h2>
-                <a href="#">Contact</a>
-                <a href="#">FAQs</a>
-            </div>
-        </div>
-        <div class="footer_links_wrapper">
-            <div class="footer_link_items">
-                <h2>Privacy Policy</h2>
-                <a href="#">Privacy</a>
-                <span href="#" id="no-show">Privacy</span>
-            </div>
-            <div class="footer_link_items">
-                <h2 id="disclaim">Disclaimer/Legal</h2>
-                <a href="#">Disclaimer</a>
-                <a href="#">FAQs</a>
-            </div>
-        </div>
-    </div>
-</section>
-<footer class="social_media">
-    <div class="social_media_wrap">
-        <div class="footer_logo">
-            <a href="#" id="footer_logo_top">The Seville Report</a>
-            <a href="#" id="footer_logo_bottom">The Investment Newsletter</a>
-        </div>
-        <p class="website_rights">&copy; The Seville Report 2022. All Rights Reserved</p>
-        <div class="social_icons">
-            <a href="https://www.facebook.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/the_seville_report/" class="social_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://twitter.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{% endblock %}

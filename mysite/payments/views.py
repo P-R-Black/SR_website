@@ -1,4 +1,8 @@
+import mimetypes
+from pyexpat import model
 import re
+from django.forms import FilePathField
+from django.http import FileResponse, StreamingHttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 import stripe
 from django.conf import settings
@@ -13,6 +17,9 @@ from orders.forms import OrderCreateForm
 from cart.cart import Cart
 from orders.tasks import order_created
 import json
+from store.models import Product
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
 
 
 
@@ -52,6 +59,7 @@ def start_order(request):
     )
 
     payment_intent = session.payment_intent
+    
     first_name = data['first_name']
     last_name = data['last_name']
     email = data['email']
@@ -72,91 +80,54 @@ def start_order(request):
     return JsonResponse({'session': session, 'payments': payment_intent})
 
 
-
 def payment_process(request):
     pub_key = settings.STRIPE_PUBLIC_KEY 
     return render(request, 'payments/process.html', {'pub_key': pub_key})
 
 
-
-# @csrf_exempt
-# def stripe_config(request):
-#     if request.method == 'GET':
-#         stripe_config = {'publicKey': settings.STRIPE_PUBLIC_KEY}
-#         return JsonResponse(stripe_config, safe=False)
-
-
-# @csrf_exempt
-# def create_checkout_session(request):
-#     order_id = request.session.get('order_id', None)
-#     print(f'order_id: {order_id}')
-#     the_orders = get_object_or_404(Order, id=order_id)
-#     print(f'order: {the_orders}')
-#     total_cost = the_orders.get_total_cost() * 100
-#     print(f'total cost: {total_cost}')
-    
-
-#     cart = Cart(request)
-#     # print(f'cart: {cart}')
-#     # attributes = dir(cart)
-#     # print(f'attributes: {attributes}')
-#     # print(f'cart session: {cart.session}')
-
-#     order = Order(request)
-#     print(f'attributes Order: {dir(order)}')
-#     print(f'order_items: {order.items}')
-#     # print(f'order_objects: {order.objects}')
-#     print(f'order_pk: {order.pk}')
-#     #print(f'order_id: {order.id}')
-
-
-#     for item in cart:
-#         products = item['product']
-#         product_two = item.product.name
-#         print(f'product: {products}')
-#         print(f'product: {product_two}')
-
-
-
-
-#     if request.method == 'GET':
-#         domain_url = 'http://localhost:8000/'
-#         stripe.api_key = settings.STRIPE_SECRET_KEY
-#         try:
-#             # Create new Checkout Session for the order
-#             # Other optional params include:
-#             # [billing_address_collection] - to display billing address details on the page
-#             # [customer] - if you have an existing Stripe Customer ID
-#             # [payment_intent_data] - capture the payment later
-#             # [customer_email] - prefill the email input in the form
-#             # For full details see https://stripe.com/docs/api/checkout/sessions/create
-
-#             # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
-#             checkout_session = stripe.checkout.Session.create(
-#                 success_url=domain_url + 'done/',
-#                 cancel_url=domain_url + 'canceled/',
-#                 payment_method_types=['card'],
-#                 mode='payment',
-#                 line_items=[
-#                     {
-#                         'name': order_id,
-#                         'quantity': 1,
-#                         'currency': 'usd',
-#                         'amount': int(total_cost),
-#                     }
-#                 ]
-#             )
-#             return JsonResponse({'sessionId': checkout_session['id']})
-#         except Exception as e:
-#             return JsonResponse({'error': str(e)})
-
-
-# def payment_process(request):
-#     return render(request, 'payments/process.html')
-
-def payment_done(request):
-    return render(request, 'payments/done.html')
-
 def payment_canceled(request):
     return render(request, 'payments/canceled.html')
 
+
+
+
+def payment_done(request):
+    cart = Cart(request)
+
+    order = Order.objects.values()
+    current_order = order[0]
+    first_name = current_order['first_name']
+    email = current_order['email']
+
+    print(f'first_name: {first_name}')
+    print(f'email: {email}')
+
+    products = {}
+    for c in cart:
+        product = c['product']
+        price = c['price']
+
+        products[product] = price
+
+    purchased_products = products
+
+    for product in purchased_products:
+        file = product.pdf_file.url
+
+    print(f'file: {file}')
+
+    print(f'purchased_products: {purchased_products}')
+
+    template = render_to_string('payments/email_template.html', {'name': first_name, 'file': file})
+
+    email = EmailMessage(
+        'Thank You!',
+        template,
+        settings.EMAIL_HOST_USER,
+        [email],
+    )
+
+    email.fail_silently=False
+    email.send()
+
+    return render(request, 'payments/done.html', {'products':purchased_products})

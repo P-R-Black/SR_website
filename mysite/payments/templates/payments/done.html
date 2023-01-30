@@ -1,14 +1,38 @@
 {% extends 'store/base.html' %}
-{% load static %}
 
-{% block title %}Payment Successful{% endblock %}
+{% block title %}
+  Payment Successful
+{% endblock %}
 
-{% block content %}
+
+{% block main %}
 <html>
   <body>
-  <section class="success_section">
-        <h1>Your Payment Was Successful</h1>
-        <p>Thank you for your purchase.</p>
+    <section class="success_section">
+          <h1>Your Payment Was Successful</h1>
+          <p>Thank you for your purchase.</p>
+    </section>
+  <section class="download_page">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table_head">Newsletter</th>
+          <th class="table_head">Edition</th>
+          <th class="table_head">Price</th>
+          <th class="table_head">Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for prod in products %}
+        <tr class="table_row">
+          <td class="table_data test_pic"><img id="test_pic" src="{{ prod.image.url }}"></td>
+          <td class="table_data">{{ prod.name }}</td>
+          <td class="table_data">${{prod.price}}</td>
+          <td class="table_data"><button class="table_data_button"><a href="{{prod.pdf_file.url}}" download>Download</a></button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </section>
   </body>
 </html>
