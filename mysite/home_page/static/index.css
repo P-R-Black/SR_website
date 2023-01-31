@@ -497,24 +497,34 @@ hr {
 } 
 
 .blog_categories {
+   
     display: flex;
     justify-content: space-around;
+    margin-bottom: 1rem;
     margin-left: 5.1rem;
-    margin-top: 4rem;
     margin-right: 1.8rem;
+    margin-top: 4rem;
     width: 80.5rem;
 
 }
 
+.categories {
+    font-weight: lighter;
+    color: #212121;
+    
+}
+
 
 .blog_page_body {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
-
-    margin-left: 3.4rem;
+    margin-left: 8rem;
 }
 
 .post_section {
     background-color: #D3DFE7;
+    border-left: 1px solid #212121;
     border-right: 1px solid #212121;
     border-top: 1px solid #212121;
     width: 74.5rem;
