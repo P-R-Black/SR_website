@@ -1,22 +1,143 @@
 @media(max-width:390px){
+    .navbar {
+        padding: 0 1rem;
+        margin: 0;
+    }
 
-     /* * * * * * * * * * * * * *  Blog Section * * * * * * * * * * * * * */
-
-    /* .logo {
-        color: #ffffff;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
+    #top_logo {
+        font-size: 1rem; 
+        text-decoration-thickness: 1.10px;
     }
     
-    #top_logo {
-        font-size: .50rem;
+    #bottom_logo {
+        font-size: .70rem;
+    }
+
+    .hamburger_menu {
+        display: block;
+
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar_menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #6196B1;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .navbar_items {
+        margin: 1rem 0;
+    }
+
+    .navbar_menu.active {
+        left: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+     
+    /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
+    
+    #bg {
+        background-size: 100% 85%;
+
+    }
+    .home {
+        border: 2px solid black;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_box {
+       
+        border: 2px solid green;
+
+        height: fit-content;
+        min-width: fit-content;
+
+
+    }
+
+
+    .inner_home_box {
+        border: 2px solid palevioletred;
         padding: 0;
-        text-decoration: underline;
-        text-decoration-color: #ffffff;
-        text-decoration-thickness: 1.5px;
-    } */
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_box .home_title {
+        border: 2px solid red;
+
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1em;
+
+        text-align: center;
+
+        min-width: 20rem;;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .home_box .home_paragraph {
+        font-size: 1.10rem;
+        line-height: 1.35em;
+        margin: 0;
+        padding: 0;
+
+        text-align: center;
+        
+    }
+
+    .btn {
+        font-size: 1rem;
+        font-weight: 200;
+        line-height: 1;
+        margin: 0;
+    }
+    
+    .social_media_block {
+        display: flex;
+        min-width: fit-content
+    }
+    
+    .social_block_link {
+        font-size: 1.5rem;
+        
+    }
+
+    /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
+ 
 
 
     /* * * * * * * * * * * * * *  Blog Section * * * * * * * * * * * * * */
@@ -27,12 +148,14 @@
 
     .all_posts_title {
         font-size: 1.65rem;
-        margin-left: 1.50rem;
+        margin: 0;
+        padding: 0 1rem;
     }
 
     .all_posts_slug {
-        margin-left: 1.50rem;
         font-size: .85rem;
+        margin: 0;
+        padding: 0 1rem;
     }
 
     .blog_categories {
@@ -41,12 +164,12 @@
         font-size: .85rem;
 
         justify-content: flex-start;
-        margin-left: 1rem;
+        margin-left: 0;
         margin-top: 1rem;
         
         overflow-x: auto;
-        padding: 0;
-        width: 21.5rem;
+        padding: 0 1rem;
+        width: 23rem;
 
     }
 
@@ -54,17 +177,16 @@
         flex-shrink: 0;
         height: 100%;
         margin-right: 1.25rem;
-
-
     }
 
     .blog_page_body {
-        margin-left: 1rem;
+        margin: 1rem 0;
+        padding: 0 1rem;
     
     }
 
     .post_section {
-        width: 21.5rem;
+        width: 22.3rem;
     }
 
     .pic_title_snip{
@@ -121,6 +243,8 @@
         font-size: .75rem;
     }
 
+    /* * * * * * * * * * * * * *  Blog Section * * * * * * * * * * */
+
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
     .footer_links{
         display: flex;
@@ -128,8 +252,10 @@
     }
 
   .footer_container {
-        width: 23.5rem;
-        padding: .25rem 0;  
+        width: 24.5rem;
+        padding: .25rem 0;
+
+        border: 2px solid royalblue;
     }
 
 
@@ -180,102 +306,7 @@
         font-size: 1.20rem;
         margin: 0;
     }
-    
-}
-
-/* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
-/* 
-
-.footer_links {
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    width: 100%;
-}
-
-.footer_links_wrapper {
-    display: flex;
+    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
 }
 
 
-
-.footer_link_items h2{
-    color: #ffffff;
-    font-size: 1.25rem;
-    margin-bottom: .3rem;
-   
-}
-
-#no-show {
-    display: none;
-}
-
-.footer_link_items a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 0.2rem;
-    transition: 0.3s ease-out;
-}
-
-.footer_link_items a:hover {
-    color: #5C5757;
-    transition: 0.3s ease-out;
-}
-
-
-
-#footer_logo_top {
-    align-items: center;
-    color: #ffffff;
-    cursor: pointer;
-    display: flex;
-    font-size: 1.4rem;
-    padding: 0;
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    text-decoration-thickness: 1.5px;
-}
-
-#footer_logo_bottom {
-    align-items: center;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    font-size: .96rem;
-    margin-top: -3px; 
-    text-decoration: none;
-    
-}
-
-.social_icon_link {
-    color: #ffffff;
-    font-size: 1.5rem;
-}
-
-.social_media{
-    background-color: #5C5757;
-    max-width: 2000px;
-    width: 100%;
-    padding: .5rem;
-}
-
-.social_media_wrap {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    max-width: 2000px;
-    width: 100%;
-   
-}
-
-.social_icons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-right: 2%;
-    width: 10rem;
-    
-}
-
-.website_rights {
-    color: #ffffff;
-} */

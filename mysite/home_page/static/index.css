@@ -17,26 +17,40 @@ html {
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+.hamburger_menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+.bar {
+    background-color: white;
+    display: block;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    width: 2rem;
+
+}
+
+.no_nav {
+    display: none;
+}
+
 .navbar {
+
+    align-items: center;
     background-color: #6196B1;
     display: flex;
     height: 4rem;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1rem;
+
+    padding: 0 4rem;
     position: sticky;
     top: 0;
     z-index: 999;
-}
-
-.navbar_container {
-    align-items: center;
-    display: flex;
-    height: 4rem;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1300px;
-    padding: 0 25px;
-    width: 100%;
     
 }
 
@@ -87,7 +101,7 @@ hr {
     border: 2px solid #6196B1;
 }
 
-/* Home Page */
+/* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
 
 #bg {
     background-attachment: fixed;
@@ -95,14 +109,13 @@ hr {
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
-
 }
 
 #bg_two {
     background-size: cover;
-
-
 }
+
+
 
 
 .home_box {

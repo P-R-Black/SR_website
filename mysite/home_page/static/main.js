@@ -1,3 +1,34 @@
+// Hamburger Menu
+const hamburger = document.querySelector('#mobile_menu');
+const navElements = document.querySelector('.navbar_menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is_active');
+    navElements.classList.toggle('active');
+})
+
+
+const mobileMenu = document.querySelectorAll('.navbar_links').forEach(n => n.addEventListener('click', ()=> {
+    hamburger.classList.toggle('active');
+    navElements.classList.toggle('active');
+    console.log('Testing 2')
+}))
+
+
+
+const hideMobileMenu = () => {
+    const menuBars = document.querySelector('.is_active')
+    if(window.innerWidth <= 768 && menuBars) {
+        hamburger.classList.toggle('is_active')
+        navElements.classList.toggle('active')
+        console.log('Testing 3')
+    }
+}
+
+hamburger.addEventListener('click', mobileMenu)
+navElements.addEventListener('click', hideMobileMenu)
+
+
 
 function validateForm(data) {
   let errors = []
@@ -44,11 +75,10 @@ function buy(event) {
           body: JSON.stringify(data),
       })
       .then(function(response) {
-          // console.log('response.json()', response.json())
           return response.json()
       })
       .then(function(session) {
-            // console.log('stripe.redirectToCheckout({ sessionId: session.session.id }', session.session.id)
+    
           return stripe.redirectToCheckout({ sessionId: session.session.id })
       })
       .then(function(result) {
