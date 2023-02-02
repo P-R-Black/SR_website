@@ -8,54 +8,54 @@
 
 {% block main %}
 <!-- ========== HOME ==========-->
-
-<section class="home" id="bg" style="background-image: url('{% static 'img/pexels-mirsad-mujanovic-original-691034.jpeg' %}'), radial-gradient(#9F9F9F, #888);">
-
-    <div class="home_box">
-        <div class="inner_home_box">
-            <h1 class="home_title">Where are your investments taking you?</h1>
-            <!-- <h2 class="home_title_two">Reach new heights with the right investments.</h2>  -->
-            <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
-            <a href="{% url 'store:product_list' %}"><button class="btn">newsletter</button></a> 
-        </div>
-    </div>
-    <div class="social_block">
-        <div class="social_media_block">
-            <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        </div>
-    </div>
+<section class="home">
+        <picture id="bg">
+            <div class="home_box">
+                <div class="inner_home_box">
+                    <h1 class="home_title">Where are your investments taking you?</h1>
+                    <!-- <h2 class="home_title_two">Reach new heights with the right investments.</h2>  -->
+                    <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
+                    <a href="{% url 'store:product_list' %}"><button class="btn">newsletter</button></a> 
+                </div>
+            </div>
+            <div class="social_block">
+                <div class="social_media_block">
+                    <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                </div>
+            </div>
+        </picture> 
 </section>
 <hr>
 <!-- ========== RECENT RECOMMENDATIONS ==========-->
-{% comment %}
+
 <section class="recent_recommendations">
     <div class="section_title">
         <h1 class="recom_title">Recent Recommendation</h1>
     </div>
     <div class="recomend_wrapper">
         <div class="recommend_items">
-            <h3>Symbol</h3>
-            <a href="#">BDSI</a>
+            <div class="rec_icons"><i class="fa-solid fa-file-invoice-dollar"></i></i></div>
+            <div class="rec_desc">$AMKR</div>
         </div>
         <div class="recommend_items">
-            <h3>Company Name</h3>
-            <a href="#">BioDelivery Sciences</a>
+            <div class="rec_icons"><i class="fa-regular fa-building"></i></div>
+            <div class="rec_desc">Amkor Technology, Inc.</div>
         </div>
         <div class="recommend_items">
-            <h3>Gain</h3>
-            <a href="#">+35%</a>
+            <div class="rec_icons"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <div class="rec_desc">+35%</div>
         </div>
         <div class="recommend_items">
             <h3>Recommended</h3>
-            <a href="#">Dec. 2021</a>
+            <a class="rec_desc" href="#">Dec. 2021</a>
         </div>
     </div>
 </section>
 <hr>
 <!-- ========== THE NEWSLETTER ==========-->
-
+{% comment %}
 <section class="newsletter_section" id="bg" style="background-image: url('{% static 'img/pexels-markus-spiske-143577.jpeg'%}'), radial-gradient(#9F9F9F, #222);" >
     <div class="section_title">
         <h1 class="newsletter_title">The Seville Report Newsletter</h1>

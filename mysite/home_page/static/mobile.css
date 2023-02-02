@@ -59,64 +59,48 @@
     }
      
     /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
-    
+
     #bg {
-        background-size: 100% 85%;
-
+        background-position: top 0rem left -25rem;
+        image-rendering: pixelated;
+        height: 45rem;
     }
-    .home {
-        border: 2px solid black;
 
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
     .home_box {
-       
-        border: 2px solid green;
-
-        height: fit-content;
+        
+        margin-top: 2rem;
         min-width: fit-content;
-
+        height: 20rem;
 
     }
 
 
     .inner_home_box {
-        border: 2px solid palevioletred;
-        padding: 0;
-        margin: 0;
-
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: fit-content;
+        justify-content: flex-start;
+        margin: 0;
+        top: 0;        
     }
 
     .home_box .home_title {
-        border: 2px solid red;
-
         font-size: 2rem;
         font-weight: 600;
         line-height: 1em;
-
-        text-align: center;
-
-        min-width: 20rem;;
-
-        margin: 0;
-        padding: 0;
+        margin: 0 0 1rem 0;
+        min-width: 20rem;
+        text-align: left; 
     }
 
     .home_box .home_paragraph {
         font-size: 1.10rem;
         line-height: 1.35em;
-        margin: 0;
-        padding: 0;
-
-        text-align: center;
-        
+        margin: 0 0 1rem 0;
+        text-align: left;
+       
     }
 
     .btn {
@@ -127,17 +111,56 @@
     }
     
     .social_media_block {
-        display: flex;
-        min-width: fit-content
+        margin: 2rem 0 0 .2rem;
+
     }
     
     .social_block_link {
         font-size: 1.5rem;
         
+
+        
     }
 
     /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
+    
+    /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
+    .recom_title {
+
+        font-size: 1.65rem;
+
+    }
+
+    .rec_icons {
+        font-size: 1.1rem;
+    
+    }
+
+    .recommend_items {
+        height: 7rem;
+        width: 5rem;
+    
+    }
+
+    .recommend_items:nth-child(1) {
+       font-size: .65rem;
+    }
+
+    .recommend_items:nth-child(2) {
+        font-size: .65rem;
  
+     }
+    
+    .recommend_items:nth-child(3){
+        font-size: 1rem;
+    }
+
+    .recommend_items h3 {
+        font-size: .55rem;
+        font-weight: 300;
+        
+    }
+    /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
 
 
     /* * * * * * * * * * * * * *  Blog Section * * * * * * * * * * * * * */
@@ -284,6 +307,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 1rem;
     }
 
     #footer_logo_top {
