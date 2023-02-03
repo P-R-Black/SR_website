@@ -1,4 +1,6 @@
 @media(max-width:390px){
+
+
     .navbar {
         padding: 0 1rem;
         margin: 0;
@@ -60,6 +62,7 @@
      
     /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
 
+
     #bg {
         background-position: top 0rem left -25rem;
         image-rendering: pixelated;
@@ -92,7 +95,9 @@
         line-height: 1em;
         margin: 0 0 1rem 0;
         min-width: 20rem;
-        text-align: left; 
+        text-align: left;
+
+        
     }
 
     .home_box .home_paragraph {
@@ -117,9 +122,6 @@
     
     .social_block_link {
         font-size: 1.5rem;
-        
-
-        
     }
 
     /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
@@ -127,12 +129,13 @@
     /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
     .recom_title {
 
-        font-size: 1.65rem;
+        font-size: 1.55rem;
 
     }
 
     .rec_icons {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+
     
     }
 
@@ -162,8 +165,119 @@
     }
     /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
 
+    /* * * * * * * * * * * * * * Newsletter Section * * * * * * * * * * * * * */
 
-    /* * * * * * * * * * * * * *  Blog Section * * * * * * * * * * * * * */
+    #bg_two {
+        background-position: top 0rem left -25rem;
+        image-rendering: pixelated;
+        height: 50rem;
+    }
+
+    .newsletter_title {
+        font-size: 1.55rem;
+    }
+
+    .newsletter {
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 0 0;
+    }
+
+    .newsletter_description {
+        margin: 1rem 0 1.5rem 0;
+        order: 0;
+        text-align: justify;
+        width: 90%;  
+    }
+  
+    .news_desc {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .description_two {
+        line-height: 1.15;
+        order: 2;
+        text-align: justify;
+        width: 14rem;
+
+        margin: 0;
+        padding: 0;
+    }
+    
+    .curr_desc {
+        font-size: .95rem;
+        margin: 0;
+    }
+
+    .newsletter_image {
+        margin-bottom: 1rem;
+    }
+  
+    .curr_newsletter {
+        height: 17rem;
+        width: 14rem; 
+        
+    }
+    /* * * * * * * * * * * * * * Newsletter Section * * * * * * * * * * * * * */
+
+    /* * * * * * * * * * * * * *  Blog Section Home Page * * * * * * * * * * * * * */
+    .blog_section_title {
+        font-size:1.55rem;
+    }
+
+    .card {
+        grid-template-rows: 9.12rem 7.12rem 2.75rem;
+    }
+
+    .card_image {
+        /* background-size: cover; */
+        background-position: top 10rem left 0;
+    }
+
+    .card_text .date {
+        font-size: .75rem;
+    }
+    .card_text h2{
+        font-size: 1.40rem;
+        margin-top: 0px;
+    }
+
+    .card_text p {
+        font-size: .90rem;
+        font-weight: 200;
+        text-align: justify;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card_stats .stat {
+        padding: 5px;
+    }
+
+    
+    .card_stats .type {
+        font-size: 8px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    .card_stats .value {
+        font-size: 16px;
+        font-weight: 400;
+
+    }
+
+
+
+
+    /* * * * * * * * * * * * * *  Blog Section Home Page * * * * * * * * * * * * * */
+
+
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+
+    
 
     .blog_page_header {
         margin-top: 1rem;
@@ -266,8 +380,10 @@
         font-size: .75rem;
     }
 
-    /* * * * * * * * * * * * * *  Blog Section * * * * * * * * * * */
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * */
 
+
+    
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
     .footer_links{
         display: flex;
@@ -331,6 +447,9 @@
         margin: 0;
     }
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
+
 }
+
+
 
 

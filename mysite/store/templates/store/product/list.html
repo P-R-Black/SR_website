@@ -19,17 +19,24 @@
             {% endfor %}
         </ul>
     </div>
-    <div id="main" class="product_list">
-        <h1>{% if category %}{{ category.name }}{% else %}Library{% endif %}</h1>
-        {% for product in products %}
-        <div class="item">
-            <a href="{{ product.get_absolute_url }}">
-                <img src="{{ product.image.url }}" alt=""></a>
-                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-                <br>
-                ${{ product.price }}
+    <section class="product_library">
+        <div class="section_title">
+            <h1 class="library_title">{% if category %}{{ category.name }}{% else %}Library{% endif %}</h1>
         </div>
-        {% endfor %}
-    </div>
+        <div id="main" class="product_list">
+            {% for product in products %}
+            <div class="item">
+
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{{ product.image.url }}" alt="">
+                </a>
+                <a class="product_name" href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                <br>
+                    ${{ product.price }}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </div>
+   
 {% endblock %}

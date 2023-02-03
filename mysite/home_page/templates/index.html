@@ -55,33 +55,35 @@
 </section>
 <hr>
 <!-- ========== THE NEWSLETTER ==========-->
-{% comment %}
-<section class="newsletter_section" id="bg" style="background-image: url('{% static 'img/pexels-markus-spiske-143577.jpeg'%}'), radial-gradient(#9F9F9F, #222);" >
-    <div class="section_title">
-        <h1 class="newsletter_title">The Seville Report Newsletter</h1>
-    </div>
-    <newsletter class="newsletter">
-        <div class="newsletter_description">
-            <h2 class="news_desc">Our quarterly newsletter provides the information that investors need to know to build wealth. We discuss traditional investments, alternative investments, and investment education. The Seville Report has you covered.</h2>
-            <div>
-                <p class="discover"><a href="#" class="discover_link" target="_blank"><span class="highlights">Discover</span></a> what makes The Seville Report different.</p>
+
+<section class="newsletter_section">
+    <picture id="bg_two">
+        <div class="section_title">
+            <h1 class="newsletter_title">The Seville Report Newsletter</h1>
+        </div>
+        <newsletter class="newsletter">
+            <div class="newsletter_description">
+                <h2 class="news_desc">Our quarterly newsletter provides the information that investors need to know to build wealth. We discuss traditional investments, alternative investments, and investment education. The Seville Report has you covered.</h2>
+                <div>
+                    <p class="discover"><a href="#" class="discover_link" target="_blank"><span class="highlights">Discover</span></a> what makes The Seville Report different.</p>
+                </div>
+            </div>
+            <div class="description_two">
+                <p class="curr_desc">This quarter's newsletter features a researched investment idea. In addition, we discuss if an Index Universal Life Insurance plicy can be an infinite bank in retirement and why gas prices have been so high in 2022.</p>
+            </div>
+            <div class="newsletter_image">
+                <img src="{% static 'img/SR_Sept_22.jpeg' %}" alt="picture of newsletter cover" class="curr_newsletter">
+                <button href="#" class="newsletter_btn">Purchase Now</button>
+            </div>
+        </newsletter>
+        <div class="social_block">
+            <div class="social_media_block">
+                <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
             </div>
         </div>
-        <div class="description_two">
-            <p class="curr_desc">This quarter's newsletter features a researched investment idea. In addition, we discuss if an Index Universal Life Insurance plicy can be an infinite bank in retirement and why gas prices have been so high in 2022.</p>
-        </div>
-        <div class="newsletter_image">
-            <img src="{% static 'img/SR_Sept_22.jpeg' %}" alt="picture of newsletter cover" class="curr_newsletter">
-            <button href="#" class="newsletter_btn">Purchase Now</button>
-        </div>
-    </newsletter>
-    <div class="social_block">
-        <div class="social_media_block">
-            <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        </div>
-    </div>
+    </picture>  
 </section>
 <hr>
 <!-- ========== SR BLOG ==========-->
@@ -158,7 +160,7 @@
         </div>
     </div>
     <div class="home_page_blog_button">
-        <button class="blog_btn">Past Blogs</button>
+        <button class="blog_btn">More Blogs</button>
     </div>
     <div class="social_block">
         <div class="blue_social_media_block">
@@ -168,5 +170,5 @@
         </div>
     </div>
 </section>
-{% endcomment %}
+
 {% endblock %}
