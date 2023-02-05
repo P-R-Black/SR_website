@@ -15,9 +15,9 @@
         <div class="product_price">
             <p>${{ product.price }}</p>
             <form  action="{% url 'cart:cart_add' product.id %}" method="post" id="quantity_selection">
-                {{ cart_product_form }}
-                {% csrf_token %}
                 <input id="cart_add" type="submit" value="Add to Cart">
+                   <div class="cart_quant">{{ cart_product_form }}</div>
+                    {% csrf_token %}
             </form>
         </div>
     </div>

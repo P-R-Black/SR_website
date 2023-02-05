@@ -151,7 +151,6 @@
 
     .recommend_items:nth-child(2) {
         font-size: .65rem;
- 
      }
     
     .recommend_items:nth-child(3){
@@ -161,8 +160,15 @@
     .recommend_items h3 {
         font-size: .55rem;
         font-weight: 300;
-        
+        margin-bottom: 4.75rem;
     }
+
+    .recom_photo {
+        height: 7rem;
+        width: 5rem;
+    }
+
+
     /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
 
     /* * * * * * * * * * * * * * Newsletter Section * * * * * * * * * * * * * */

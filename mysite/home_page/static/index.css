@@ -254,17 +254,19 @@ hr {
     justify-content: space-around;
     transform: scale(1.02) translate(2px);
     width: 7rem;
-   
 
 }
 
 .recommend_items h3 {
-    color: #6196B1;
+    color: #ffffff;
     font-size: .80rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
     text-shadow: 0.50px 0.50px rgba(0, 0, 0.1);
+    position: absolute;
+
+    margin-bottom: 6rem;
     
 }
 
@@ -273,6 +275,16 @@ hr {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
+}
+
+
+.recom_photo {
+    border-radius: 8px;
+    border: 1px solid #6196B1;
+    height: 9rem;
+    width: 7rem;
+
+    position: absolute;
 }
 
 
