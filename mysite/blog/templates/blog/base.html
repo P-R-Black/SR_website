@@ -19,8 +19,9 @@
     <script src="https://kit.fontawesome.com/27e86509c5.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'index.css' %}">
-    <link rel="stylesheet" href="{% static 'mobile.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile_blog.css' %}">
 </head>
 <body>
 <!-- ========== NAVIGATION ========== -->
@@ -57,48 +58,50 @@
 
 {% endblock %}
 <!-- ========== FOOTER ==========-->
-<section class="footer_container">
-    <div class="footer_links">
-        <div class="footer_links_wrapper">
-            <div class="footer_link_items">
-                <h2>About Us</h2>
-                <a href="#">About</a>
-                <a href="#">FAQs</a>
+<section class="section_foot">
+    <div class="footer_container">
+        <div class="footer_links">
+            <div class="footer_links_wrapper">
+                <div class="footer_link_items">
+                    <h2>About Us</h2>
+                    <a href="#">About</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="footer_link_items">
+                    <h2>Contact Us</h2>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQs</a>
+                </div>
             </div>
-            <div class="footer_link_items">
-                <h2>Contact Us</h2>
-                <a href="#">Contact</a>
-                <a href="#">FAQs</a>
-            </div>
-        </div>
-        <div class="footer_links_wrapper">
-            <div class="footer_link_items">
-                <h2>Privacy Policy</h2>
-                <a href="#">Privacy</a>
-                <span href="#" id="no-show">Privacy</span>
-            </div>
-            <div class="footer_link_items">
-                <h2 id="disclaim">Disclaimer/Legal</h2>
-                <a href="#">Disclaimer</a>
-                <a href="#">FAQs</a>
+            <div class="footer_links_wrapper">
+                <div class="footer_link_items">
+                    <h2>Privacy Policy</h2>
+                    <a href="#">Privacy</a>
+                    <span href="#" id="no-show">Privacy</span>
+                </div>
+                <div class="footer_link_items">
+                    <h2 id="disclaim">Disclaimer/Legal</h2>
+                    <a href="#">Disclaimer</a>
+                    <a href="#">FAQs</a>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="social_media">
+        <div class="social_media_wrap">
+            <div class="footer_logo">
+                <a href="#" id="footer_logo_top">The Seville Report</a>
+                <a href="#" id="footer_logo_bottom">The Investment Newsletter</a>
+            </div>
+            <p class="website_rights">&copy; The Seville Report 2022. All Rights Reserved</p>
+            <div class="social_icons">
+                <a href="https://www.facebook.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/the_seville_report/" class="social_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://twitter.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+    </footer>
 </section>
-<footer class="social_media">
-    <div class="social_media_wrap">
-        <div class="footer_logo">
-            <a href="#" id="footer_logo_top">The Seville Report</a>
-            <a href="#" id="footer_logo_bottom">The Investment Newsletter</a>
-        </div>
-        <p class="website_rights">&copy; The Seville Report 2022. All Rights Reserved</p>
-        <div class="social_icons">
-            <a href="https://www.facebook.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/the_seville_report/" class="social_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://twitter.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        </div>
-    </div>
-</footer>
-<script src="{% static 'main.js' %}"></script>
+<script src="{% static 'js/mobileMenu.js' %}"></script>
 </body>
 </html>

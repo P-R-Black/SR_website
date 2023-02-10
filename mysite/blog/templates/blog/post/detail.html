@@ -1,0 +1,46 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+
+
+{% block main %}
+<section class="blog_area_section">
+  <div class="blog_area">
+      <div class="blog_title_slug_area">
+        <h1 class="the_blog_title">{{ post.title }}</h1>
+        <h2 class="blog_subtitle">{{ post.subtitle }}</h2>
+      </div>
+      <div class="auth_pub_read_area">
+          <div class="blog_author">By {{ post.author.first_name|title }} {{ post.author.last_name|title}}</div>
+          <div class="pub_date_read_time">
+            <div class="blog_pub_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></div>
+            <div class="blog_read_time">{{ time_to_read }} Mins</div>
+          </div>
+      </div>
+      <img class="blog_main_img" src="{{ post.post_image.url }}" alt="main blog image">
+      <div class="blog_overview">{{ post.overview|safe }}</div>
+      <hr class="blog_hr">
+      <article class="blog_text">{{ post.body|safe }}</article>
+      <a href="{% url 'store:product_list' %}"><img class="newsletter_promotion" src="{% static 'img/SR_Adv.png' %}" alt=""></a>
+      
+  </div>
+  <div class="social_sidebar">
+    <a href="https://www.facebook.com/SevilleReport" class="blog_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://www.instagram.com/the_seville_report/" class="blog_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+    <a href="https://twitter.com/SevilleReport" class="blog_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+    <a href="" class="blog_icon_link" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-square-reddit"></i></a>
+    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-square-tumblr"></i></a>
+    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+  </div>
+
+  <div class="blog_sidebar">
+    An Advertisement
+  </div>
+
+</section>
+
+
+
+{% endblock %}

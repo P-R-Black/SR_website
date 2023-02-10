@@ -1,0 +1,172 @@
+
+/* * * * * * * *  Checkout Section * * * * * * * */ 
+.checkout_section {
+    height: 75vh;
+    margin-top: 1rem;
+}
+
+.checkout_title {
+    color: #6196B1;
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 1rem 0 0 4.5rem;
+}
+
+
+.order_info {
+    background-color: #efefef;
+    float: right;
+    margin-right: 5rem;
+    padding: .5rem 1.25rem;
+    width: 350px;
+}
+
+.order_info h3 {
+    color: #6196B1;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order_info ul li {
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0;
+    font-size: 14px;
+}
+
+.order_info p {
+    font-weight: bold;
+    float: right;
+    margin-top: 1rem;
+}
+
+.order_info span {
+    float: right;
+}
+
+
+.order_form {
+    float: left;
+    margin: 1rem 0 0 4.5rem;
+    width:fit-content;
+}
+
+#customer_email {
+    margin-bottom: 1rem;
+}
+
+.order_form p {
+    padding: 5px 9px 5px 9px;
+}
+
+.order_form input[type="submit"] {
+    color:#ffffff;
+    cursor: pointer;
+    background:#6196B1;
+    width: 280px;
+}
+
+form p label, form p input {
+    float: left;
+    clear: both;    
+}
+
+form p label {
+    font-size:14px;
+    padding-bottom: 1px;
+    text-transform: capitalize;
+}
+
+
+
+
+/* * * * * * * *  Success Section * * * * * * * */ 
+
+
+.success_section h1 {
+    color: #6196B1;
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 1rem 0 0 4.5rem;
+    text-transform: capitalize;
+  
+}
+
+.success_section p {
+    margin: 0 0 0 4.5rem;
+    text-transform: capitalize;
+}
+
+.purchase_list {
+    margin-top: 2rem;
+    
+}
+
+
+.purchase_list li {
+    margin: 1rem 0 0 4rem;
+    width: 100%;
+    text-transform: capitalize;
+    list-style: none;
+}
+
+.download_list li {
+    text-decoration: none;
+    
+}
+
+.download_button{
+    color:#fff;
+    cursor: pointer;
+    background:#6196B1;
+    border:0;
+    border-radius:4px;
+    font-size:12px;
+    justify-items: flex-end;
+    padding: 4px 14px;
+    text-decoration: none;
+}
+
+#test_pic {
+    height: 8rem;
+    width: 6rem;
+}
+
+
+.table_data_button {
+
+    background:#6196B1;
+    border-radius:4px;
+    padding: 4px 14px;
+    font-size:12px;
+    border:0;   
+}
+
+.table_data_button a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.order_form {
+    float:left;
+}
+
+
+.order_form label, .order_form input {
+    float:left;
+    clear:both;
+}
+
+.order_form label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+.order_form input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}

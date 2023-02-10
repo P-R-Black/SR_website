@@ -1,0 +1,3 @@
+Replace cart text with computer image for file download
+mobile All Post css
+figure how to get the time to read formula in one place so that it can be distrubuted to multiple views

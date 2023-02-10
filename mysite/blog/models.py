@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -19,14 +21,17 @@ class Post(models.Model):
         )
     
     title = models.CharField(max_length=250)
+    subtitle = models.CharField(max_length=250, null=True, default="", blank=True)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    body = models.TextField()
+    overview = RichTextField(blank=True, null=True)
+    body = RichTextField(blank=True, null=True)
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=25, choices = STATUS_CHOICE, default='draft')
     post_image = models.ImageField(upload_to='blog_images/', default='default.jpeg')
+    image_url = models.CharField(max_length=500, default=None, null=True, blank=True)
 
     class Meta:
         ordering = ('-publish',)

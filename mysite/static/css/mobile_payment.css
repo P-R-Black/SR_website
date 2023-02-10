@@ -1,0 +1,70 @@
+@media(max-width:390px) {
+
+    /* * * * * * * *  Checkout Section * * * * * * * */ 
+    .checkout_section{
+        height: auto;
+    }
+    
+    .checkout_title {
+        font-size: 1.55rem;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .order_info {
+        float: left;
+        height: auto;
+        margin: 1rem 0 1rem 1.25rem;    
+    }
+    
+    .order_form {
+        margin: 0 0 4rem 1rem;
+    
+    }
+    /* * * * * * * *  Checkout Section * * * * * * * */ 
+
+
+   
+    /* * * * * * * *  Success Section * * * * * * * */ 
+    .success_section{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 2rem 0;
+        width: 100vw;
+        height: auto;
+    }
+
+
+    .success_section h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        width: fit-content;
+    }
+
+    .success_section p {
+        margin: 0 0 0 0rem;
+        width: fit-content;
+    }
+
+    .download_table {
+        margin: 0 .5rem 0 .5rem;
+        width: auto;
+
+    }
+
+    .table_data_prod_name {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    table thead tr th.table_head_price{
+        min-width: auto;
+    }
+
+
+
+    /* * * * * * * *  Success Section * * * * * * * */ 
+
+}

@@ -77,6 +77,7 @@ def start_order(request):
 
         item = OrderItem.objects.create(order=order, product=product, price=price, quantity=quantity)
     
+
     return JsonResponse({'session': session, 'payments': payment_intent})
 
 
@@ -113,12 +114,13 @@ def payment_done(request):
 
     for product in purchased_products:
         file = product.pdf_file.url
+        print(f'file: {file}')
 
-    print(f'file: {file}')
+        print(f'purchased_products: {purchased_products}')
 
-    print(f'purchased_products: {purchased_products}')
-
-    template = render_to_string('payments/email_template.html', {'name': first_name, 'file': file})
+        
+        template = render_to_string('payments/email_template.html', {'name': first_name, 'file': file})
+        print('template', template)
 
     email = EmailMessage(
         'Thank You!',
@@ -130,4 +132,5 @@ def payment_done(request):
     email.fail_silently=False
     email.send()
 
+    cart.clear()
     return render(request, 'payments/done.html', {'products':purchased_products})
