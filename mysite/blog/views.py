@@ -1,13 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
-from .blog import PostStats
+from blog.blog import count
 
 
 # Create your views here.
 def post_list(request):
     posts = Post.published.all()
-
-   
+    count()
+    
     return render(request, 'blog/post/blogs.html', {'posts': posts})
 
 def post_detail(request, year, month, day, post):

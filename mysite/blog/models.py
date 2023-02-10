@@ -37,7 +37,7 @@ class Post(models.Model):
         ordering = ('-publish',)
 
     def __str__(self):
-        return self.title
+        return {self.title}
         
 
     def get_absolute_url(self):
