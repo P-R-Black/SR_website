@@ -369,98 +369,50 @@ a.button.dark {
 
 /* * * * * * * * Sticky Cart * * * * * * * */
 .cart_section {
+    align-items: center;
     background-color: #efefef;
+    display: flex;
+    height: 2.20rem;
+    justify-content: flex-end;
     max-width: auto;
-    height: 1.5rem;
+    /* margin-top: 0;
+    padding-top: 0; */
+
 }
+
+.all_cart_items {
+    height: 2rem;
+    margin-right: 4rem;
+    margin-top: 0;
+    width: 2.50rem;
+}
+
+
 
 .site_cart {
+
+    color: white;
     float: right;
-    margin-right: 3rem;
-    text-transform: capitalize;
+    font-size: .75rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #264f64;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 
-
-
-/* * * * * * *  Checkout Section * * * * * * * /
-.checkout_section {
-    height: 100vh;
-}
-
-.checkout_title {
-    margin: 1rem 0 0 2rem;
-
-}
-
-
-.order_info {
-    background-color: #efefef;
-    float: right;
-    margin-right: 5rem;
-    padding: .5rem 1.25rem;
-    width: 350px;
-}
-
-.order_info h3 {
+.fa-laptop {
+    font-size: 1.75rem;
     color: #6196B1;
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
 }
 
-.order_info ul li {
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 0;
-    font-size: 14px;
-}
-
-.order_info p {
-    font-weight: bold;
-    float: right;
-    margin-top: 1rem;
-}
-
-.order_info span {
-    float: right;
-}
-
-
-.order_form {
-    float: left;
-    margin-left: 2rem;
-    width:500px;
-}
-
-
-.order_form p {
-    padding:5px 9px;
-}
-
-.order_form input[type="submit"] {
-    color:#ffffff;
-    background:#6196B1;
-}
-
-form p label, form p input {
-    float: left;
-    clear: both;
-}
-
-form p label {
-    font-size:14px;
-    padding-bottom: 1px;
-    text-transform: capitalize;
-}
-
-form p input {
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 10px 12px;
-    width: 300px;
-    margin-bottom: 10px;
-    background: #efefef;
-    color: #000000;
-    
-}
+/* * * * * * * * Sticky Cart * * * * * * * */
 
 
 /* * * * * * * *  Success Section * * * * * * * */ 
@@ -552,6 +504,8 @@ form p input {
     color:#666;
     border-radius:4px;
 }
+
+
 
 
 /* * * * * * * *  Footer Section * * * * * * * */ 

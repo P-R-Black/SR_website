@@ -22,18 +22,20 @@
     <div class="post_section">
         <div class="pic_title_snip">
             <a href="{{ post.get_absolute_url }}">
-                <img src='{{ post.post_image.url }}' alt="blog post image" class="post_image">
+                <img src='{{ post.post_header_image.url }}' alt="blog post image" class="post_image">
             </a>
             <div class="post_desc">
                 <h1 class="post_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
                 <p class="post_snippet">{{ post.body|safe|truncatewords:30|linebreaks }}</p>
                 <div class="auth_and_opinion">
-                    <h3 class="author">{{ post.author }}</h3>
+                    <h3 class="author">{{ post.author.first_name|title }} {{ post.author.last_name|title}}</h3>
                     <h3 class="opinion">Opinion</h3>
                 </div>
                 <div class="pubdate_readtime">
-                    <h3 class="publish_date">{{ post.publish }}</h3>
-                    <h3 class="read_time">{{ time_to_read }}</h3>
+                    <h3 class="publish_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></h3>
+                    <h3 class="read_time">{{ post.get_read_time }} Minutes</h3>
+                    <h3 class="read_time">{{ times }} Minutes</h3>
+
                 </div>
             </div>
         </div>

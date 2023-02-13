@@ -351,6 +351,17 @@ hr {
 }
 /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
 
+/* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
+
+
+.blog_image {
+    height: 26rem;
+    width: 38rem;
+}
+
+
+/* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
+
 
 /* * * * * * * *  Footer Section * * * * * * * */ 
 .section_foot {

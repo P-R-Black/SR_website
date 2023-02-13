@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'payments.apps.PaymentsConfig',
     'blog.apps.BlogConfig',
     'ckeditor',
-    # 'ckeditor_uploader',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -164,3 +164,5 @@ CKEDITOR_CONFIGS = {
         'width': 1000,
     }
 }
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'

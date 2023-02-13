@@ -54,20 +54,19 @@
 <hr>
 
 <section class="cart_section">
-    <div class="site_cart">
-        {% with total_items=cart|length %}
-        {% if total_items > 0 %}
-        <p class="your_cart">Your cart:
-            <a href="{% url 'cart:cart_detail' %}">
-                {{ total_items }} item{{ total_items|pluralize }}:
-                ${{ cart.get_total_price }}
-            </a>
-        </p>
-        {% else %}
-        Your cart is empty.
-        {% endif %}
+    <a class="all_cart_items" href="{% url 'cart:cart_detail' %}">
+    <div class="file_download_icon"><i class="fa-solid fa-laptop"></i></div>
+    {% with total_items=cart|length %}
+            {% if total_items > 0 %}
+            <div class="site_cart">
+                {{ total_items }}
+            </div>
+            {% else %}
+            <div"></div>
+            {% endif %}
+       
         {% endwith %}
-    </div>
+    </a>
 </section>
 {% block main %}
 {% endblock %}

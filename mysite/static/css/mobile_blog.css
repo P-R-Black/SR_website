@@ -251,7 +251,16 @@
     /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
 
 
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
 
+
+    .blog_image {
+        height: 14rem;
+        width: 22rem;
+    }
+
+
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
 
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
     .footer_links{
