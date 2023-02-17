@@ -60,8 +60,6 @@
 
     /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
 
-    
-
     .blog_page_header {
         margin-top: 1rem;
     }
@@ -116,23 +114,19 @@
 
     
     .post_title {
-        font-size: 1rem;
+        font-size: .95rem;
         height: auto;
         width: 14rem;
     }
 
     .post_snippet {
-        font-size: .75rem;
-        max-height: fit-content;
-        max-width: 14rem;
-        white-space: nowrap;
-        overflow:hidden;
-        text-overflow: ellipsis;
+        max-width: 10rem;
 
     }
 
+
     .post_image {
-        height: 8rem;
+        height: 7rem;
         margin-left: .15rem;
         width: 6.5rem;
     }
@@ -140,7 +134,30 @@
     .post_desc {
         margin-left: .55rem;
 
+        display: flex;
+        flex-direction: column;
+        height: 4rem;
+        width: 20rem;
+
+    
+
     }
+
+    .post_title{
+        font-size: .85rem;
+    }
+
+    .post_desc p{
+        color: red;
+        font-size: .65rem;
+        height: 3rem;
+  
+        width: 40ch;
+        text-overflow: ellipsis;
+        /* white-space: nowrap; */
+
+    }
+
 
     .auth_and_opinion {
         margin-top: .5rem;

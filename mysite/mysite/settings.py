@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payments.apps.PaymentsConfig',
     'blog.apps.BlogConfig',
+    'taggit',
     'ckeditor',
     'ckeditor_uploader',
+    
 ]
 
 MIDDLEWARE = [

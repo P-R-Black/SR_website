@@ -1,4 +1,3 @@
-from .models import Post
 
 
 def get_word_count(the_text):
