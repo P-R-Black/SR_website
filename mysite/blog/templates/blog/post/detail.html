@@ -10,6 +10,7 @@
         <h1 class="the_blog_title">{{ post.title }}</h1>
         <h2 class="blog_subtitle">{{ post.subtitle }}</h2>
       </div>
+
       <div class="auth_pub_read_area">
           <div class="blog_author">By {{ post.author.first_name|title }} {{ post.author.last_name|title}}</div>
           <div class="pub_date_read_time">
@@ -41,7 +42,5 @@
   </div>
 
 </section>
-
-
 
 {% endblock %}

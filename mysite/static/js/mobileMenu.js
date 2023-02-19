@@ -1,3 +1,5 @@
+
+
 // Hamburger Menu
 const hamburger = document.querySelector('#mobile_menu');
 const navElements = document.querySelector('.navbar_menu');
@@ -27,6 +29,8 @@ const hideMobileMenu = () => {
 
 hamburger.addEventListener('click', mobileMenu)
 navElements.addEventListener('click', hideMobileMenu)
+
+
 
 
 

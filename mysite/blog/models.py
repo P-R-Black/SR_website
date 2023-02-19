@@ -32,15 +32,16 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     overview = RichTextField(blank=True, null=True)
     body = RichTextField(blank=True, null=True)
+    post_description = models.CharField(max_length=200)
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=25, choices = STATUS_CHOICE, default='draft')
     post_header_image = models.ImageField(upload_to='blog_images/', default='default.jpeg')
-    post_images = RichTextUploadingField()
+    post_images = RichTextUploadingField(blank=True)
     image_url = models.CharField(max_length=500, default=None, null=True, blank=True)
-    tags = TaggableManager()
-    # categories = 
+    # hash_tags = TaggableManager()
+    post_categories = TaggableManager()
 
     class Meta:
         ordering = ('-publish',)

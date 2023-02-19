@@ -10,10 +10,15 @@ from django.utils.html import strip_tags
 def post_list(request,tag_slug=None):
     object_list = Post.published.all()
 
-    tag = None
+    post_category = None
+
     if tag_slug:
-        tag = get_object_or_404(Tag, slug=tag_slug)
-    strip_tags(object_list.filter(tags__in=[tag]))
+        post_category = get_object_or_404(Tag, slug=tag_slug)
+        print('post_categories', post_category)
+
+    object_list.filter(post_categories__in=[post_category])
+
+    
 
     paginator = Paginator(object_list, 10)
     page = request.GET.get('page')
@@ -25,9 +30,8 @@ def post_list(request,tag_slug=None):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
 
-    
 
-    return render(request, 'blog/post/blogs.html', {'page': page, 'posts': posts, 'tag': tag})
+    return render(request, 'blog/post/blogs.html', {'page': page, 'posts': posts, 'post_category': post_category})
 
 
 def post_detail(request, year, month, day, post):

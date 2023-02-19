@@ -152,8 +152,13 @@ hr {
     background-color: #c8d9e5;
     border: 1px solid #212121;
     border-radius: 8px;
+  
     margin-bottom: .5rem;
     width: 74.5rem;
+
+    display: block;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .post_title a {
@@ -171,35 +176,49 @@ hr {
 }
 
 .pic_title_snip{
+    align-items: center;
     display: flex;
     margin-left: 5rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
     margin-bottom: .5rem;
+}
 
+.post_desc a {
+    text-decoration: none;
+    color: black;
 }
 
 .post_desc {
     display: flex;
     flex-direction: column;
-    height: 8rem;
     margin-left: 1.5rem;
     width: 45rem;
 }
 
+
 .post_image {
     height: 11rem;
     width: 17.5rem;
+
+    
 }
 
 .post_title {
-    height: auto;
-    width: 30rem;
+    height: fit-content;
+    margin-bottom: 0;
+    width: 35rem;
 }
 
-.post_snippet {
-    width: 30rem;
-    height: 3.75rem;
+
+.post_snippet { 
+    height: auto;
+    width: 40rem;
 }
+
+#post_snippet_mobile_view{
+    display: none;
+}
+
  
 .auth_and_opinion {
     display: flex;
