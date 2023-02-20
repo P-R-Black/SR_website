@@ -1,5 +1,8 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
+
+{% load taggit_templatetags2_tags %}
+
 {% block title %}The Seville Report Blog{% endblock %}
 
 {% block main %}
@@ -9,22 +12,13 @@
     </div>
     <h4 class="all_posts_slug">Our thoughts on the events shaping the market</h4>
     
-    <p class="tags">
-        Tags:
-        {% total_categories %}
-       
-   
-      
-    </p>
-   
 
     <div class="blog_categories">
-        <h4 class="categories">All Posts</h4>
-        <h4 class="categories">Investing</h4>
-        <h4 class="categories">Tech Investing</h4>
-        <h4 class="categories">Technical Analysis</h4>
-        <h4 class="categories">Funadamental Analysis</h4>
-        <h4 class="categories">More</h4>
+        {% total_categories as tc %}
+            {% for tag in tc %}
+        <h4 class="categories"><a href="">{{ tag|title }}</a></h4>
+        {% endfor %}
+        <h4 class="categories"><a href="">More</a></h4>
     </div>
 </section> 
 <section class="blog_page_body">
@@ -46,15 +40,6 @@
                         <h3 class="author">{{ post.author.first_name|title }} {{ post.author.last_name|title}}</h3>
                         <h3 class="opinion">Opinion</h3>
                     </div>
-                    <p class="tags">
-                        Tags:
-                        {% for tag in post.post_categories.all %}
-                          <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
-                            {{ tag.name }}
-                          </a>
-                          {% if not forloop.last %}, {% endif %}
-                        {% endfor %}
-                      </p>
                     <div class="pubdate_readtime">
                         <h3 class="publish_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></h3>
                         <h3 class="read_time">{{ post.get_read_time }} Minutes</h3>

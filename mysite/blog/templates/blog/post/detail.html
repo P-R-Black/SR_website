@@ -5,6 +5,18 @@
 
 {% block main %}
 <section class="blog_area_section">
+  <div class="prev_blog_section">
+    <h1 class="related_post_title">Related Post</h1>
+    {% for post in similar_posts %}
+    <div class="post_img_and_title">
+      <a href="{{ post.get_absolute_url }}"><img class="prev_post_img" src="{{ post.post_header_image.url }}" alt=""></a>
+      <h4 class="prev_post_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+    </div>
+      {% empty %}
+      There are no similar posts yet.
+      {% endfor %}
+
+  </div>
   <div class="blog_area">
       <div class="blog_title_slug_area">
         <h1 class="the_blog_title">{{ post.title }}</h1>

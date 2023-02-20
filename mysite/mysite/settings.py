@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'payments.apps.PaymentsConfig',
     'blog.apps.BlogConfig',
     'taggit',
+    'taggit_templatetags2',
     'ckeditor',
     'ckeditor_uploader',
     

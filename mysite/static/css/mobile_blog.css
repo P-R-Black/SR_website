@@ -172,12 +172,13 @@
 
 
     /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
+    .prev_blog_section {
+        display: none;
+    }
 
     .blog_area_section {
         flex-direction: column;
         justify-content: center;
-
-        border: 2px solid blueviolet;
     }
 
     .blog_area {
