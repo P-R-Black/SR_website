@@ -71,9 +71,10 @@
             <div class="description_two">
                 <p class="curr_desc">This quarter's newsletter features a researched investment idea. In addition, we discuss if an Index Universal Life Insurance plicy can be an infinite bank in retirement and why gas prices have been so high in 2022.</p>
             </div>
+            
             <div class="newsletter_image">
-                <img src="{% static 'img/SR_Sept_22.jpeg' %}" alt="picture of newsletter cover" class="curr_newsletter">
-                <button href="#" class="newsletter_btn">Purchase Now</button>
+                <img src="{{ current_news.image.url }}" alt="picture of newsletter cover" class="curr_newsletter">
+                <a href="{{ current_news.get_absolute_url }}"><button class="newsletter_btn">Purchase Now</button></a>
             </div>
         </newsletter>
         <div class="social_block">
@@ -92,75 +93,31 @@
         <h1 class="blog_section_title">The SR Blog</h1>
     </div>
     <div class="card_container">
+        {% for post in last_three_post %}
         <div class="card">
-            <div class="card_image"></div>
-            <div class="card_text">
-                <span class="date">4 Days Ago</span>
-                <h2>Post One</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui culpa voluptatibus repellendus magni sunt numquam, dignissimos veritatis necessitatibus iste voluptate dolorem inventore doloremque.</p>
-            </div>
-            <div class="card_stats">
-                <div class="stat">
-                    <div class="value">4<sup>m</sup></div>
-                    <div class="type">read</div>
+            <a href="{{ post.get_absolute_url }}">
+                <div class="card_image"><img class="blog_card_image" src="{{ post.post_header_image.url }}" alt=""></div>
+                <div class="card_text">
+                    <div class="date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></div>
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.post_description }}</p>
                 </div>
-                <div class="stat border">
-                    <div class="value">5123</div>
-                    <div class="type">views</div>
+                <div class="card_stats">
+                    <div class="stat">
+                        <div class="value">{{ post.get_read_time }}<sup>m</sup></div>
+                        <div class="type">read</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">{{ post.author.first_name|title }} {{ post.author.last_name|title}}</div>
+                        <div class="type">@SevilleReport</div>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="value">32</div>
-                    <div class="type">comments</div>
-                </div>
-            </div>
+            </a>
         </div>
-        <div class="card">
-            <div class="card_image"></div>
-            <div class="card_text">
-                <span class="date">4 Days Ago</span>
-                <h2>Post One</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui culpa voluptatibus repellendus magni sunt numquam, dignissimos veritatis necessitatibus iste voluptate dolorem inventore doloremque.</p>
-            </div>
-            <div class="card_stats">
-                <div class="stat">
-                    <div class="value">4<sup>m</sup></div>
-                    <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                    <div class="value">5123</div>
-                    <div class="type">views</div>
-                </div>
-                <div class="stat">
-                    <div class="value">32</div>
-                    <div class="type">comments</div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card_image"></div>
-            <div class="card_text">
-                <span class="date">4 Days Ago</span>
-                <h2>Post One</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui culpa voluptatibus repellendus magni sunt numquam, dignissimos veritatis necessitatibus iste voluptate dolorem inventore doloremque.</p>
-            </div>
-            <div class="card_stats">
-                <div class="stat">
-                    <div class="value">4<sup>m</sup></div>
-                    <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                    <div class="value">5123</div>
-                    <div class="type">views</div>
-                </div>
-                <div class="stat">
-                    <div class="value">32</div>
-                    <div class="type">comments</div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="home_page_blog_button">
-        <button class="blog_btn">More Blogs</button>
+        <button class="blog_btn"><a href="{% url 'blog:post_list' %}">More Posts</a></button>
     </div>
     <div class="social_block">
         <div class="blue_social_media_block">

@@ -1,3 +1,292 @@
+@media(min-width:400px) and  (max-width:450px){
+
+    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
+    #top_logo {
+        font-size: 1.15rem;
+    }
+
+    #bottom_logo {
+        font-size: .76rem;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .hamburger_menu {
+        display: block;
+    }
+    
+    .hamburger_menu.is_active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar_menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #6196B1;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .navbar_items {
+        margin: 1rem 0;
+    }
+
+    .navbar_menu.active {
+        left: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
+
+    /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
+
+
+    #bg {
+        background-position: top 0rem left -25em right -25rem;
+        image-rendering: pixelated;
+        height: 40rem;
+    }
+
+
+    .inner_home_box {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        justify-content: flex-start;
+        margin: 0;
+        top: 0;        
+    }
+
+
+    .home_box .home_title {
+        font-size: 2.50rem;
+        font-weight: 600;
+        line-height: 1em;
+        margin: 2rem 0 1rem 0;
+        min-width: 30rem;
+        text-align: left;  
+    }
+   
+    .home_box .home_paragraph {
+        font-size: 1.25rem;
+        line-height: 1.35em;
+        margin: 0 0 1rem 0;
+        min-width: 24rem;
+        text-align: left; 
+    }
+
+    
+    .social_media_block {
+        margin: 2rem 0 0 .2rem;
+
+    }
+    
+    /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
+
+    /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
+     .recom_title {
+        font-size: 1.85rem
+    }
+
+
+    .recommend_items {
+        height: 8rem;
+        width: 6rem;
+    
+    }
+
+    .recom_photo {
+        height: 8rem;
+        width: 6rem;
+    }
+
+    
+    .recommend_items:nth-child(1) {
+       font-size: .90rem;
+    }
+
+    .recommend_items:nth-child(2) {
+        font-size: .90rem;
+     }
+    
+    .recommend_items:nth-child(3){
+        font-size: .95rem;
+    }
+
+    .recommend_items h3 {
+        font-size: .75rem;
+        font-weight: 300;
+        margin-bottom: 4.75rem;
+    }
+
+    /* * * * * * * * * * * * * * Recommended Section * * * * * * * * * * * * * */
+
+    /* * * * * * * * * * * * * * Newsletter Section * * * * * * * * * * * * * */
+
+    #bg_two {
+        background-position: top 0rem left -25rem right -25rem;
+        image-rendering: pixelated;
+        height: 50rem;
+    }
+
+    .newsletter_title {
+        font-size: 1.85rem;
+    }
+
+   
+    .newsletter {
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 0 0;
+    }
+
+     
+    .newsletter_description {
+        margin: 1rem 0 1.5rem 0;
+        order: 0;
+        text-align: justify;
+        width: 90%;  
+    }
+   
+  
+    .news_desc {
+        font-size: 1.35rem;
+        font-weight: 600;
+    }
+
+     
+    .description_two {
+        line-height: 1.15;
+        order: 2;
+        text-align: justify;
+        width: 90%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .curr_desc {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .newsletter_image {
+        margin-bottom: 1rem;
+    }
+
+    .curr_newsletter {
+        height: 16rem;
+        width: 11rem; 
+        
+    }
+    
+    /* * * * * * * * * * * * * * Newsletter Section * * * * * * * * * * * * * */
+
+    /* * * * * * * * * * * * * *  Blog Section Home Page * * * * * * * * * * * * * */
+
+     .blog_section_title {
+        font-size:1.85rem;
+    }
+
+    
+    .card {
+        grid-template-rows: 210px 210px 70px;
+        grid-template-columns: 300px;
+    }
+
+    
+    .blog_card_image {
+        height:12.55rem;
+        width: 18.75rem;
+      
+    }
+    
+
+    /* * * * * * * * * * * * * *  Blog Section Home Page * * * * * * * * * * * * * */
+
+
+    
+
+    
+    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
+   .footer_links{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+  .footer_container {
+        width: 100%;
+        padding: .25rem 0;
+    }
+
+    
+    .footer_link_items {
+        text-align: center;
+    
+    }
+
+     
+    .footer_link_items h2 {
+        font-size: 1rem; 
+    }
+
+     
+    .social_media_wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .footer_logo {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .website_rights {
+        font-size: .90rem;
+        margin: .5rem 0 .5rem 0;
+    }
+
+    .social_icon_link {
+        color: #ffffff;
+        font-size: 1.20rem;
+        margin: 0;
+    }
+
+    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
+
+}
+
+
+
+
 @media(max-width:390px){
 
 
@@ -59,6 +348,8 @@
         right: 5%;
         transform: translate(5%, 20%);
     }
+
+
      
     /* * * * * * * * * * * * * *  Home Page * * * * * * * * * * * * * */
 
@@ -233,20 +524,24 @@
     }
 
     .card {
-        grid-template-rows: 9.12rem 7.12rem 2.75rem;
+        grid-template-rows: 9.12rem 7.12rem 3.75rem;
+        grid-template-columns: 252px;
     }
 
-    .card_image {
-        /* background-size: cover; */
-        background-position: top 10rem left 0;
+
+    .blog_card_image {
+        height: 8.55rem;
+        width: 15.75rem;
+      
     }
+    
 
     .card_text .date {
         font-size: .75rem;
     }
     .card_text h2{
-        font-size: 1.40rem;
-        margin-top: 0px;
+        font-size: 1.25rem;
+        margin-top: .5rem;
     }
 
     .card_text p {
@@ -256,6 +551,11 @@
         white-space: nowrap;
         overflow:hidden;
         text-overflow: ellipsis;
+
+    }
+
+    .card_stats{
+        width: 252px;
     }
 
     .card_stats .stat {
@@ -293,8 +593,6 @@
   .footer_container {
         width: 24.5rem;
         padding: .25rem 0;
-
-        border: 2px solid royalblue;
     }
 
 
@@ -312,6 +610,8 @@
     .footer_link_items a {
         font-size: .80rem; 
     }
+
+  
 
     .social_media_wrap {
         display: flex;

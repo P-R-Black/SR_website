@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block title %}All Post Categories{% endblock %}
+
+{% block main %}
+<section >
+    <div class="title_social">
+        <h1 class="all_posts_title">All Post Categories</h1>
+        <h4 class="all_posts_slug post_related_to">Find a Post by its Category</h4>
+    </div>
+    <div class="all_cats_section">
+        {% for k, v in all_cats.items %}
+        <button class="cat_button"><a href="{% url 'blog:by_categories' v %}">{{ k }}</a></button>
+        {% endfor %}
+    </div>
+    
+</section>
+
+{% endblock %}

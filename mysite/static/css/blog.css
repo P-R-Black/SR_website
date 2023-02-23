@@ -130,6 +130,14 @@ hr {
     text-decoration: none;
 }
 
+a.more_categories {
+    color: #212121;
+    font-weight: lighter;
+    text-decoration: none;
+
+}
+
+
 .blog_categories {
     display: flex;
     justify-content: space-around;
@@ -422,6 +430,52 @@ hr {
 
 
 /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
+
+
+
+/* * * * * * * * * * * *Blog Post By Category * * * * * * * * * * * */ 
+
+
+.post_related_to {
+    margin-bottom: 4rem;
+}
+
+.all_cats_section {
+    display: grid;
+    grid-template-columns:  repeat(5, auto);
+    grid-template-rows:  repeat(7, auto);
+    grid-gap: 1rem;
+    height: auto;
+    justify-content: center;
+    margin: 4rem 4rem 0 4rem;
+    max-width: auto;
+
+}
+
+.cat_button {
+    background-color: #6196B1;
+    border: 1px solid #5C5757;
+    border-radius: 5px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: .25rem .5rem;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: capitalize;;
+}
+
+.cat_button a {
+    text-decoration: none;
+    color: white;
+
+}
+/* * * * * * * * * * * *Blog Post By Category * * * * * * * * * * * */ 
+
+
+
 
 
 /* * * * * * * *  Footer Section * * * * * * * */ 

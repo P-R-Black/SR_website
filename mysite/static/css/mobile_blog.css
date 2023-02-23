@@ -267,6 +267,24 @@
 
     /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
 
+
+
+    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
+    .all_cats_section {
+        grid-template-columns:  repeat(3, auto);
+        grid-template-rows:  repeat(auto, auto);
+        grid-gap: .75rem;
+        height: auto;
+        justify-content: center;
+        margin: 4rem 4rem 0 4rem;
+        max-width: auto;
+    
+    }
+
+    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
+
+
+
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
     .footer_links{
         display: flex;

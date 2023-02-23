@@ -39,14 +39,12 @@ html {
 }
 
 .navbar {
-
     align-items: center;
     background-color: #6196B1;
     display: flex;
     height: 4rem;
     justify-content: space-between;
     font-size: 1rem;
-
     padding: 0 4rem;
     position: sticky;
     top: 0;
@@ -183,6 +181,9 @@ hr {
     transform: scale(1.02) translate(2px);
 }
 
+.social_block {
+    margin-top: -1rem;;
+}
 
 .social_media_block {
     display: flex;
@@ -335,6 +336,7 @@ hr {
 .newsletter_description {
     text-align: justify;
     width: 28%;
+
 }
 
 
@@ -418,29 +420,35 @@ hr {
 }
 
 .card {
-    border: 2px #6196B1 solid;
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
-    grid-template-areas: "image" "text" "stats";
-
-    border-radius: 8px;
     background-color: #ffffff;
+    border: 2px #6196B1 solid;
+    border-radius: 8px;
+    display: grid;
+    grid-template-areas: "image" "text" "stats";
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 90px;
+    position: relative;
     text-align: center;
-    cursor: pointer;
+     
 }
 
-.card_image {
-    grid-area: image;
-    background: url('/static/img/pexels-adityaG.jpg');
+.card a{
+    text-decoration: none;
+
+}
+
+.blog_card_image {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-size: cover;
+    height:12.55rem;
+    width: 18.75rem;
+  
 }
+
 
 .card_text {
     grid-area: text;
-    margin: 1rem;
+    margin: .25rem 1rem 1rem 1rem;
 }
 
 .card_text .date {
@@ -450,34 +458,41 @@ hr {
 
 .card_text p {
     color: gray;
-    font-size: 15px;
+    font-size: .90rem;
     font-weight: 300;
+    text-align: justify;
 }
 
 .card_text h2{
-    margin-top: 0px;
-    font-size: 1.75rem;
+    color: black;
+    line-height: 1.25rem;
+    margin: .5rem 0 .5rem 0;
+    font-size: 1.35rem;
 
 }
 
 .card_stats {
-    grid-area: stats;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    background: #6196B1;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background: #6196B1
+    bottom: 0px;
+    display: grid;
+    grid-area: stats;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: absolute;
+    width: 18.75rem;
 }
 
 
 .card_stats .stat {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
+    align-items: space;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
 }
 
 .card_stats .type {
@@ -487,13 +502,12 @@ hr {
 }
 
 .card_stats .value {
-    font-size: 22px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 .card_stats .border {
     border-left: 1px solid #ffffff;
-    border-right: 1px solid #ffffff;
 }
 
 .card_stats .value sup{
@@ -536,11 +550,18 @@ hr {
     transform: scale(1.02) translate(2px);
 }
 
+.blog_btn a{
+    color: white;
+    text-decoration: none;
+    
+}
+
 
 .blue_social_media_block {
     display: flex;
     justify-content: flex-start;
     margin-left: 5%;
+   
     width: 10%;
 }
 
@@ -651,7 +672,6 @@ hr {
 
 .social_media{
     background-color: #5C5757;
-    max-width: 2000px;
     width: 100%;
     padding: .5rem;
 }

@@ -1,26 +1,27 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
 
-{% block title %}The Seville Report Blog{% endblock %}
+{% block title %}Post Related To {{ tag }}{% endblock %}
 
 {% block main %}
 <section class="blog_page_header">
     <div class="title_social">
-        <h1 class="all_posts_title">All Posts</h1>
+
+        <h1 class="all_posts_title">{{ tag }}</h1>
     </div>
-    <h4 class="all_posts_slug">Our thoughts on the events shaping the market</h4>
+    <h4 class="all_posts_slug post_related_to">Post Related to {{ tag  }}</h4>
     <div class="blog_categories">
-            {% total_categories as tc %}
-            {% for key, value in tc.items %}
-        <h4 class="categories">
-            <a href="{% url 'blog:by_categories' value %}">{{ key|title }}</a>
-        </h4>
-            {% endfor %}
-        <h4 class="categories"><a href="{% url 'blog:all_categories' %}">More</a></h4>
-    </div>
+        {% total_categories as tc %}
+        {% for key, value in tc.items %}
+    <h4 class="categories">
+        <a href="{% url 'blog:by_categories' value %}">{{ key|title }}</a>
+    </h4>
+        {% endfor %}
+    <h4 class="categories"><a href="{% url 'blog:all_categories' %}">More</a></h4>
+</div>
 </section> 
 <section class="blog_page_body">
-    {% for post in posts %}
+    {% for post in similar_posts %}
     <div class="post_section">
         <div class="pic_title_snip">
             <a href="{{ post.get_absolute_url }}">
@@ -49,6 +50,4 @@
     {% endfor %}
     {% include 'pagination.html' with page=posts %}
 </section>
-
-
 {% endblock %}

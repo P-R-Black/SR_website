@@ -5,6 +5,7 @@ from .forms import EmailPostForm
 from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count
+from collections import Counter
 
 # Create your views here.
 def post_list(request,tag_slug=None):
@@ -14,7 +15,7 @@ def post_list(request,tag_slug=None):
 
     if tag_slug:
         post_category = get_object_or_404(Tag, slug=tag_slug)
-
+      
     object_list.filter(post_categories__in=[post_category])
 
     paginator = Paginator(object_list, 10)
@@ -28,11 +29,10 @@ def post_list(request,tag_slug=None):
         posts = paginator.page(paginator.num_pages)
     
    
-
     return render(request, 'blog/post/blogs.html', 
     {'page': page, 
-    'posts': posts, 
-    'post_category': post_category})
+    'posts': posts,
+    'post_category': post_category })
 
 
 def post_detail(request, year, month, day, post):
@@ -60,3 +60,51 @@ def post_share(request, post_id):
     else:
         form = EmailPostForm()
     return render(request, 'blog/post/share.html', {'post': post, 'form': form, 'sent': sent})
+
+
+def by_categories(request, tag_slug):
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        print('tag', tag)
+
+    posts = Post.published.filter(post_categories=tag).order_by('-publish')
+    similar_posts = posts.annotate(same_tags=Count('post_categories')).order_by('-same_tags', '-publish')
+
+    paginator = Paginator(posts, 10)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+    
+    return render(request, 'blog/post/categories.html',
+     {
+        'tag': tag, 
+        'similar_posts': similar_posts, 
+        'page': page, 
+        'posts': posts, 
+    })
+
+def all_categories(request):
+    all_cat_names = list()
+    all_cat_slugs = list()
+
+    posts = Post.objects.all()
+    tags = Tag.objects.all()
+    for tag in tags.values():
+        if tag['name'] not in all_cat_names:
+            all_cat_names.append(tag['name'])
+            all_cat_slugs.append(tag['slug'])
+
+
+    all_cats = {}
+    for i in all_cat_names:
+        for cat in tags.values():
+            if i == cat['name']:
+                all_cats[i] = cat['slug']
+
+
+    return render(request, 'blog/post/all.html', {'all_cats': all_cats})

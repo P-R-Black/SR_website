@@ -1,8 +1,3 @@
-/////
-can add tag and categories doing the same thing. revisit page 192 of 'Django 3 By Example', just make tags categories
-and add a seperate part for hashtags
-Add categories to models for Blog so that users can search by category
-Add tags to model
-In blogs.html, edit for categories, and create html page to display all categories
-add code for 
-/////
+mobile view for home page
+
+add hashtags
