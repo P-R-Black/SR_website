@@ -1,3 +1,10 @@
 mobile view for home page
 
 add hashtags
+set up social media links
+how do add google ads
+about us page
+
+explore putting cart/computer into nav bar, so that it's on all screens if in use and hidden if not
+create sitemap
+search feature / change db to postgres. DO THIS CLOSE TO THE END.

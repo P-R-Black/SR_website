@@ -13,7 +13,6 @@
             <div class="home_box">
                 <div class="inner_home_box">
                     <h1 class="home_title">Where are your investments taking you?</h1>
-                    <!-- <h2 class="home_title_two">Reach new heights with the right investments.</h2>  -->
                     <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
                     <a href="{% url 'store:product_list' %}"><button class="btn">newsletter</button></a> 
                 </div>
@@ -99,13 +98,13 @@
                 <div class="card_image"><img class="blog_card_image" src="{{ post.post_header_image.url }}" alt=""></div>
                 <div class="card_text">
                     <div class="date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></div>
-                    <h2>{{ post.title }}</h2>
+                    <h2>{{ post.title|title }}</h2>
                     <p>{{ post.post_description }}</p>
                 </div>
                 <div class="card_stats">
                     <div class="stat">
                         <div class="value">{{ post.get_read_time }}<sup>m</sup></div>
-                        <div class="type">read</div>
+                        <div class="type">Read</div>
                     </div>
                     <div class="stat border">
                         <div class="value">{{ post.author.first_name|title }} {{ post.author.last_name|title}}</div>
