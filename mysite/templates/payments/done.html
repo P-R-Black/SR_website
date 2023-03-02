@@ -1,4 +1,4 @@
-{% extends 'store/base.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}
   Payment Successful
@@ -26,7 +26,7 @@
     <tbody>
       {% for prod in products %}
       <tr class="table_row">
-        <td class="table_data test_pic"><img id="test_pic" src="{{ prod.image.url }}"></td>
+        <td class="table_data download_pic"><img id="download_pic" src="{{ prod.image.url }}"></td>
         <td class="table_data table_data_prod_name">{{ prod.name }}</td>
         <td class="table_data">${{prod.price}}</td>
     

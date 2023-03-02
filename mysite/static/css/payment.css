@@ -1,7 +1,7 @@
 
 /* * * * * * * *  Checkout Section * * * * * * * */ 
 .checkout_section {
-    height: 75vh;
+    height: 100vh;
     margin-top: 1rem;
 }
 
@@ -74,12 +74,11 @@ form p label {
     padding-bottom: 1px;
     text-transform: capitalize;
 }
-
+/* * * * * * * *  Checkout Section * * * * * * * */ 
 
 
 
 /* * * * * * * *  Success Section * * * * * * * */ 
-
 
 .success_section h1 {
     color: #6196B1;
@@ -93,6 +92,10 @@ form p label {
 .success_section p {
     margin: 0 0 0 4.5rem;
     text-transform: capitalize;
+}
+
+.download_page{
+    height: 80vh;
 }
 
 .purchase_list {
@@ -125,18 +128,17 @@ form p label {
     text-decoration: none;
 }
 
-#test_pic {
+#download_pic {
     height: 8rem;
     width: 6rem;
 }
 
 
 .table_data_button {
-
     background:#6196B1;
     border-radius:4px;
     padding: 4px 14px;
-    font-size:12px;
+    font-size: 1rem;
     border:0;   
 }
 
@@ -170,3 +172,5 @@ form p label {
     color:#666;
     border-radius:4px;
 }
+
+/* * * * * * * *  Success Section * * * * * * * */ 

@@ -122,15 +122,15 @@ def payment_done(request):
         template = render_to_string('payments/email_template.html', {'name': first_name, 'file': file})
         print('template', template)
 
-    email = EmailMessage(
-        'Thank You!',
-        template,
-        settings.EMAIL_HOST_USER,
-        [email],
-    )
+        email = EmailMessage(
+            'Thank You!',
+            template,
+            settings.EMAIL_HOST_USER,
+            [email],
+        )
 
-    email.fail_silently=False
-    email.send()
+        email.fail_silently=False
+        email.send()
 
     cart.clear()
     return render(request, 'payments/done.html', {'products':purchased_products})

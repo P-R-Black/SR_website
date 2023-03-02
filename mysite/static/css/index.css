@@ -48,6 +48,7 @@ html {
     padding: 0 4rem;
     position: sticky;
     top: 0;
+    width:100%;
     z-index: 999;
     
 }
@@ -557,8 +558,8 @@ hr {
 /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
 .section_foot {
     height: auto;
-    margin-top: 1.75rem;
-    width: 100%;
+    margin-top: 1rem;
+    width: 100vw;
 }
 
 .footer_container {
@@ -567,13 +568,13 @@ hr {
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
+    width: 100vw;
 }
 
 
 .footer_links {
     display: flex;
     justify-content: center;
-    /* max-width: 1000px; */
     width: 100%;
 }
 
@@ -595,6 +596,7 @@ hr {
     color: #ffffff;
     font-size: 1.25rem;
     margin-bottom: .3rem;
+    
 }
 
 #no-show {

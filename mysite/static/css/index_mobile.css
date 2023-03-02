@@ -12,6 +12,8 @@
     .navbar_links {  
         font-size: 1.20rem;
     }
+
+  
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
 
 
@@ -148,6 +150,7 @@
     /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
 
 
+
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
 
     .footer_link_items {
@@ -186,11 +189,6 @@
 
 
 
-
-
-
-
-
 @media(max-width:900px){
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
     #top_logo {
@@ -204,6 +202,8 @@
     .navbar_links {  
         font-size: .95rem;
     }
+
+   
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
 
     /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
@@ -284,6 +284,11 @@
     .blue_social_media_block {
         margin-left:0;
     }
+
+    .card {
+        margin-bottom: 1rem;     
+    }
+
     
     /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
 
@@ -291,7 +296,64 @@
 
 
 
+@media(max-width:700px){
+    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
+    #top_logo {
+        font-size: 1.10rem; 
+        text-decoration-thickness: 1.10px;
+    }
+    
+    #bottom_logo {
+        font-size: .78rem;
+    }
 
+    .hamburger_menu {
+        display: block;
+
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar_menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #6196B1;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .navbar_items {
+        margin: 1rem 0;
+    }
+
+    .navbar_menu.active {
+        left: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
+
+}
 
 
 
@@ -426,20 +488,25 @@
 
 
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
+    
+    .footer_links {
+        display: flex;
+        flex-direction: column;
+    }
 
     .footer_link_items {
-        margin: 1rem;
         text-align: left;
     }
    
-    .footer_link_items h2{
-        font-size: .80rem;
-        width: fit-content;
+    .footer_link_items h2 {
+        font-size: 1rem;
+
     }
 
     
     .footer_link_items a {
-        font-size: .75rem;
+        font-size: .90rem;
+        text-align: center;
     }
 
      
@@ -466,6 +533,7 @@
 
 
 
+
 @media(max-width:375px){
 
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
@@ -478,10 +546,6 @@
 
 
     /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-    .home_box {
-        border: 2px solid gold;
-    }
     
     .home_box .home_title {
         font-size: 1.75rem;
@@ -512,83 +576,51 @@
 
     
     .recomend_wrapper {
+        margin: 2rem 3.5rem 2rem 3.5rem;
 
-        border: 2px solid red;
-        padding: 0 1rem;
-
-        
-
-        /* 
-        background-color: #ffffff;
-        
-        flex-wrap: wrap;
-        
-        margin-top: 2rem;
-        margin-bottom: 2rem; */
     }
 
     .recommend_items {
-        border: 2px solid blue;
+        margin: 1rem .25rem 1rem .25rem;
       
-       
     }
 
-   
- 
+    /* * * * * * * * * * * Recommended Section * * * * * * * * * * */
 
-     /*
 
-    .rec_icons {
-        border: 2px solid blue;
-        font-size: 2rem;
-        color: #6196B1;
-        text-shadow: 0.50px 0.50px rgba(0, 0, 0.1);
+
+    /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
+
+    .newsletter {
+        margin: 1rem 1rem 1rem 1rem;
     }
-    .rec_desc {
+
+    .newsletter_title {
+        font-size: 1.60rem;
         text-align: center;
     }
 
-    .recommend_items:nth-child(3){
-        font-size: 1.30rem;
-    }
-
-    .recommend_items {
-        align-items: center;
-        border: 1px solid #6196B1;
-        border-radius: 8px;
-        box-shadow: .60rem .60rem .60rem rgba(0, 0, 0, 0.5);
-        display: flex;
-        flex-direction: column;
-        height: 9rem;
-        justify-content: space-around;
-        transform: scale(1.02) translate(2px);
-        width: 7rem;
-
-    }
-
-    .recommend_items h3 {
-        color: #ffffff;
-        font-size: .80rem;
-        font-weight: 600;
-        text-align: center;
-        text-decoration: none;
-        text-shadow: 0.50px 0.50px rgba(0, 0, 0.1);
-        position: absolute;
-
-        margin-bottom: 6rem;
-        
+    .newsletter_description {
+        margin: 1rem 0 2rem 0;
+    
     }
 
 
-    .recom_photo {
-        border-radius: 8px;
-        border: 1px solid #6196B1;
-        height: 9rem;
-        width: 7rem;
-
-        position: absolute;
+    .news_desc {
+        font-size: 1.05rem;
     }
-        */
+
+    .discover {
+        font-size: .7rem;
+    }
+
+    .curr_newsletter {
+        height: 14rem;
+        width: 10rem;
+    }
+
+    /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
+    
 
 
 }

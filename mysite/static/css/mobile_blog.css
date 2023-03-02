@@ -1,62 +1,5 @@
 @media(max-width:390px) {
-    .navbar {
-        padding: 0 1rem;
-        margin: 0;
-    }
-
-    #top_logo {
-        font-size: 1rem; 
-        text-decoration-thickness: 1.10px;
-    }
-    
-    #bottom_logo {
-        font-size: .70rem;
-    }
-
-    .hamburger_menu {
-        display: block;
-
-    }
-
-    .hamburger_menu.is_active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger_menu.is_active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger_menu.is_active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .navbar_menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #6196B1;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        z-index: 99;
-    }
-
-    .navbar_items {
-        margin: 1rem 0;
-    }
-
-    .navbar_menu.active {
-        left: 0;
-    }
-
-    #mobile-menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%, 20%);
-    }
+   
 
     /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
 
@@ -285,69 +228,7 @@
 
 
 
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
-    .footer_links{
-        display: flex;
-        flex-direction: column;
-    }
-
-  .footer_container {
-        width: 24.5rem;
-        padding: .25rem 0;
-
-        border: 2px solid royalblue;
-    }
-
-
-    .footer_link_items {
-        text-align: center;
     
-    }
-
-
-    .footer_link_items h2 {
-        font-size: .95rem; 
-    }
-
-
-    .footer_link_items a {
-        font-size: .80rem; 
-    }
-
-    .social_media_wrap {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer_logo {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 1rem;
-    }
-
-    #footer_logo_top {
-        font-size: 1rem;
-        text-decoration-thickness: 1px;
-    }
-
-    #footer_logo_bottom {
-        font-size: .85rem;
-        margin-bottom: .5rem;
-    }
-
-    .website_rights {
-        font-size: .90rem;
-        margin-bottom: .5rem;
-    }
-
-    .social_icon_link {
-        color: #ffffff;
-        font-size: 1.20rem;
-        margin: 0;
-    }
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
 
 
 }

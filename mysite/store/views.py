@@ -16,7 +16,7 @@ def product_list(request, category_slug=None):
         products = products.filter(category=category)
     return render(
         request,
-        'store/product/list.html',
+        'store/list.html',
         {'category': category, 
         'categories':categories,
         'products':products}
@@ -31,4 +31,4 @@ def product_detail(request, id, slug):
         )
     
     cart_product_form = CartAddProductForm()
-    return render(request, 'store/product/detail.html', {'product': product, 'cart_product_form': cart_product_form})
+    return render(request, 'store/detail.html', {'product': product, 'cart_product_form': cart_product_form})

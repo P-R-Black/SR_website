@@ -1,4 +1,4 @@
-{% extends 'store/base.html' %}
+{% extends 'layout.html' %}
 {% load static %}
 
 {% block title %}
@@ -56,12 +56,50 @@
                 </tr>
         </tbody>
     </table>
+    <p class="text_right">
+        <a href="{% url 'store:product_list' %}" class="button light">Continue Shopping</a>
+        <a href="{% url 'payments:process' %}" class="button dark">Checkout</a>
+        {% csrf_token %}
+    </p>
 </section>
 
-<p class="text_right">
-    <a href="{% url 'store:product_list' %}" class="button light">Continue Shopping</a>
-    <a href="{% url 'payments:process' %}" class="button dark">Checkout</a>
-    {% csrf_token %}
-</p>
+<section class="mobile_cart">
+    {% for item in cart %}
+        {% with product=item.product %}
+    <div class="mobile_cart_a">
+            <picture class="mobile_image">
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{% if product.image %}{{ product.image.url }} 
+                    {% else %}{% static 'img/no_image.png' %}{% endif %}" alt="mobile product image" class="mobile_prod_img" >
+                </a>
+            </picture>
+            <div class="mobile_item_details">
+                <h2 class="mobile_prod_name">{{ product.name }}</h2>
+                <p class="mobile_prod_price"><strong>${{ item.price}}</strong></p>
+                <p class="mobile_total_price">Total: ${{ item.total_price }}</p>
+                <div class="column_div">
+                    <form action="{% url 'cart:cart_add' product.id %}" method="post" class="mobile_quant_update">
+                        {{ item.update_quantity_form.quantity }}
+                        {{ item.update_quantity_form.override }}
+                        <input type="submit" value="Update">
+                        {% csrf_token %}
+                    </form>
+                    <form action="{% url 'cart:cart_remove' product.id %}" method="post" class="mobile_quant_remove">
+                        <input type="submit" value="Remove">
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+    </div>
+    {% endwith %}
+        {% endfor %}
+    <p class="mobile_cart_total">Total: ${{ cart.get_total_price }}</p>
+    <p class="mobile_text_right">
+        <a href="{% url 'store:product_list' %}" class="mobile_button_light">Continue Shopping</a>
+        <a href="{% url 'payments:process' %}" class="mobile_button_dark">Checkout</a>
+        {% csrf_token %}
+    </p>
+</section>
+
 
 {% endblock %}

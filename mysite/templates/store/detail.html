@@ -1,4 +1,4 @@
-{% extends 'store/base.html' %}
+{% extends 'layout.html' %}
 
 
 {% block main %}
@@ -7,7 +7,7 @@
         <img src="{{ product.image.url }}" alt="" class="curr_newsletter">
     </div>
     <div class="description_block">
-        <h1 class="title_block"> {% block title %}{{ product.name|linebreaks }}{% endblock %}</h1>
+        <h1 class="title_block"> {% block title %}{{ product.name }}{% endblock %}</h1>
         <h2 class="category_block">{{ product.category }}</h2>
         <div class="product_description">
             <p>{{ product.description|linebreaks }}</p>

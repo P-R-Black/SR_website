@@ -1,0 +1,220 @@
+/* * * * * * * *  Shopping Cart * * * * * * * */
+
+
+h1.shopping_cart {
+    color: #6196B1;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px rgba(0, 0, 0.1);
+    width: fit-content;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 3.5rem;
+    width: 95%;
+}
+
+table th, table td {
+    font-size: 1rem;
+    margin: 0;
+    padding: .75rem;
+    text-align: left;
+    
+}
+
+tbody tr:nth-child(odd) {
+    background: #EEECEC;
+}
+
+thead th, tbody tr.total {
+    background: #5C5757;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table.cart {
+    margin-bottom: 2.5rem;
+}
+
+table.cart img {
+    box-shadow: 3px 3px 3px black;
+    height: 16rem;
+    margin-bottom: .5rem;
+    width: 12rem; 
+}
+
+tbody td.num {
+    text-align: left;
+}
+
+a.button, input[type="submit"] {
+    color:#fff;
+    background:#6196B1;
+    border-radius:4px;
+    padding: 4px 14px;
+    font-size:12px;
+    border:0;
+}
+
+a.button.light {
+    color:#5C5757;
+    background:#ededed;
+    text-decoration: none;
+}
+
+a.button.dark {
+    color:#ffffff;
+    background:#6196B1;
+    text-decoration: none;
+}
+
+.text_right {
+    text-align:right;
+    margin: 0 3rem 2rem 0;
+
+}
+
+
+
+
+/* * * * * * * * Sticky Cart * * * * * * * */
+.cart_section {
+    align-items: center;
+    background-color: #efefef;
+    display: flex;
+    height: 2.20rem;
+    justify-content: flex-end;
+    max-width: auto;
+    /* margin-top: 0;
+    padding-top: 0; */
+
+}
+
+.all_cart_items {
+    height: 2rem;
+    margin-right: 4rem;
+    margin-top: 0;
+    width: 2.50rem;
+}
+
+
+
+.site_cart {
+
+    color: white;
+    float: right;
+    font-size: .75rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #264f64;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.fa-laptop {
+    font-size: 1.75rem;
+    color: #6196B1;
+    position: absolute;
+}
+
+/* * * * * * * * Sticky Cart * * * * * * * */
+
+
+/* * * * * * * *  Success Section * * * * * * * */ 
+.success_section {
+    height: 20vh;
+}
+.success_section h1 {
+    width: 100%;
+}
+
+.success_section p {
+    margin: 0 0 0 4rem;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.purchase_list {
+    margin-top: 2rem;
+    
+}
+
+
+.purchase_list li {
+    margin: 1rem 0 0 4rem;
+    width: 100%;
+    text-transform: capitalize;
+    list-style: none;
+}
+
+.download_list li {
+    text-decoration: none;
+    
+}
+
+.download_button{
+    color:#fff;
+    background:#6196B1;
+    border:0;
+    border-radius:4px;
+    font-size:12px;
+    justify-items: flex-end;
+    padding: 4px 14px;
+    
+    text-decoration: none;
+}
+
+#test_pic {
+    height: 8rem;
+    width: 6rem;
+}
+
+
+.table_data_button {
+
+    background:#6196B1;
+    border-radius:4px;
+    padding: 4px 14px;
+    font-size:12px;
+    border:0;   
+}
+
+.table_data_button a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.order_form {
+    float:left;
+}
+
+
+.order_form label, .order_form input {
+    float:left;
+    clear:both;
+}
+
+.order_form label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+.order_form input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}

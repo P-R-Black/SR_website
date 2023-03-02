@@ -1,8 +1,8 @@
-{% extends 'store/base.html' %}
+{% extends 'layout.html' %}
 
 {% block main %}
 <section class="checkout_section">
-    <h class="checkout_title">Checkout</h>
+  <h1 class="checkout_title">Checkout</h1>
     <div class="order_info">
       <h3>Your Order</h3>
       <ul>
@@ -30,13 +30,11 @@
           <input name="email" type="text" class="form_control" id="customer_email" placeholder="" required />
         </div>
         <button onclick="buy(event)" >
-          <p><input 
-            type="submit"
-            value="Place Order">
-          </p>
+          <p><input type="submit" value="Place Order"></p>
         </button>
         {% csrf_token %} 
       </div>
     </div>
 </section>
 {% endblock %}
+
