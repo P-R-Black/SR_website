@@ -156,7 +156,6 @@ a.more_categories {
 }
 
 .prev_blog_section {
-
     border-right: 1px dotted grey;
     height: fit-content;
     margin-left: 3rem;
@@ -199,7 +198,7 @@ a.more_categories {
 
 .blog_area_section {
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
     height: auto;
     justify-content: flex-end;
     margin-bottom: 2rem;
@@ -330,7 +329,7 @@ a.more_categories {
 
 
 
-/* * * * * * * * * * * *Blog Post By Category * * * * * * * * * * * */ 
+/* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
 
 
 .post_related_to {
@@ -344,7 +343,7 @@ a.more_categories {
     grid-gap: 1rem;
     height: auto;
     justify-content: center;
-    margin: 4rem 4rem 0 4rem;
+    margin: 4rem 4rem 4rem 4rem;
     max-width: auto;
 
 }
@@ -354,7 +353,6 @@ a.more_categories {
     border: 1px solid #5C5757;
     border-radius: 5px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    
     cursor: pointer;
     font-size: 1rem;
     font-weight: 200;

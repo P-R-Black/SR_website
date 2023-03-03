@@ -1,4 +1,357 @@
-@media(max-width:390px) {
+@media(min-width:1800px){
+
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+    .all_posts_title {
+        font-size: 3rem;
+    }
+
+    .all_posts_slug {
+        font-size: 1.75rem;
+    }
+
+    .blog_categories {
+        
+        font-size: 1.25rem;
+        margin-top: 4rem;
+        width: 97%;
+    }
+
+    .categories {
+        height: 100%;
+        margin-right: 1.25rem;
+    }
+
+    .post_section {
+        width: 97%;
+    }
+
+    .post_title {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+
+    .post_image {
+        height: 14rem;
+        width: 20.5rem;
+    }
+
+    .post_snippet {
+        font-size: 1.35rem;
+    }
+
+    .author{
+        font-size: 1.1rem;
+    }
+
+    .publish_date {
+        font-size: 1.1rem;
+    }
+    
+    .opinion, .read_time{
+        font-size: 1rem;
+    }
+
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+
+    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */
+    .related_post_title {
+        font-size: 1.75rem;
+    }
+
+    .prev_blog_section {
+        border-right: 2px dotted grey;
+    }
+
+    /* .post_img_and_title {
+        border: 2px solid red;
+
+    } */
+
+    .prev_post_img {
+        height: 9rem;
+
+        width: 15rem;
+    }
+
+    .prev_post_title{
+        font-size: 1.25rem;
+        line-height: 2rem;
+        width: 90%;
+    }
+
+    .blog_area {
+        width: 50rem;
+    }
+
+    .the_blog_title {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        width: 45rem;
+    }
+    
+    .blog_subtitle {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .blog_main_img {
+        width: 49.5rem;
+        height: 24rem;
+    }
+
+    .blog_text, .blog_overview {
+        font-size: 1.5rem;
+    }
+
+    .blog_overview{
+        margin-left: .5rem;
+    }
+
+    .blog_icon_link {
+        font-size: 2.25rem;
+    }
+    
+    .auth_pub_read_area {
+        width: 49.5rem;
+    }
+
+    
+    .blog_author {
+        font-size: 1.25rem;
+    }
+
+
+    .blog_pub_date, .blog_read_time{
+        font-size: 1.1rem;
+    }
+    
+    .newsletter_promotion {
+        width: 49.5rem;
+        height: 7.5rem;
+    
+    }
+
+    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */ 
+
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
+
+
+    .blog_image {
+        height: 28rem;
+        width: 49.5rem;
+    }
+
+
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
+
+
+    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
+     .all_cats_section {
+        grid-template-columns:  repeat(5, auto);
+        grid-template-rows:  repeat(auto, auto);
+        grid-gap: 1rem;
+    }
+
+    .cat_button {
+    
+        font-size: 1.75rem;
+        font-weight: 400;
+        
+    }
+
+    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
+}
+
+@media(max-width:900px){
+
+}
+
+
+@media(max-width:600px){
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+    .blog_categories {
+        font-size: .85rem;
+        justify-content: flex-start;
+        margin-left: 3rem;
+        margin-top: 1rem;
+        overflow-x: auto;
+        padding: 0 1rem;
+        width: 32rem;
+
+    }
+
+    .categories {
+        flex-shrink: 0;
+        height: 100%;
+        margin-right: 2.25rem;
+    }
+
+    .blog_page_body {
+        margin: 1rem 3rem;
+        padding: 0 .5rem;
+    
+    }
+
+    .post_section {
+        width: 32rem;
+    }
+
+    .pic_title_snip{
+        margin-left: .25rem;
+        margin-bottom: .5rem;
+    }
+
+    .post_image {
+        height: 9rem;
+        width: 11rem;
+    }
+
+    .post_title {
+        font-size: 1.10rem;
+        width: 16rem;
+    }
+
+    .post_snippet {
+        display: none;
+    }
+
+    #post_snippet_mobile_view{
+        display: flex;
+        font-size: 1rem;
+        margin-top: .5rem;
+        max-width: 17rem;
+    }
+
+    .auth_and_opinion {
+        margin-top: .75rem;
+        max-width: 16rem;
+    }
+
+    .pubdate_readtime {
+        max-width: 16rem;
+    }
+
+    .author{
+        font-size: .95rem;
+    }
+
+    .publish_date {
+        font-size: .85rem;
+    }
+    
+    .opinion, .read_time{
+        font-size: .85rem;
+    }
+
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+    
+
+    
+    /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
+
+    .prev_blog_section {
+        display: none;
+    }
+
+    .blog_area_section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .blog_area {
+        margin-right: 0;
+        margin-left: 0;
+        overflow-y: scroll;
+        width: auto;
+    }
+
+    .the_blog_title {
+        font-size: 2rem;
+        width: 26rem;
+    }
+
+    .blog_subtitle {
+        font-size: .95rem;
+    }
+
+
+    .auth_pub_read_area {
+        width: auto;
+    }
+
+
+    .blog_main_img {
+        width: calc(100vw - .25rem);
+        height: 17.75rem;
+    
+    }
+
+    .blog_overview {
+        font-size: .85rem;
+        margin: 0 .5rem;
+    }
+
+    .blog_text {
+        font-size: .95rem;
+    }
+
+    .newsletter_promotion {
+        width: calc(100vw - .25rem);
+        height: 6.5rem;
+    
+    }
+
+    .newsletter_promotion, .auth_pub_read_area, .blog_main_img {
+        padding: 0rem .75rem 0rem .75rem;
+    }
+
+    .social_sidebar {
+        align-items: flex-start;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        height: 3rem;
+        gap: .75rem;
+        justify-content: space-evenly; 
+        width: auto;
+    
+    }
+
+   .blog_sidebar {
+    background-color: grey;
+    height: 7rem;
+    padding: 0rem .75rem 0rem .75rem;
+    width: auto;
+
+    }
+
+    /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
+
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
+
+
+    .blog_image {
+        height: 17.75rem;
+        width: calc(100vw - 1rem);
+    }
+
+
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ x
+
+
+
+
+    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
+    .all_cats_section{
+        grid-template-columns:  repeat(4, auto);
+        grid-template-rows:  repeat(auto, auto);
+    }
+    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
+}
+
+
+@media(max-width:375px) {
    
 
     /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
@@ -20,14 +373,11 @@
     }
 
     .blog_categories {
- 
         cursor: pointer;
         font-size: .85rem;
-
         justify-content: flex-start;
         margin-left: 0;
         margin-top: 1rem;
-        
         overflow-x: auto;
         padding: 0 1rem;
         width: 23rem;
@@ -42,7 +392,7 @@
 
     .blog_page_body {
         margin: 1rem 0;
-        padding: 0 1rem;
+        padding: 0 .5rem;
     
     }
 
@@ -134,8 +484,9 @@
 
     .the_blog_title {
         font-size: 1.75rem;
+        line-height: 2rem;
         margin-bottom: 0;
-        width: fit-content;
+        width: 22rem;
     }
 
     .blog_subtitle {
@@ -152,14 +503,14 @@
 
 
     .blog_main_img {
-        width: 24.375rem;
+        width: 23.55rem;
         height: 13.75rem;
     
     }
 
     .blog_overview {
         font-size: .85rem;
-
+        margin: 0 .5rem;
     }
 
     .blog_text {
@@ -167,7 +518,7 @@
     }
 
     .newsletter_promotion {
-        width: 24.375rem;
+        width: 23.55rem;
         height: 4.5rem;
     
     }

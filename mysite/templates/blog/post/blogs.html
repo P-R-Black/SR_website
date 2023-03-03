@@ -1,4 +1,4 @@
-{% extends "blog/base.html" %}
+{% extends "layout.html" %}
 {% load blog_tags %}
 
 {% block title %}The Seville Report Blog{% endblock %}
@@ -28,7 +28,6 @@
             </a>
             <div class="post_desc">
                 <a href="{{ post.get_absolute_url }}">
-
                     <h1 class="post_title"><a href="{{ post.get_absolute_url }}">{{ post.title|title }}</h1>
                     <p class="post_snippet">{{ post.post_description|truncatewords:25 }}</p>
                     <p id="post_snippet_mobile_view">{{ post.post_description|truncatewords:10 }}</p>
@@ -47,7 +46,7 @@
         </div>
     </div>
     {% endfor %}
-    {% include 'pagination.html' with page=posts %}
+    {% include '../pagination.html' with page=posts %}
 </section>
 
 
