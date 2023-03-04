@@ -226,28 +226,37 @@
 
     /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
 
-    .news_desc {
-        font-size: 1.25rem;
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter_description {
+        order: 0;
+        margin: -1rem 0 1.5rem 0;
+        width: 95%;
     }
 
     .discover {
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
-   
+    .news_desc {
+        font-size: 1.5rem;
+    }
+
     .description_two {
-        line-height: 1.2;
-        width: 20%;
+        line-height: 1.15;
+        margin: 1.5rem 0 1rem 0;
+        order: 2;
+        text-align: justify;
+        width: 90%;
     }
 
-    .curr_desc {
-        font-size: .8rem;
+    img.curr_newsletter {
+        height: 25rem;
+        width: 18rem;
     }
 
-    .curr_newsletter {
-        height: 20rem;
-        width: 13rem;
-    }
     
     /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
 
@@ -620,6 +629,37 @@
     }
 
     /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
+
+    
+    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
+    
+    #footer_logo_top {
+        font-size: .85rem;
+    }
+    
+   
+    #footer_logo_bottom {
+        font-size: .65rem;
+    }
+
+    
+    .website_rights {
+        font-size: .55rem;
+        margin-left: 1rem;
+        text-align: center;
+        width: 20%;
+    }
+
+    footer .social_icons {
+        width: fit-content;
+        justify-content: flex-end;
+    }
+
+    footer .social_icons .social_icon_link {
+        margin-left: .5em;
+    }
+
+    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
     
 
 

@@ -279,8 +279,6 @@ a.more_categories {
     align-items: center;;
     display: flex;
     flex-direction: column;
- 
-    
     margin: 0;
     gap: 1.5rem;
     border-left: 1px solid grey;

@@ -63,11 +63,6 @@
         border-right: 2px dotted grey;
     }
 
-    /* .post_img_and_title {
-        border: 2px solid red;
-
-    } */
-
     .prev_post_img {
         height: 9rem;
 
@@ -165,6 +160,210 @@
 
 @media(max-width:900px){
 
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+    
+    .blog_categories {
+        font-size: .95rem;
+        justify-content: flex-start;
+        margin-left: 3rem;
+        margin-top: 1rem;
+        overflow-x: auto;
+        padding: 0 1rem;
+        width: 50rem;
+
+    }
+
+    .categories {
+        flex-shrink: 0;
+        height: 100%;
+        margin-right: 2.25rem;
+    }
+
+
+    .blog_page_body {
+        margin: 1.5rem 3rem;
+        padding: 0 .5rem;    
+    }
+
+    .post_title {
+        font-size: 1.50rem;
+        height: auto;
+        width: 28rem;
+    }
+
+    .post_section {
+        width: 49rem;
+    }
+
+    .pic_title_snip{
+        margin-left: .25rem;
+        margin-bottom: .5rem;
+    }
+
+    .post_snippet {
+        display: none;
+    }
+
+    #post_snippet_mobile_view{
+        display: flex;
+        font-size: 1.25rem;
+        margin-top: .5rem;
+        max-width: 20rem;
+    }
+
+    .auth_and_opinion {
+        margin-top: .75rem;
+        max-width: 26rem;
+    }
+
+    .pubdate_readtime {
+        max-width: 26rem;
+    }
+
+    .author{
+        font-size: 1rem;
+    }
+
+    .publish_date {
+        font-size: 1rem;
+    }
+    
+    .opinion, .read_time{
+        font-size: 1rem;
+    }
+
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+
+
+
+    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */
+
+    .related_post_title {
+        font-size: 1.25rem;
+    }
+    
+    .prev_blog_section {
+        border-right: 1px dotted grey;
+        height: fit-content;
+        margin-left: 3rem;
+        margin-top:4rem;
+        width: 20vw;
+    }
+    
+    .post_img_and_title {
+        margin: 1rem .20rem .25rem .20rem;
+        padding: 0 .5rem;
+    }
+    
+    .prev_post_img {
+        height: 4rem;
+        width: 6rem;
+    }
+    
+    .prev_post_title {
+        font-size: .80rem;
+        width: 8.5rem;
+    }
+    
+    
+    .blog_area {
+        height: 100vh;
+        margin-right: auto;
+        margin-left: auto;
+        overflow-y: scroll;
+        width: 32rem;
+    }
+    
+    .blog_sidebar {
+        border: 1px solid gray;
+        height: 100vh;
+        position: sticky;
+        width: 15vw;
+    }
+    
+    
+    .the_blog_title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        width: 30rem;
+    }
+    
+    .blog_subtitle {
+        font-size: 1rem;
+        width: 28rem;
+    }
+    
+    .auth_pub_read_area {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 31rem;
+    }
+    
+    .pub_date_read_time {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .blog_main_img {
+        width: 31.25rem;
+        height: 15rem;
+    
+    }
+    
+    
+    .blog_text, .blog_overview {
+        padding: 1rem 1rem 1rem 1rem;
+        text-align: justify;
+    }
+    
+    .blog_hr {
+        border: .75px dotted #6196B1;
+    }
+    
+    
+    .social_sidebar {
+        width: 2rem;
+    }
+    
+    .blog_icon_link {
+        font-size: 1.25rem;
+    }
+    
+    .auth_pub_read_area {
+        margin-bottom: 1rem;
+    }
+    
+    .blog_author {
+        color:#797979eb;
+    }
+    
+    .blog_pub_date, .blog_read_time{
+        color:#797979eb;
+        font-size: .90rem;
+        text-transform: capitalize;
+    }
+    
+    .newsletter_promotion {
+        width: 31.25rem;
+        height: 4.5rem;
+    
+    }
+
+    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */
+
+
+
+    /* * * * * * * * * * Blog Images Section * * * * * * * * * */ 
+
+
+    .blog_image {
+        width: 30.25rem;
+        height: 19rem;
+    }
+
+
+    /* * * * * * * * * * Blog Images Section * * * * * * * * * */
 }
 
 
@@ -225,11 +424,11 @@
 
     .auth_and_opinion {
         margin-top: .75rem;
-        max-width: 16rem;
+        max-width: 18rem;
     }
 
     .pubdate_readtime {
-        max-width: 16rem;
+        max-width: 18rem;
     }
 
     .author{
@@ -337,7 +536,7 @@
     }
 
 
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ x
+    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */
 
 
 
@@ -391,9 +590,10 @@
     }
 
     .blog_page_body {
+        height: 100vw;
         margin: 1rem 0;
         padding: 0 .5rem;
-    
+
     }
 
     .post_section {
