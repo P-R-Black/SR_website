@@ -151,6 +151,30 @@
 
 
 
+    /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
+    .blog_section_title {
+        font-size: 3rem;
+    }
+
+    .about_bx_title {
+        font-size: 2rem;
+    }
+
+    .about_bx_desc{
+        font-size: 1.25rem;
+    }
+
+    .about_li {
+        font-size: 1.5rem;
+    }
+
+    .about_li:hover .hidden_text{
+        font-size: 1.25rem;
+    }
+    /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
+
+
+
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
 
     .footer_link_items {
@@ -496,6 +520,54 @@
 
 
 
+    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
+    .about_us_section{
+        height: 65vh;
+    }
+
+    .about_bx {
+        flex-direction: column;
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .about_bx_desc {
+        font-size: 1.1rem;
+        width: 85%;
+    }
+
+    .about_inner_bx_two{
+        width: 100%;
+    }
+
+    .about_ul{
+        gap: 10%;
+        column-gap: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+    }
+
+    .about_li {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+
+    .about_li:nth-child(4){
+        margin-bottom: 0rem;
+    }
+
+    .about_li:hover .hidden_text {
+        font-size: 1.1rem;
+ 
+    }
+    
+    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
+    
+
+
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
     
     .footer_links {
@@ -629,6 +701,52 @@
     }
 
     /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
+
+    
+    
+    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
+    .about_us_section{
+        height: 100vh;
+    }
+
+    .about_bx {
+        flex-direction: column;
+        margin: 1rem 0 1rem 0;
+        width: 100;
+    }
+    
+    .about_bx_desc {
+        font-size: 1.1rem;
+        width: 85%;
+    }
+
+    .about_inner_bx_two{
+        width: 100%;
+    }
+
+    .about_ul{
+        gap: 10%;
+        column-gap: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        margin: 1rem 1rem 2rem 0;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .about_li {
+        font-size: 1.25rem;
+    }
+    
+
+    .about_li:nth-child(4){
+        margin-bottom: 0rem;
+    }
+
+    .about_li:hover .hidden_text {
+        margin-bottom: 1rem;
+    }
+    
+    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
 
     
     /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */

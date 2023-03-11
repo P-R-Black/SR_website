@@ -554,6 +554,102 @@ hr {
 }
 
 
+/* * * * * * * * * * * * Blog Section * * * * * * * * * * * */ 
+
+/* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
+.about_us_section{
+    height: 100vh;
+}
+
+.about_bx{
+    display: flex;
+    margin: 2rem 6.5rem 5rem 6.5rem;
+}
+
+.about_inner_bx{
+    align-items: center;
+    background-color: #ecf0f2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about_bx_title {
+    margin-top: 1rem;
+    padding: .5rem 1.5rem;
+}
+
+.about_bx_desc {
+    margin: 1rem 0 2.5rem 0;
+    text-align: justify;
+    width: 65%;
+}
+
+.about_inner_bx_two {
+    align-items: center;
+    background-color: #6196B1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    justify-content: center;
+    padding: 0 1rem 0 1rem;
+    width: 35%;
+}
+
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+
+
+.about_li {
+    cursor: pointer;
+    font-size: 1.25rem;
+    list-style: none;
+    margin-top: .75rem;
+    
+    
+}
+
+.about_li:nth-child(4){
+    margin-bottom: 1rem;
+}
+
+.hidden_text {
+    display: none;
+    
+}
+
+.about_li:hover {
+    color: #ecf0f2;
+    transition: 0.3s ease-out;
+}
+
+.about_li:hover .hidden_text {
+    animation: fadeIn 1.5s;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: none;
+    display: block;
+    font-size: .85rem;
+    font-weight: 100;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    padding: .5rem .5rem;
+    -webkit-animation: fadeIn 1.5s;
+}
+
+/* * * * * * * * * * *  About Us Section * * * * *  * * * * * */ 
+
+
+
 
 /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
 .section_foot {

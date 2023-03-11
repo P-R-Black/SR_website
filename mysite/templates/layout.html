@@ -59,7 +59,7 @@
             <a href="#insights" class="navbar_links" id="insights_page">Insights</a>
         </li>
         <li class="navbar_items">
-            <a href="#about" class="navbar_links" id="about_page">About Us</a>
+            <a href="{% url 'home_page:about_us_page_view' %}" class="navbar_links" id="about_page">About Us</a>
         </li>
     </ul>
     <div class="hamburger_menu" id="mobile_menu">
@@ -79,7 +79,7 @@
             <div class="footer_links_wrapper">
                 <div class="footer_link_items">
                     <h2>About Us</h2>
-                    <a href="#">About</a>
+                    <a href="{% url 'home_page:about_us_page_view' %}">About</a>
                     <a href="#">FAQs</a>
                 </div>
                 <div class="footer_link_items">

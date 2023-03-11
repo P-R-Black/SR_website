@@ -10,3 +10,7 @@ def home_page_view(request):
         current_news = p
     
     return render(request, 'home_page/index.html', {'last_three_post': last_three_post, 'current_news': current_news})
+
+def about_us_page_view(request):
+    return render(request, 'home_page/about_us.html')
+
