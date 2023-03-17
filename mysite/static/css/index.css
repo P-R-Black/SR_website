@@ -646,9 +646,41 @@ hr {
     -webkit-animation: fadeIn 1.5s;
 }
 
-/* * * * * * * * * * *  About Us Section * * * * *  * * * * * */ 
+/* * * * * * * * * * *  About Us Section * * * * * * * * * * */ 
+
+/* * * * * * * * * * *  Disclaimer Section * * * * * * * * * * */ 
+.disclaimer_section{
+    margin: 3.5rem;
+}
+
+.disclaimer_title{
+    color: #6196B1;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+.disclaim {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.disclaim_warranty{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 
 
+/* * * * * * * * * * *  Disclaimer Section * * * * * * * * * * */ 
+
+.privacy{
+  
+    border: 2px solid red;
+    
+
+}
 
 
 /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 

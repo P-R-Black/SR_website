@@ -14,3 +14,6 @@ def home_page_view(request):
 def about_us_page_view(request):
     return render(request, 'home_page/about_us.html')
 
+def disclaimers_view(request):
+    return render(request, 'home_page/disclaimer.html')
+
