@@ -1,350 +1,15 @@
-
-@media(min-width:1800px){
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-    #top_logo {
-        font-size: 1.75rem;
-    }
-    
-    #bottom_logo {
-        font-size: 1.20rem;
-    }
-
-    .navbar_links {  
-        font-size: 1.30rem;
-    }
-
-  
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-
-
-    /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-    .home_box .home_title {
-        font-size: 4.10rem;
-    }
-
-    .home_box .home_paragraph {
-        font-size: 1.75rem;
-        margin-left: 3rem; 
-    }
-
-    .btn {
-        font-size: 1.5rem;
-        font-weight: 200;
-        margin-left: 3rem;
-    }
-    /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * *  Recommended Section * * * * * * * * * * */
-    .recom_title {
-        font-size: 3rem;
-    }
-
-    .rec_icons {
-        font-size: 3rem;
-    }
-
-    .recommend_items {
-        height: 12rem;
-        width: 10rem;
-    }
-
-    .recommend_items h3 {
-        font-size: 1rem;
-    }
-
-    .recommend_items .rec_desc{
-        font-size: 1.5rem;
-        line-height: 1.75rem;;
-    }
-
-    .recom_photo {
-        height: 12rem;
-        width: 10rem;
-    }
-    
-    /* * * * * * * * * * *  Recommended Section * * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
-    .newsletter_title {
-        font-size: 3rem;
-    }
-
-    .news_desc {
-        font-size: 2.40rem;
-        line-height: 1.2em;
-    }
-
-    .discover {
-        font-size: 1.5rem;
-    }
-
-    .curr_desc {
-        font-size: 1.5rem;
-    }
-
-    .curr_newsletter {
-        height: 35rem;
-        width: 25rem;
-    }
-
-    .newsletter_btn {
-        font-size: 1.75rem;
-    }
-    
-    /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
-
-
-    /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
-    .blog_section_title {
-        font-size: 3rem;
-    }
-
-    .card {
-        grid-template-columns: 32rem;
-        grid-template-rows: 20rem 20rem 4rem;         
-    }
-
-    .blog_card_image {
-        height: 19rem;
-        width: 32rem;
-    }
-    
-    .card_text .date {
-        font-size: 1rem;
-    }
-
-    .card_text h2{
-        font-size: 2rem;
-    
-    }
-
-    .card_text p {
-        font-size: 1.25rem;
-    }
-
-    .card_stats {
-        width: 32rem;
-    }
-
-    .card_stats .type {
-        font-size: 1.35rem;
-    }
-
-    .card_stats .value {
-        font-size: 1.35rem;
-    }
-
-    .card_stats .value sup{
-        font-size: 1rem;
-    }
-
-    .blog_btn {
-        font-size: 1.75rem;
-    }
-
-    /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
-    .blog_section_title {
-        font-size: 3rem;
-    }
-
-    .about_bx_title {
-        font-size: 2rem;
-    }
-
-    .about_bx_desc{
-        font-size: 1.25rem;
-    }
-
-    .about_li {
-        font-size: 1.5rem;
-    }
-
-    .about_li:hover .hidden_text{
-        font-size: 1.25rem;
-    }
-    /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
-
-
-    /* * * * * * * * * * *  Disclaimer Section * * * * *  * * * * * */
-    .disclaimer_title{
-        font-size: 3rem;
-    }
-    /* * * * * * * * * * *  Disclaimer Section * * * * *  * * * * * */
-
-
-
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
-
-    .footer_link_items {
-        font-size: 1.5rem;
-        margin: 1rem;
-        text-align: left;
-
-      
-    }
-    
-    .footer_link_items h2{
-        color: #ffffff;
-        font-size: 1.75rem;
-        margin-bottom: .3rem;
-        width: fit-content;
-    }
-
-    .footer_link_items a {
-        font-size: 1.50rem;
-    }
-
-    #footer_logo_top {
-        font-size: 1.75rem;
-    }
-    
-    #footer_logo_bottom {
-        font-size: 1.20rem;
-    }
-
-    .website_rights {
-        font-size: 1.25rem;
-    }
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
-
-}
-
-
-
-@media(max-width:900px){
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-    #top_logo {
-        font-size: 1.25rem;
-    }
-    
-    #bottom_logo {
-        font-size: .87rem;
-    }
-
-    .navbar_links {  
-        font-size: .95rem;
-    }
-
-   
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-
-    /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-    .home_box .home_title {
-        font-size: 2.75rem;
-    }
-
-    .home_box .home_paragraph {
-        font-size: 1rem;
-    }
-
-    .social_block_link {
-        font-size: 1.45rem;
-        
-    }
-
-    /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-
-    /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
-
-    .newsletter {
-        flex-direction: column;
-    }
-
-    .newsletter_description {
-        order: 0;
-        margin: -1rem 0 1.5rem 0;
-        width: 95%;
-    }
-
-    .discover {
-        font-size: 1rem;
-    }
-
-    .news_desc {
-        font-size: 1.5rem;
-    }
-
-    .description_two {
-        line-height: 1.15;
-        margin: 1.5rem 0 1rem 0;
-        order: 2;
-        text-align: justify;
-        width: 90%;
-    }
-
-    img.curr_newsletter {
-        height: 25rem;
-        width: 18rem;
-    }
-
-    
-    /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
-
-    /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
-
-    .card {
-        grid-template-columns: 15rem;
-        grid-template-rows: 20rem 10rem 4rem;         
-    }
-
-    
-    .blog_card_image {
-        height: 10rem;
-        width: 15rem;
-    }
-   
-    .card_text h2{
-        font-size: 1.5rem;
-    }
-
-    .card_text p {
-        font-size: .80rem;
-    }
-    
-    .card_stats {
-        width: 15rem;
-    }
-
-    .blog_btn {
-        font-size: 1rem;
-    }
-
-
-    .blue_social_media_block {
-        margin-left:0;
-    }
-
-    .card {
-        margin-bottom: 1rem;     
-    }
-
-    
-    /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
-
-}
-
-
-
-@media(max-width:700px){
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-    #top_logo {
-        font-size: 1.10rem; 
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+
+@media screen and (max-width: 1024px){
+     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
+     #top_logo {
+        font-size: 1.25rem; 
         text-decoration-thickness: 1.10px;
     }
-    
+
+ 
     #bottom_logo {
-        font-size: .78rem;
+        font-size: .85rem;
     }
 
     .hamburger_menu {
@@ -365,15 +30,15 @@
     }
 
     .navbar_menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
+        background: var(--color-site-blue);
         flex-direction: column;
-        background-color: #6196B1;
-        width: 100%;
+        gap: 0;
+        left: -100%;
+        position: fixed;
         text-align: center;
         transition: 0.3s;
+        top: 70px;
+        width: 100%;
         z-index: 99;
     }
 
@@ -391,405 +56,254 @@
         right: 5%;
         transform: translate(5%, 20%);
     }
+
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
 
-}
 
+    /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
 
-
-@media(max-width:600px){
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-    #top_logo {
-        font-size: 1.10rem; 
-        text-decoration-thickness: 1.10px;
-    }
-    
-    #bottom_logo {
-        font-size: .78rem;
-    }
-
-    .hamburger_menu {
-        display: block;
-
-    }
-
-    .hamburger_menu.is_active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger_menu.is_active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger_menu.is_active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .navbar_menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #6196B1;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        z-index: 99;
-    }
-
-    .navbar_items {
-        margin: 1rem 0;
-    }
-
-    .navbar_menu.active {
-        left: 0;
-    }
-
-    #mobile-menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%, 20%);
-    }
-    /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-
-    /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-    .home_box{
-        max-width: 70%;
-    }
-
-    .home_box .home_title {
-        font-size: 2rem;
-    }
-
-    .home_box .home_paragraph {
-        font-size: .8rem;
-        margin-left: 3rem;
-    }
-
-    .btn {
-        font-size: 1rem;
-        margin-left: 3rem;
-    }
-
-    .social_block_link {
-        font-size: 1.25rem;
-        
-    }
-
-    /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-
-    /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
-
-    .newsletter {
-        flex-direction: column;
-    }
-
-    .newsletter_description {
-        order: 0;
-        margin: -1rem 0 1.5rem 0;
-        width: 95%;
-    }
-
-    .discover {
-        font-size: .8rem;
-    }
-
-    .news_desc {
-        font-size: 1.25rem;
-    }
-
-    .description_two {
-        line-height: 1.15;
-        margin: 1.5rem 0 1rem 0;
-        order: 2;
-        text-align: justify;
-        width: 90%;
-    }
-
-    /* * * * * * * * * * * Newsletter Section * * * * * * * * * * * */
-
-
-
-    /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
-
-    .card_container {
-        align-items: center;
+    .news_container{
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    
-    /* * * * * * * * * *  Blog Section Home Page * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
-    .about_us_section{
-        height: 65vh;
+    .news_left {
+        align-items: center;
     }
 
-    .about_bx {
-        flex-direction: column;
-        margin: 1rem 0;
-        width: 100%;
-    }
-    
-    .about_bx_desc {
-        font-size: 1.1rem;
-        width: 85%;
-    }
 
-    .about_inner_bx_two{
-        width: 100%;
-    }
-
-    .about_ul{
-        gap: 10%;
-        column-gap: 5rem;
-        display: grid;
-        grid-template-columns: repeat(2, 45%);
-        margin-bottom: 1rem;
-        padding-right: 1rem;
-    }
-
-    .about_li {
-        font-size: 1.25rem;
+    .news_desc {
+        font-size: 1.40rem;
+        line-height: 1.15em;
         margin-bottom: 1rem;
     }
+
+    .news_block {
+        display: none;
+    }
+
+    .description_two {
+        line-height: 1.15;
+        margin: 0;
+        width: 90%;
+    }
     
-
-    .about_li:nth-child(4){
-        margin-bottom: 0rem;
-    }
-
-    .about_li:hover .hidden_text {
-        font-size: 1.1rem;
- 
-    }
-    
-    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
-    
-
-
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
-    
-    .footer_links {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer_link_items {
-        text-align: left;
-    }
-   
-    .footer_link_items h2 {
-        font-size: 1rem;
-
-    }
-
-    
-    .footer_link_items a {
-        font-size: .90rem;
-        text-align: center;
-    }
-
-     
-    #footer_logo_top {
+    .curr_desc {
         font-size: 1rem;
     }
+
+    .newsletter_image{
+        gap: 0rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .newsletter_image .curr_newsletter {
+        height: 14rem;
+        width: 11rem;
+    }
+    /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
+
+
+
+
     
    
-    #footer_logo_bottom {
-        font-size: .70rem;
-    }
-
-    
-
-    .website_rights {
-        font-size: .65rem;
-        text-align: center;
-        width: 25%;
-    }
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
 
 }
 
 
-
-
-
-@media(max-width:375px){
-
+/* =============== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px){
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-    .navbar {
-        background-size: 100% 100%;
-        padding: 0 1.5rem;
+    #top_logo {
+        font-size: 1.10rem; 
+        text-decoration-thickness: 1.10px;
+    }
+    
+    #bottom_logo {
+        font-size: .75rem;
+    }
+
+    .hamburger_menu {
+        display: block;
+
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger_menu.is_active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar_menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--color-site-blue);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .navbar_items {
+        margin: 1rem 0;
+    }
+
+    .navbar_menu.active {
+        left: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
     }
     /* * * * * * * * * * * * * *  NavBar * * * * * * * * * * * * * */
-
-
 
     /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
-    
-    .home_box .home_title {
-        font-size: 1.75rem;
-        font-weight: 400;
-        margin-left: 1rem;
+
+    .home_title {
+        font-size: 2rem;
     }
 
-    .home_box .home_paragraph {
-        font-size: .75rem;
-        margin: 1rem 0 0 1rem;
+    .home_paragraph {
+        font-size: .9rem;
+        width: 11rem;
     }
-
-    .btn {
-        margin-left: 1rem;
-    }
-
-    .social_block {
-        margin-left: 1rem;
-    }
-
     /* * * * * * * * * * * *  Hero Section * * * * * * * * * * * * */
 
 
     /* * * * * * * * * * * Recommended Section * * * * * * * * * * */
-    .recom_title {
-        font-size: 1.60rem;
-    }
-
     
-    .recomend_wrapper {
-        margin: 2rem 3.5rem 2rem 3.5rem;
-
-    }
 
     .recommend_items {
         margin: 1rem .25rem 1rem .25rem;
       
     }
 
+    .discover {
+        font-size: .8rem;
+    }
+
     /* * * * * * * * * * * Recommended Section * * * * * * * * * * */
-
-
+ 
 
     /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
 
-    .newsletter {
-        margin: 1rem 1rem 1rem 1rem;
-    }
 
-    .newsletter_title {
-        font-size: 1.60rem;
-        text-align: center;
+    .news_container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
-
-    .newsletter_description {
-        margin: 1rem 0 2rem 0;
-    
-    }
-
 
     .news_desc {
-        font-size: 1.05rem;
+        font-size: 1.10rem;
+        line-height: 1em;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+
     }
 
-    .discover {
-        font-size: .7rem;
+    .news_left {
+        gap: 0;
     }
 
-    .curr_newsletter {
-        height: 14rem;
-        width: 10rem;
+    .news_block {
+        display: none;
     }
 
+    .description_two {
+        line-height: 1.15;
+        margin: 0;
+    }
+    
+    .curr_desc {
+        font-size: .8rem;
+    }
+
+
+    .newsletter_image .curr_newsletter {
+        height: 11rem;
+        width: 8rem;
+    }
     /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
 
-    
-    
-    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
-    .about_us_section{
-        height: 100vh;
+
+
+    /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
+    .about_us_section {
+        height: auto;
     }
 
-    .about_bx {
+    .about_bx{
         flex-direction: column;
-        margin: 1rem 0 1rem 0;
-        width: 100;
     }
-    
+
+    .about_inner_bx{
+        border-radius: 8px 8px 0 0;
+        flex-direction: column;
+    }
+
     .about_bx_desc {
-        font-size: 1.1rem;
-        width: 85%;
+        margin: 1rem 0 2.5rem 0;
+        text-align: justify;
+        width: 75%;
     }
 
-    .about_inner_bx_two{
+    .about_inner_bx_two {
+        border-radius: 0 0 8px 8px;
         width: 100%;
-    }
-
-    .about_ul{
-        gap: 10%;
-        column-gap: 4rem;
-        display: grid;
-        grid-template-columns: repeat(2, 45%);
-        margin: 1rem 1rem 2rem 0;
-        padding: 0 1rem 0 1rem;
-    }
-
-    .about_li {
-        font-size: 1.25rem;
+        
     }
     
 
-    .about_li:nth-child(4){
-        margin-bottom: 0rem;
-    }
 
-    .about_li:hover .hidden_text {
-        margin-bottom: 1rem;
-    }
-    
-    /* * * * * * * * * * *  About Us Section * * * * * * * * * * */
+    /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
 
 
-    
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
-    
-    #footer_logo_top {
-        font-size: .85rem;
-    }
-    
-   
-    #footer_logo_bottom {
-        font-size: .65rem;
+
+    /* * * * * * * * * *  Footer  * * * * * * * * * * */
+    .footer_container{
+        flex-direction: column;
     }
 
-    
-    .website_rights {
-        font-size: .55rem;
-        margin-left: 1rem;
+
+    .footer_link_items h2 {
+        
+        font-size: 1rem;
+    }
+
+    .footer_link_items a {
         text-align: center;
-        width: 20%;
+        transition: var(--transition);
     }
 
-    footer .social_icons {
-        width: fit-content;
-        justify-content: flex-end;
+
+    .social_media_wrap {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: .25rem;
+        padding: 0 0 0 0;
     }
 
-    footer .social_icons .social_icon_link {
-        margin-left: .5em;
-    }
+  
 
-    /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */
-    
+    /* * * * * * * * * *  Footer  * * * * * * * * * * */
+
+   
 
 
 }
-
-
-   

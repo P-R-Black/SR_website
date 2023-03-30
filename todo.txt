@@ -1,8 +1,7 @@
 
-- contact page
 - add hashtags
 - set up social media links
-- how do add google ads
+- how to add google ads
 
 
 - explore putting cart/computer into nav bar, so that it's on all screens if in use and hidden if not

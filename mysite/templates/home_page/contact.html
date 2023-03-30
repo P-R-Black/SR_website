@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+<section class="contact_section">
+        <h1 class="section_title_blue">Contact Us</h1>
+
+    <div class="container email_container">
+        <form class="email_form" method="post">
+            {% csrf_token %}
+            <p>
+                Please provide your name, email address and a messeage below 
+            </p>
+            <div class="form_name">
+                <h4 class="contact_name">Name:</h4>
+                <div class="name_input"> {{ form.name }}</div>
+            </div>
+            <div class="form_email">
+                <h4 class="contact_email">Email:</h4>
+                <div class="email_input"> {{ form.email_address }}</div>
+            </div>
+            <div class="form_message">
+                <h4 class="contact_message">Message:</h4>
+                <div class="message_input"> {{ form.message }}</div>
+            </div>
+    
+            <button class="input_submit" type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

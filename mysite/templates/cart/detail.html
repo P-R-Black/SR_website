@@ -6,67 +6,71 @@
 {% endblock %}
 
 {% block main %}
-<h1 class="shopping_cart">Your Shopping Cart</h1>
-<section class="table_scroll">
-    <table class="cart">
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-                <th>Unit Price</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in cart %}
-                {% with product=item.product %}
+
+<section class="shop_cart_section">
+    <h1 class="section_title_blue">Your Shopping Cart</h1>
+    <div class="container shop_cart_container">
+        <table class="cart">
+            <thead>
                 <tr>
-                    <td>
-                        <a href="{{ product.get_absolute_url }}">
-                            <img class="cart_image" src="{% if product.image %}{{ product.image.url }} 
-                            {% else %}{% static 'img/no_image.png' %}{% endif %}">
-                        </a>
-                    </td>
-                    <td class="table_prod_name">{{ product.name }}</td>
-                    <td class="table_prod_quant">
-                        <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                            {{ item.update_quantity_form.quantity }}
-                            {{ item.update_quantity_form.override }}
-                            <input type="submit" value="Update">
-                            {% csrf_token %}
-                        </form>
-                    </td>
-                    <td>
-                        <form action="{% url 'cart:cart_remove' product.id %}" method="post">
-                            <input type="submit" value="Remove">
-                            {% csrf_token %}
-                        </form>
-                    </td>
-                        <td class="num">${{ item.price }}</td>
-                        <td class="num">${{ item.total_price }}</td>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                    <th>Unit Price</th>
+                    <th>Price</th>
                 </tr>
-                {% endwith %}
-                {% endfor %}
-                <tr class="total">
-                    <td>Total</td>
-                    <td colspan="4"></td>
-                    <td class="num">${{ cart.get_total_price }}</td>
-                </tr>
-        </tbody>
-    </table>
-    <p class="text_right">
-        <a href="{% url 'store:product_list' %}" class="button light">Continue Shopping</a>
-        <a href="{% url 'payments:process' %}" class="button dark">Checkout</a>
-        {% csrf_token %}
-    </p>
+            </thead>
+            <tbody>
+                {% for item in cart %}
+                    {% with product=item.product %}
+                    <tr>
+                        <td>
+                            <a href="{{ product.get_absolute_url }}">
+                                <img class="cart_image" src="{% if product.image %}{{ product.image.url }} 
+                                {% else %}{% static 'img/no_image.png' %}{% endif %}">
+                            </a>
+                        </td>
+                        <td class="table_prod_name">{{ product.name }}</td>
+                        <td class="table_prod_quant">
+                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                {{ item.update_quantity_form.override }}
+                                <input type="submit" value="Update">
+                                {% csrf_token %}
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{% url 'cart:cart_remove' product.id %}" method="post">
+                                <input type="submit" value="Remove">
+                                {% csrf_token %}
+                            </form>
+                        </td>
+                            <td class="num">${{ item.price }}</td>
+                            <td class="num">${{ item.total_price }}</td>
+                    </tr>
+                    {% endwith %}
+                    {% endfor %}
+                    <tr class="total">
+                        <td>Total</td>
+                        <td colspan="4"></td>
+                        <td class="num">${{ cart.get_total_price }}</td>
+                    </tr>
+            </tbody>
+        </table>
+        <p class="text_right">
+            <a href="{% url 'store:product_list' %}" class="button light">Continue Shopping</a>
+            <a href="{% url 'payments:process' %}" class="button dark">Checkout</a>
+            {% csrf_token %}
+        </p>
+    </div>
 </section>
 
 <section class="mobile_cart">
-    {% for item in cart %}
+    <h1 class="section_title_blue">Your Shopping Cart</h1>
+    <div class="container moble_cart_container">
+        {% for item in cart %}
         {% with product=item.product %}
-    <div class="mobile_cart_a">
+        <div class="mobile_cart_a">
             <picture class="mobile_image">
                 <a href="{{ product.get_absolute_url }}">
                     <img src="{% if product.image %}{{ product.image.url }} 
@@ -90,15 +94,17 @@
                     </form>
                 </div>
             </div>
-    </div>
-    {% endwith %}
+        </div>
+        {% endwith %}
         {% endfor %}
-    <p class="mobile_cart_total">Total: ${{ cart.get_total_price }}</p>
-    <p class="mobile_text_right">
-        <a href="{% url 'store:product_list' %}" class="mobile_button_light">Continue Shopping</a>
-        <a href="{% url 'payments:process' %}" class="mobile_button_dark">Checkout</a>
-        {% csrf_token %}
-    </p>
+        <p class="mobile_cart_total">Total: ${{ cart.get_total_price }}</p>
+        <p class="mobile_text_right">
+            <a href="{% url 'store:product_list' %}" class="mobile_button_light">Continue Shopping</a>
+            <a href="{% url 'payments:process' %}" class="mobile_button_dark">Checkout</a>
+            {% csrf_token %}
+        </p>
+
+    </div> 
 </section>
 
 

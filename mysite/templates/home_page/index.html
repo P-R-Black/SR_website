@@ -7,33 +7,29 @@
 {% endblock %}
 
 {% block main %}
-<!-- ========== HOME ==========-->
-<section class="home">
-        <picture id="bg">
+
+<main class="home_section" id="bg">
+        <div class="container home_container">
             <div class="home_box">
                 <div class="inner_home_box">
                     <h1 class="home_title">Where are your investments taking you?</h1>
                     <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
-                    <a href="{% url 'store:product_list' %}"><button class="btn">newsletter</button></a> 
+                    <a href="{% url 'store:product_list' %}" aria-label="to newsletter" tabindex="7"><button class="btn_dark">newsletter</button></a> 
                 </div>
-            </div>
-            <div class="social_block">
                 <div class="social_media_block">
                     <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
                     <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
                     <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
                 </div>
-            </div>
-        </picture> 
-</section>
+            </div> 
+        </div> 
+    </main>
 <hr>
-<!-- ========== RECENT RECOMMENDATIONS ==========-->
 
-<section class="recent_recommendations">
-    <div class="section_title">
-        <h1 class="recom_title">Recent Recommendation</h1>
-    </div>
-    <div class="recomend_wrapper">
+
+<aside class="recent_recommendations">
+    <h1 class="section_title_blue">Recent Recommendation</h1>
+    <div class="container recom_container">
         <div class="recommend_items">
             <div class="rec_icons"><i class="fa-solid fa-file-invoice-dollar"></i></i></div>
             <div class="rec_desc">$AMKR</div>
@@ -51,47 +47,51 @@
             <h3 class="recom_date">Recommended<br>March 2022</h3>
         </div>
     </div>
-</section>
+    <div class="newsletter_discover">
+        <p class="discover">
+            <a href="#" class="discover_link" target="_blank">
+                <span class="highlights">Discover</span>
+            </a> what makes The Seville Report different.
+        </p>
+    </div>
+</aside>
 <hr>
 <!-- ========== THE NEWSLETTER ==========-->
 
-<section class="newsletter_section">
-    <picture id="bg_two">
-        <div class="section_title">
-            <h1 class="newsletter_title">The Seville Report Newsletter</h1>
-        </div>
-        <newsletter class="newsletter">
+<section class="newsletter_section"  id="bg_two">
+        <h1 class="section_title_white">The Seville Report Newsletter</h1>
+    <div class="container news_container">
+        <div class="news_left">
             <div class="newsletter_description">
-                <h2 class="news_desc">Our quarterly newsletter provides the information that investors need to know to build wealth. We discuss traditional investments, alternative investments, and investment education. The Seville Report has you covered.</h2>
-                <div>
-                    <p class="discover"><a href="#" class="discover_link" target="_blank"><span class="highlights">Discover</span></a> what makes The Seville Report different.</p>
-                </div>
+                <h2 class="news_desc">Our quarterly newsletter provides the information that investors need to know 
+                    to build wealth. We discuss traditional investments, alternative investments, and investment 
+                    education. The Seville Report has you covered.
+                </h2>
             </div>
             <div class="description_two">
                 <p class="curr_desc">This quarter's newsletter features a researched investment idea. In addition, we discuss if an Index Universal Life Insurance plicy can be an infinite bank in retirement and why gas prices have been so high in 2022.</p>
             </div>
             
-            <div class="newsletter_image">
-                <img src="{{ current_news.image.url }}" alt="picture of newsletter cover" class="curr_newsletter">
-                <a href="{{ current_news.get_absolute_url }}"><button class="newsletter_btn">Purchase Now</button></a>
-            </div>
-        </newsletter>
-        <div class="social_block">
-            <div class="social_media_block">
+            <div class="news_block">
                 <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
                 <a href="https://www.instagram.com/the_seville_report/" class="social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
                 <a href="https://twitter.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
             </div>
         </div>
-    </picture>  
+        <div class="news_right">
+            <div class="newsletter_image">
+                <img src="{{ current_news.image.url }}" alt="picture of newsletter cover" class="curr_newsletter">
+                <a href="{{ current_news.get_absolute_url }}"><button class="btn_light">Purchase Now</button></a>
+            </div> 
+
+        </div>
+    </div> 
 </section>
 <hr>
 <!-- ========== SR BLOG ==========-->
 <section class="blog_section">
-    <div class="section_title">
-        <h1 class="blog_section_title">The SR Blog</h1>
-    </div>
-    <div class="card_container">
+    <h1 class="section_title_blue">The SR Blog</h1>
+    <div class="container card_container">
         {% for post in last_three_post %}
         <div class="card">
             <a href="{{ post.get_absolute_url }}">
@@ -116,15 +116,13 @@
         {% endfor %}
     </div>
     <div class="home_page_blog_button">
-        <button class="blog_btn"><a href="{% url 'blog:post_list' %}">More Posts</a></button>
+        <button class="btn_dark"><a href="{% url 'blog:post_list' %}">More Posts</a></button>
     </div>
-    <div class="social_block">
-        <div class="blue_social_media_block">
+        <div class="container blue_social_media_block">
             <a href="https://www.facebook.com/SevilleReport" class="blue_social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.instagram.com/the_seville_report/" class="blue_social_block_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
             <a href="https://twitter.com/SevilleReport" class="blue_social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
         </div>
-    </div>
 </section>
 
 {% endblock %}

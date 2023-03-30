@@ -4,13 +4,10 @@
 {% block title %}Post Related To {{ tag }}{% endblock %}
 
 {% block main %}
-<section class="blog_page_header">
-    <div class="title_social">
-
-        <h1 class="all_posts_title">{{ tag }}</h1>
-    </div>
-    <h4 class="all_posts_slug post_related_to">Post Related to {{ tag  }}</h4>
-    <div class="blog_categories">
+<aside class="blog_page_header">
+    <h1 class="section_title_blue">{{ tag }}</h1>
+    <h4 class="all_posts_slug">Post Related to {{ tag  }}</h4>
+    <div class="container blog_categories">
         {% total_categories as tc %}
         {% for key, value in tc.items %}
     <h4 class="categories">
@@ -19,35 +16,37 @@
         {% endfor %}
     <h4 class="categories"><a href="{% url 'blog:all_categories' %}">More</a></h4>
 </div>
-</section> 
+</aside> 
 <section class="blog_page_body">
-    {% for post in similar_posts %}
-    <div class="post_section">
-        <div class="pic_title_snip">
-            <a href="{{ post.get_absolute_url }}">
-                <img src='{{ post.post_header_image.url }}' alt="blog post image" class="post_image">
-            </a>
-            <div class="post_desc">
+    <div class="container cats_container">
+        {% for post in similar_posts %}
+        <div class="post_section">
+            <div class="pic_title_snip">
                 <a href="{{ post.get_absolute_url }}">
-
-                    <h1 class="post_title"><a href="{{ post.get_absolute_url }}">{{ post.title|title }}</h1>
-                    <p class="post_snippet">{{ post.post_description|truncatewords:25 }}</p>
-                    <p id="post_snippet_mobile_view">{{ post.post_description|truncatewords:10 }}</p>
-
-
-                    <div class="auth_and_opinion">
-                        <h3 class="author">{{ post.author.first_name|title }} {{ post.author.last_name|title}}</h3>
-                        <h3 class="opinion">Opinion</h3>
-                    </div>
-                    <div class="pubdate_readtime">
-                        <h3 class="publish_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></h3>
-                        <h3 class="read_time">{{ post.get_read_time }} Minutes</h3>
-                    </div>
+                    <img src='{{ post.post_header_image.url }}' alt="blog post image" class="post_image">
                 </a>
+                <div class="post_desc">
+                    <a href="{{ post.get_absolute_url }}">
+    
+                        <h1 class="post_title"><a href="{{ post.get_absolute_url }}">{{ post.title|title }}</h1>
+                        <p class="post_snippet">{{ post.post_description|truncatewords:25 }}</p>
+                        <p id="post_snippet_mobile_view">{{ post.post_description|truncatewords:10 }}</p>
+    
+    
+                        <div class="auth_and_opinion">
+                            <h3 class="author">{{ post.author.first_name|title }} {{ post.author.last_name|title}}</h3>
+                            <h3 class="opinion">Opinion</h3>
+                        </div>
+                        <div class="pubdate_readtime">
+                            <h3 class="publish_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></h3>
+                            <h3 class="read_time">{{ post.get_read_time }} Minutes</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+        {% endfor %}
+        {% include '../pagination.html' with page=posts %}
     </div>
-    {% endfor %}
-    {% include '../pagination.html' with page=posts %}
 </section>
 {% endblock %}

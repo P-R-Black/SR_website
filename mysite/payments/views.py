@@ -90,8 +90,6 @@ def payment_canceled(request):
     return render(request, 'payments/canceled.html')
 
 
-
-
 def payment_done(request):
     cart = Cart(request)
 
@@ -99,9 +97,6 @@ def payment_done(request):
     current_order = order[0]
     first_name = current_order['first_name']
     email = current_order['email']
-
-    print(f'first_name: {first_name}')
-    print(f'email: {email}')
 
     products = {}
     for c in cart:
@@ -114,13 +109,8 @@ def payment_done(request):
 
     for product in purchased_products:
         file = product.pdf_file.url
-        print(f'file: {file}')
-
-        print(f'purchased_products: {purchased_products}')
-
         
         template = render_to_string('payments/email_template.html', {'name': first_name, 'file': file})
-        print('template', template)
 
         email = EmailMessage(
             'Thank You!',

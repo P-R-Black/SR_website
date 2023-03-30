@@ -10,5 +10,6 @@ urlpatterns = [
     path('<int:post_id>/share/', views.post_share, name='post_share'),
     path('categories/<slug:tag_slug>/', views.by_categories, name='by_categories'),
     path('all/', views.all_categories, name='all_categories'),
+
 ]
 

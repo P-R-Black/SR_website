@@ -5,53 +5,58 @@
 
 {% block main %}
 <section class="blog_area_section">
-  <div class="prev_blog_section">
-    <h1 class="related_post_title">Related Post</h1>
-    {% for post in similar_posts %}
-    <div class="post_img_and_title">
-      <a href="{{ post.get_absolute_url }}"><img class="prev_post_img" src="{{ post.post_header_image.url }}" alt=""></a>
-      <h4 class="prev_post_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+    <div class="container blog_post_container">
+      <aside class="prev_blog_section">
+        <h1 class="section_title_blue">Related Post</h1>
+        {% for post in similar_posts %}
+        <div class="post_img_and_title">
+          <a href="{{ post.get_absolute_url }}"><img class="prev_post_img" src="{{ post.post_header_image.url }}" alt=""></a>
+          <h4 class="prev_post_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+        </div>
+          {% empty %}
+          There are no similar posts yet.
+          {% endfor %}
+      </aside>
+
+      <article class="blog_area">
+        <div class="blog_title_slug_area">
+          <h1 class="the_blog_title">{{ post.title|title }}</h1>
+          <h2 class="blog_subtitle">{{ post.subtitle|title }}</h2>
+        </div>
+  
+        <div class="auth_pub_read_area">
+            <div class="blog_author">By {{ post.author.first_name|title }} {{ post.author.last_name|title}}</div>
+            <div class="pub_date_read_time">
+              <div class="blog_pub_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></div>
+              <div class="blog_read_time">{{ post.get_read_time}} Minutes</div>
+            </div>
+        </div>
+        <img class="blog_main_img" src="{{ post.post_header_image.url }}" alt="main blog image">
+        <div class="blog_overview">{{ post.overview|safe }}</div>
+        <hr class="blog_hr">
+        <article class="blog_text">{{ post.body|safe }}</article>
+        <a href="{% url 'store:product_list' %}"><img class="newsletter_promotion" src="{% static 'img/SR_Adv.png' %}" alt=""></a>
+      </article>
+
+      <div class="social_sidebar">
+        <a href="https://www.facebook.com/SevilleReport" class="blog_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/the_seville_report/" class="blog_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        <a href="https://twitter.com/SevilleReport" class="blog_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="mailto:?subject={{ post.title|title }}&body=Check%20out%20this%20post%20from%20The%20Seville%20Report%20|%20sevillereport{{ post.get_absolute_url }}" class="blog_icon_link" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/" class="blog_icon_link" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.reddit.com/" class="blog_icon_link" target="_blank"><i class="fa-brands fa-square-reddit"></i></a>
+        <a href="https://www.tumblr.com/" class="blog_icon_link" target="_blank"><i class="fa-brands fa-square-tumblr"></i></a>
+        <a href="https://telegram.org/" class="blog_icon_link" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+  
+      <div class="blog_sidebar">
+        An Advertisement
+      </div>
+
     </div>
-      {% empty %}
-      There are no similar posts yet.
-      {% endfor %}
-
-  </div>
-  <div class="blog_area">
-      <div class="blog_title_slug_area">
-        <h1 class="the_blog_title">{{ post.title }}</h1>
-        <h2 class="blog_subtitle">{{ post.subtitle }}</h2>
-      </div>
-
-      <div class="auth_pub_read_area">
-          <div class="blog_author">By {{ post.author.first_name|title }} {{ post.author.last_name|title}}</div>
-          <div class="pub_date_read_time">
-            <div class="blog_pub_date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></div>
-            <div class="blog_read_time">{{ post.get_read_time}} Minutes</div>
-          </div>
-      </div>
-      <img class="blog_main_img" src="{{ post.post_header_image.url }}" alt="main blog image">
-      <div class="blog_overview">{{ post.overview|safe }}</div>
-      <hr class="blog_hr">
-      <article class="blog_text">{{ post.body|safe }}</article>
-      <a href="{% url 'store:product_list' %}"><img class="newsletter_promotion" src="{% static 'img/SR_Adv.png' %}" alt=""></a>
-      <p><a href="{% url 'blog:post_share' post.id %}">Share this post</a></p>
-      
-  </div>
-  <div class="social_sidebar">
-    <a href="https://www.facebook.com/SevilleReport" class="blog_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.instagram.com/the_seville_report/" class="blog_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
-    <a href="https://twitter.com/SevilleReport" class="blog_icon_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
-    <a href="" class="blog_icon_link" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-square-reddit"></i></a>
-    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-square-tumblr"></i></a>
-    <a href="" class="blog_icon_link" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-  </div>
-
-  <div class="blog_sidebar">
-    An Advertisement
-  </div>
+  
+  
+    
 
 </section>
 

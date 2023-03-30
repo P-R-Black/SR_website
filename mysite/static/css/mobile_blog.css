@@ -1,603 +1,30 @@
-@media(min-width:1800px){
 
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-    .all_posts_title {
-        font-size: 3rem;
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px){
+    /* * * * * * * * * * * * All Blogs * * * * * * * * * * * */ 
+    .blog_categories h4 a{
+        color: #212121;
+        font-weight: lighter;
     }
 
-    .all_posts_slug {
-        font-size: 1.75rem;
-    }
 
     .blog_categories {
-        
-        font-size: 1.25rem;
-        margin-top: 4rem;
-        width: 97%;
-    }
-
-    .categories {
-        height: 100%;
-        margin-right: 1.25rem;
-    }
-
-    .post_section {
-        width: 97%;
-    }
-
-    .post_title {
-        font-size: 2rem;
-        width: 100%;
-    }
-
-
-    .post_image {
-        height: 14rem;
-        width: 20.5rem;
-    }
-
-    .post_snippet {
-        font-size: 1.35rem;
-    }
-
-    .author{
-        font-size: 1.1rem;
-    }
-
-    .publish_date {
-        font-size: 1.1rem;
-    }
-    
-    .opinion, .read_time{
-        font-size: 1rem;
-    }
-
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-
-    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */
-    .related_post_title {
-        font-size: 1.75rem;
-    }
-
-    .prev_blog_section {
-        border-right: 2px dotted grey;
-    }
-
-    .prev_post_img {
-        height: 9rem;
-
-        width: 15rem;
-    }
-
-    .prev_post_title{
-        font-size: 1.25rem;
-        line-height: 2rem;
-        width: 90%;
-    }
-
-    .blog_area {
-        width: 50rem;
-    }
-
-    .the_blog_title {
-        font-size: 3.5rem;
-        line-height: 4rem;
-        width: 45rem;
-    }
-    
-    .blog_subtitle {
-        margin-top: 1rem;
-        font-size: 2rem;
-    }
-
-    .blog_main_img {
-        width: 49.5rem;
-        height: 24rem;
-    }
-
-    .blog_text, .blog_overview {
-        font-size: 1.5rem;
-    }
-
-    .blog_overview{
-        margin-left: .5rem;
-    }
-
-    .blog_icon_link {
-        font-size: 2.25rem;
-    }
-    
-    .auth_pub_read_area {
-        width: 49.5rem;
-    }
-
-    
-    .blog_author {
-        font-size: 1.25rem;
-    }
-
-
-    .blog_pub_date, .blog_read_time{
-        font-size: 1.1rem;
-    }
-    
-    .newsletter_promotion {
-        width: 49.5rem;
-        height: 7.5rem;
-    
-    }
-
-    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */ 
-
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
-
-
-    .blog_image {
-        height: 28rem;
-        width: 49.5rem;
-    }
-
-
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
-
-
-    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
-     .all_cats_section {
-        grid-template-columns:  repeat(5, auto);
-        grid-template-rows:  repeat(auto, auto);
-        grid-gap: 1rem;
-    }
-
-    .cat_button {
-    
-        font-size: 1.75rem;
-        font-weight: 400;
-        
-    }
-
-    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
-}
-
-@media(max-width:900px){
-
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-    
-    .blog_categories {
-        font-size: .95rem;
-        justify-content: flex-start;
-        margin-left: 3rem;
-        margin-top: 1rem;
+        font-size: .85rem;
         overflow-x: auto;
-        padding: 0 1rem;
-        width: 50rem;
+        gap: 2rem;
+        text-align: center;
+        
 
-    }
-
-    .categories {
-        flex-shrink: 0;
-        height: 100%;
-        margin-right: 2.25rem;
-    }
-
-
-    .blog_page_body {
-        margin: 1.5rem 3rem;
-        padding: 0 .5rem;    
-    }
-
-    .post_title {
-        font-size: 1.50rem;
-        height: auto;
-        width: 28rem;
     }
 
     .post_section {
-        width: 49rem;
-    }
-
-    .pic_title_snip{
-        margin-left: .25rem;
-        margin-bottom: .5rem;
-    }
-
-    .post_snippet {
-        display: none;
-    }
-
-    #post_snippet_mobile_view{
-        display: flex;
-        font-size: 1.25rem;
-        margin-top: .5rem;
-        max-width: 20rem;
-    }
-
-    .auth_and_opinion {
-        margin-top: .75rem;
-        max-width: 26rem;
-    }
-
-    .pubdate_readtime {
-        max-width: 26rem;
-    }
-
-    .author{
-        font-size: 1rem;
-    }
-
-    .publish_date {
-        font-size: 1rem;
-    }
-    
-    .opinion, .read_time{
-        font-size: 1rem;
-    }
-
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */
-
-    .related_post_title {
-        font-size: 1.25rem;
-    }
-    
-    .prev_blog_section {
-        border-right: 1px dotted grey;
-        height: fit-content;
-        margin-left: 3rem;
-        margin-top:4rem;
-        width: 20vw;
-    }
-    
-    .post_img_and_title {
-        margin: 1rem .20rem .25rem .20rem;
-        padding: 0 .5rem;
-    }
-    
-    .prev_post_img {
-        height: 4rem;
-        width: 6rem;
-    }
-    
-    .prev_post_title {
-        font-size: .80rem;
-        width: 8.5rem;
-    }
-    
-    
-    .blog_area {
-        height: 100vh;
-        margin-right: auto;
-        margin-left: auto;
-        overflow-y: scroll;
-        width: 32rem;
-    }
-    
-    .blog_sidebar {
-        border: 1px solid gray;
-        height: 100vh;
-        position: sticky;
-        width: 15vw;
-    }
-    
-    
-    .the_blog_title {
-        font-size: 2rem;
-        line-height: 2.5rem;
-        width: 30rem;
-    }
-    
-    .blog_subtitle {
-        font-size: 1rem;
-        width: 28rem;
-    }
-    
-    .auth_pub_read_area {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        width: 31rem;
-    }
-    
-    .pub_date_read_time {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .blog_main_img {
-        width: 31.25rem;
-        height: 15rem;
-    
-    }
-    
-    
-    .blog_text, .blog_overview {
-        padding: 1rem 1rem 1rem 1rem;
-        text-align: justify;
-    }
-    
-    .blog_hr {
-        border: .75px dotted #6196B1;
-    }
-    
-    
-    .social_sidebar {
-        width: 2rem;
-    }
-    
-    .blog_icon_link {
-        font-size: 1.25rem;
-    }
-    
-    .auth_pub_read_area {
-        margin-bottom: 1rem;
-    }
-    
-    .blog_author {
-        color:#797979eb;
-    }
-    
-    .blog_pub_date, .blog_read_time{
-        color:#797979eb;
-        font-size: .90rem;
-        text-transform: capitalize;
-    }
-    
-    .newsletter_promotion {
-        width: 31.25rem;
-        height: 4.5rem;
-    
-    }
-
-    /* * * * * * * * * * Detail Blog Section * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * Blog Images Section * * * * * * * * * */ 
-
-
-    .blog_image {
-        width: 30.25rem;
-        height: 19rem;
-    }
-
-
-    /* * * * * * * * * * Blog Images Section * * * * * * * * * */
-}
-
-
-@media(max-width:600px){
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-    .blog_categories {
-        font-size: .85rem;
-        justify-content: flex-start;
-        margin-left: 3rem;
-        margin-top: 1rem;
-        overflow-x: auto;
-        padding: 0 1rem;
-        width: 32rem;
-
-    }
-
-    .categories {
-        flex-shrink: 0;
-        height: 100%;
-        margin-right: 2.25rem;
-    }
-
-    .blog_page_body {
-        margin: 1rem 3rem;
-        padding: 0 .5rem;
-    
-    }
-
-    .post_section {
-        width: 32rem;
-    }
-
-    .pic_title_snip{
-        margin-left: .25rem;
-        margin-bottom: .5rem;
-    }
-
-    .post_image {
-        height: 9rem;
-        width: 11rem;
-    }
-
-    .post_title {
-        font-size: 1.10rem;
-        width: 16rem;
-    }
-
-    .post_snippet {
-        display: none;
-    }
-
-    #post_snippet_mobile_view{
-        display: flex;
-        font-size: 1rem;
-        margin-top: .5rem;
-        max-width: 17rem;
-    }
-
-    .auth_and_opinion {
-        margin-top: .75rem;
-        max-width: 18rem;
-    }
-
-    .pubdate_readtime {
-        max-width: 18rem;
-    }
-
-    .author{
-        font-size: .95rem;
-    }
-
-    .publish_date {
-        font-size: .85rem;
-    }
-    
-    .opinion, .read_time{
-        font-size: .85rem;
-    }
-
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-    
-
-    
-    /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
-
-    .prev_blog_section {
-        display: none;
-    }
-
-    .blog_area_section {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .blog_area {
-        margin-right: 0;
-        margin-left: 0;
-        overflow-y: scroll;
         width: auto;
-    }
-
-    .the_blog_title {
-        font-size: 2rem;
-        width: 26rem;
-    }
-
-    .blog_subtitle {
-        font-size: .95rem;
-    }
-
-
-    .auth_pub_read_area {
-        width: auto;
-    }
-
-
-    .blog_main_img {
-        width: calc(100vw - .25rem);
-        height: 17.75rem;
-    
-    }
-
-    .blog_overview {
-        font-size: .85rem;
-        margin: 0 .5rem;
-    }
-
-    .blog_text {
-        font-size: .95rem;
-    }
-
-    .newsletter_promotion {
-        width: calc(100vw - .25rem);
-        height: 6.5rem;
-    
-    }
-
-    .newsletter_promotion, .auth_pub_read_area, .blog_main_img {
-        padding: 0rem .75rem 0rem .75rem;
-    }
-
-    .social_sidebar {
-        align-items: flex-start;
-        border: none;
-        display: flex;
-        flex-direction: row;
-        height: 3rem;
-        gap: .75rem;
-        justify-content: space-evenly; 
-        width: auto;
-    
-    }
-
-   .blog_sidebar {
-    background-color: grey;
-    height: 7rem;
-    padding: 0rem .75rem 0rem .75rem;
-    width: auto;
-
-    }
-
-    /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
-
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
-
-
-    .blog_image {
-        height: 17.75rem;
-        width: calc(100vw - 1rem);
-    }
-
-
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */
-
-
-
-
-    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
-    .all_cats_section{
-        grid-template-columns:  repeat(4, auto);
-        grid-template-rows:  repeat(auto, auto);
-    }
-    /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
-}
-
-
-@media(max-width:375px) {
    
-
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
-
-    .blog_page_header {
-        margin-top: 1rem;
     }
 
-    .all_posts_title {
-        font-size: 1.65rem;
-        margin: 0;
-        padding: 0 1rem;
-    }
-
-    .all_posts_slug {
-        font-size: .85rem;
-        margin: 0;
-        padding: 0 1rem;
-    }
-
-    .blog_categories {
-        cursor: pointer;
-        font-size: .85rem;
-        justify-content: flex-start;
-        margin-left: 0;
-        margin-top: 1rem;
-        overflow-x: auto;
-        padding: 0 1rem;
-        width: 23rem;
-
-    }
-
-    .categories {
-        flex-shrink: 0;
-        height: 100%;
-        margin-right: 1.25rem;
-    }
-
-    .blog_page_body {
-        height: 100vw;
-        margin: 1rem 0;
-        padding: 0 .5rem;
-
-    }
-
-    .post_section {
-        width: 22.3rem;
+    .post_image {
+        height: 9rem;
+        width: 10.5rem;
     }
 
     .pic_title_snip{
@@ -607,16 +34,9 @@
 
     
     .post_title {
-        font-size: .95rem;
+        font-size: 1.5rem;
         height: auto;
-        width: 14rem;
-    }
-
-
-    .post_image {
-        height: 7rem;
-        margin-left: .15rem;
-        width: 6.5rem;
+        width: 90%;
     }
 
     .post_desc {
@@ -624,7 +44,156 @@
         display: flex;
         flex-direction: column;
         height: fit-content;
+        width: 90%;
+    }
+
+ 
+    #post_snippet_mobile_view{
+        display: none;
+    }
+
+
+    .author{
+        font-size: .90rem;
+    }
+
+    .publish_date {
+        font-size: .70rem;
+    }
+    
+    .opinion, .read_time{
+        font-size: .90rem;
+    }
+    /* * * * * * * * * * * * All Blogs * * * * * * * * * * * */ 
+
+
+    /* * * * * * * * * * * * Detail Blog * * * * * * * * * * * */ 
+    .blog_post_container{
+        flex-direction: column;
+    }
+
+    .blog_area{
+        order: 0;
+        width: 100%;
+
+    }
+
+    .the_blog_title {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: .5rem;
+    }
+    
+    .blog_subtitle {
+        font-size: 1.25rem;
+        margin-bottom: .5rem;
+    }
+
+    .blog_author {
+        font-size: 1rem;
+    }
+    
+    .blog_pub_date, .blog_read_time{
+        font-size: .95rem;
+    }
+
+    .blog_main_img, .blog_image {
+        width: 100%;
+        height: 16rem;
+    }
+
+    .blog_image{
+        margin-top: 1rem;
+    }
+
+    .newsletter_promotion {
+        width: 100%;
+        height: 4.5rem;
+    
+    }
+
+    .social_sidebar{
+        border-left: none;
+        flex-direction: row;
+        gap: .5rem;
+        height: fit-content;
+        
+    }
+
+    .prev_blog_section{
+        border-right: none;
+        height: fit-content;
+        margin-top: 0;
+        width: 100%;
+        order: 2;
+    }
+
+    .prev_post_img {
+        height: 12rem;
         width: 20rem;
+    }
+    
+    .prev_post_title {
+        font-size: 1.25rem;
+        line-height: 1rem;
+    }
+
+    .blog_sidebar{
+        height: fit-content;
+        order: 3;
+
+    }
+    /* * * * * * * * * * * * Detail Blog * * * * * * * * * * * */ 
+   
+}
+
+/* =============== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px){
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
+
+    .blog_categories h4 a{
+        color: #212121;
+        font-weight: lighter;
+    }
+
+
+    .blog_categories {
+        font-size: .85rem;
+        overflow-x: auto;
+        gap: 2rem;
+        text-align: center;
+        
+
+    }
+
+    .post_section {
+        width: auto;
+   
+    }
+
+    .post_image {
+        height: 7rem;
+        width: 6.5rem;
+    }
+
+    .pic_title_snip{
+        margin-left: .25rem;
+        margin-bottom: .5rem;
+    }
+
+    
+    .post_title {
+        font-size: .95rem;
+        height: auto;
+        width: 90%;
+    }
+
+    .post_desc {
+        margin-left: .55rem;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 90%;
     }
 
  
@@ -636,17 +205,10 @@
         display: flex;
         font-size: .80rem;
         margin-top: .5rem;
-        max-width: 15rem;
+        max-width: 75%;
+        
     }
 
-    .auth_and_opinion {
-        margin-top: .5rem;
-        max-width: 14rem;
-    }
-
-    .pubdate_readtime {
-        max-width: 14rem;
-    }
 
     .author{
         font-size: .75rem;
@@ -660,126 +222,89 @@
         font-size: .75rem;
     }
 
-    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * */
 
 
-
-    /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
-    .prev_blog_section {
-        display: none;
-    }
-
-    .blog_area_section {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .blog_area {
-        margin-right: 0;
-        margin-left: 0;
-        overflow-y: scroll;
-        width: auto;
-    }
-
-
-    .the_blog_title {
-        font-size: 1.75rem;
-        line-height: 2rem;
-        margin-bottom: 0;
-        width: 22rem;
-    }
-
-    .blog_subtitle {
-        font-size: .95rem;
-        line-height: 1.375rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-
-
-    .auth_pub_read_area {
-        width: auto;
-    }
-
-
-    .blog_main_img {
-        width: 23.55rem;
-        height: 13.75rem;
-    
-    }
-
-    .blog_overview {
-        font-size: .85rem;
-        margin: 0 .5rem;
-    }
-
-    .blog_text {
-        font-size: .95rem;
-    }
-
-    .newsletter_promotion {
-        width: 23.55rem;
-        height: 4.5rem;
-    
-    }
-
-    .newsletter_promotion, .auth_pub_read_area, .blog_main_img {
-        padding: 0rem .75rem 0rem .75rem;
-    }
-
-    .social_sidebar {
-        align-items: flex-start;
-        border: none;
-        display: flex;
-        flex-direction: row;
-        height: 3rem;
-        gap: .75rem;
-        justify-content: space-evenly; 
-        width: auto;
-    
-    }
-
-   .blog_sidebar {
-    background-color: grey;
-    height: 7rem;
-    padding: 0rem .75rem 0rem .75rem;
-    width: auto;
-
-    }
-
-    /* * * * * * * * * * * * Detail Blog Section * * * * * * * * * * * */ 
-
-
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
-
-
-    .blog_image {
-        height: 14rem;
-        width: 22rem;
-    }
-
-
-    /* * * * * * * * * * * * Blog Images Section * * * * * * * * * * * */ 
-
-
+    /* * * * * * * * * * * * * *  Blog * * * * * * * * * * * * * */
 
     /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
     .all_cats_section {
-        grid-template-columns:  repeat(3, auto);
+        grid-template-columns:  repeat(2, auto);
         grid-template-rows:  repeat(auto, auto);
         grid-gap: .75rem;
-        height: auto;
-        justify-content: center;
-        margin: 4rem 4rem 0 4rem;
-        max-width: auto;
     
     }
 
     /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
 
+    /* * * * * * * * * * * * Detail Blog * * * * * * * * * * * */ 
+    .blog_post_container{
+        flex-direction: column;
+    }
 
+    .blog_area{
+        order: 0;
+        width: 100%;
 
+    }
+
+    .the_blog_title {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: .5rem;
+    }
     
+    .blog_subtitle {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
 
+    .blog_author {
+        font-size: .90rem;
+    }
+    
+    .blog_pub_date, .blog_read_time{
+        font-size: .85rem;
+    }
+
+    .blog_main_img, .blog_image {
+        width: 100%;
+        height: 10rem;
+    }
+
+    .blog_image{
+        margin-top: 1rem;
+    }
+
+    .newsletter_promotion {
+        width: 100%;
+        height: 3.5rem;
+    
+    }
+
+    .social_sidebar{
+        border-left: none;
+        flex-direction: row;
+        gap: .5rem;
+        height: fit-content;
+        
+    }
+
+    .prev_blog_section{
+        border-right: none;
+        height: fit-content;
+        margin-top: 0;
+        width: 100%;
+        order: 2;
+    }
+
+
+    .blog_sidebar{
+        order: 3;
+
+    }
+    /* * * * * * * * * * * * Detail Blog * * * * * * * * * * * */ 
+
+ 
+    
 
 }

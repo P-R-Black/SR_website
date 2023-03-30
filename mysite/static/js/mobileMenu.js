@@ -13,7 +13,6 @@ hamburger.addEventListener('click', () => {
 const mobileMenu = document.querySelectorAll('.navbar_links').forEach(n => n.addEventListener('click', ()=> {
     hamburger.classList.toggle('active');
     navElements.classList.toggle('active');
-    console.log('Testing 2')
 }))
 
 
@@ -23,7 +22,6 @@ const hideMobileMenu = () => {
     if(window.innerWidth <= 768 && menuBars) {
         hamburger.classList.toggle('is_active')
         navElements.classList.toggle('active')
-        console.log('Testing 3')
     }
 }
 
