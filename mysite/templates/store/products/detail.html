@@ -1,25 +1,28 @@
 {% extends 'layout.html' %}
+{ load static }
 
 
 {% block main %}
-<div class="product_details_container">
-    <div class="product_details_image">
-        <img src="{{ product.image.url }}" alt="" class="curr_newsletter">
-    </div>
-    <div class="description_block">
-        <h1 class="title_block"> {% block title %}{{ product.name }}{% endblock %}</h1>
-        <h2 class="category_block">{{ product.category }}</h2>
-        <div class="product_description">
-            <p>{{ product.description|linebreaks }}</p>
+<section class="product_detail_section">
+    <div class="container product_details_container">
+        <div class="product_details_image">
+            <img src="{{ product.image.url }}" alt="" class="curr_newsletter">
         </div>
-        <div class="product_price">
-            <p>${{ product.price }}</p>
-            <form  action="{% url 'cart:cart_add' product.id %}" method="post" id="quantity_selection">
-                <input id="cart_add" type="submit" value="Add to Cart">
-                   <div class="cart_quant">{{ cart_product_form }}</div>
+        <div class="description_block">
+            <h1 class="title_block">{% block title %}{{ product.name }}{% endblock %}</h1>
+            <h2 class="category_block">{{ product.category }}</h2>
+            <div class="product_description">
+                <p>{{ product.description|linebreaks }}</p>
+            </div>
+            <div class="product_price">
+                <p>${{ product.price }}</p>
+                <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                    <div hidden>{{ cart_product_form }}</div>
                     {% csrf_token %}
-            </form>
+                    <input type="submit" id="cart_add" value="Add To Cart">
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}

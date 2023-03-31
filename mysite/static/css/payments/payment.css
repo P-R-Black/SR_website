@@ -1,0 +1,167 @@
+
+/* * * * * * * *  Checkout Section / payment/process.html * * * * * * * */ 
+.checkout_section {
+    height: 100vh;
+}
+
+.pre_check_container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.order_info {
+    background-color: var(--color-table-grey);
+    border-radius: 8px;
+    padding: .5rem 1.25rem;
+    width: 350px;
+}
+
+.order_info h3 {
+    color: var(--color-site-blue);
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order_info ul li {
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0;
+    font-size: .85rem;
+}
+
+.order_info p {
+    font-weight: bold;
+    float: right;
+    margin-top: 1rem;
+}
+
+.order_info span {
+    float: right;
+}
+
+
+.order_form {
+    width:fit-content;
+}
+
+#customer_email {
+    margin-bottom: 1.5rem;
+}
+
+
+button.btn_none {
+    background: none;
+}
+
+
+.order_form input[type="submit"] {
+    background: var(--color-site-blue);
+    color:var(--color-primary-font);
+    cursor: pointer;
+    width: 18.75rem;
+}
+
+form p label, form p input {
+    float: left;
+    clear: both;    
+}
+
+form p label {
+    font-size:14px;
+    padding-bottom: 1px;
+    text-transform: capitalize;
+}
+/* * * * * * * *  Checkout Section / payment/process.html * * * * * * * */ 
+
+
+
+/* * * * * * * *  Success Section * * * * * * * */ 
+.mobile_success_section {
+    display: none;
+}
+
+.success_section{
+    height: auto;  
+}
+
+.success_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+.download_table {
+    width: 100%
+}
+
+
+.success_section p {
+    text-transform: capitalize;
+}
+
+
+#download_pic {
+    height: 8rem;
+    width: 6rem;
+}
+
+
+
+/* * * * * * * *  Success Section * * * * * * * */ 
+
+/* * * * * * * *  Payment Canceled * * * * * * * */ 
+.payment_issue_section{
+    height: auto;
+}
+
+.payment_issue_container{
+    margin-top: 4rem;
+   
+}
+
+.items_container{
+    border: 2px solid var(--color-table-grey);
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+
+
+}
+
+.issue_greeting{
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+
+
+.pay_issue_table{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: 35%;
+}
+
+.pay_issue_image{
+    width: 9rem;
+    height: 12rem;
+
+}
+
+.mobile_success_table:nth-child(odd){
+    background: var(--color-table-grey);
+}
+
+.mobile_details_container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+
+}
+
+
+/* * * * * * * *  Payment Canceled * * * * * * * */ 

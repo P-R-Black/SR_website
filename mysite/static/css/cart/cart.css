@@ -3,6 +3,10 @@
     height: auto;
 }
 
+.shop_cart_container{
+    height: 100vh;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -55,7 +59,7 @@ a.button, input[type="submit"] {
     background:var(--color-site-blue);
     border-radius: 8px;
     padding: 4px 14px;
-    font-size:12px;
+    font-size: 1rem;
     border:0;
 }
 
@@ -86,53 +90,35 @@ a.button.dark {
 /* * * * * * * * Sticky Cart * * * * * * * */
 
 #subheader {
-    background:#ececec;
-    color:#444;
-    padding:15px 100px;
+    position: relative;
+    background: var(--color-bg-secondary);
+    height: 3rem;
+    padding: .5rem 0;
     overflow:auto;
 }
 
 
-.cart_section {
-    align-items: center;
-    background-color: red;
-    display: flex;
-    height: 2.20rem;
-    justify-content: flex-end;
-    max-width: auto;
-    /* margin-top: 0;
-    padding-top: 0; */
-
-}
-
-.all_cart_items {
-    height: 2rem;
-    margin-right: 4rem;
-    width: 2.50rem;
-}
-
-
-
 .site_cart {
-    color: black;
-    float: right;
-    font-size: .75rem;
-    width: 1rem;
-    height: 1rem;
+    align-items: center;
     background-color: #264f64;
     border-radius: 50%;
-
     display: flex;
+    float: right;
+    font-size: .75rem;
+    height: 1rem;
     justify-content: center;
-    align-items: center;
-    position: relative;
+    margin-bottom: 2rem;
+    width: 1rem;
 }
 
 
 .fa-laptop {
     font-size: 1.75rem;
-    color: blue;
+    color: var(--color-site-blue);
+    margin-left: -2.5rem;
+    margin-top: .5rem;
     position: absolute;
+
 }
 
 /* * * * * * * * Sticky Cart * * * * * * * */

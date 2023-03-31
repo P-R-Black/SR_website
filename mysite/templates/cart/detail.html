@@ -10,6 +10,8 @@
 <section class="shop_cart_section">
     <h1 class="section_title_blue">Your Shopping Cart</h1>
     <div class="container shop_cart_container">
+        {% with total_items=cart|length %}
+        {% if total_items > 0 %}    
         <table class="cart">
             <thead>
                 <tr>
@@ -62,6 +64,10 @@
             <a href="{% url 'payments:process' %}" class="button dark">Checkout</a>
             {% csrf_token %}
         </p>
+        {% else %}
+        <p class="container all_posts_slug">No Items in Cart</p>
+    {% endif %}
+    {% endwith %}
     </div>
 </section>
 
@@ -83,7 +89,6 @@
                 <p class="mobile_total_price">Total: ${{ item.total_price }}</p>
                 <div class="column_div">
                     <form action="{% url 'cart:cart_add' product.id %}" method="post" class="mobile_quant_update">
-                        {{ item.update_quantity_form.quantity }}
                         {{ item.update_quantity_form.override }}
                         <input type="submit" value="Update">
                         {% csrf_token %}

@@ -7,28 +7,25 @@
 {% endblock %}
 
 {% block main %}
-<div class="library_container">
-    <div id="sidebar">
-        <h3>Categories</h3>
-        <ul>
-            <li {% if not category %}class="selected"{% endif %}>
-                <a href="{% url 'store:product_list' %}">All</a>
-            </li>
-            {% for c in categories %}
-            <li {% if category.slug == c.slug %}class="selected"{% endif %}>
-                <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <section class="product_library">
-        <div class="section_title">
-            <h1 class="library_title">{% if category %}{{ category.name }}{% else %}Library{% endif %}</h1>
-        </div>
-        <div id="main" class="product_list">
+<section class="library_section">
+    <h1 class="section_title_blue">Library</h1>
+    <div class="container library_container">
+        <aside id="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li {% if not category %} class="selected"{% endif %}>
+                    <a href="{% url 'store:product_list' %}">All</a>
+                </li>
+                {% for c in categories %}
+                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </aside>
+        <main id="main" class="product_list">
             {% for product in products %}
             <div class="item">
-
                 <a href="{{ product.get_absolute_url }}">
                     <img src="{{ product.image.url }}" alt="">
                 </a>
@@ -37,8 +34,7 @@
                     ${{ product.price }}
             </div>
             {% endfor %}
-        </div>
-    </section>
-</div>
-   
+        </main>
+    </div>
+</section>
 {% endblock %}

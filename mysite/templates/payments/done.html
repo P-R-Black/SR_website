@@ -7,33 +7,48 @@
 
 {% block main %}
 <section class="success_section">
-  
-    <h1>Your Payment Was Successful</h1>
-    <p>Thank you for your purchase</p>
-
+  <h1 class="section_title_blue">Your Payment Was Successful</h1>
+  <h4 class="all_posts_slug">Thank you for your purchase</h4>
+  <div class="container success_container">
+    <table class="download_table">
+      <thead>
+        <tr>
+          <th class="table_head">Newsletter</th>
+          <th class="table_head">Edition</th>
+          <th class="table_head table_head_price">Price</th>
+          <th class="table_head">Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for prod in products %}
+        <tr class="table_row">
+          <td class="table_data download_pic"><img id="download_pic" src="{{ prod.image.url }}"></td>
+          <td class="table_data table_data_prod_name">{{ prod.name }}</td>
+          <td class="table_data">${{prod.price}}</td>
+          <td class="table_data table_data_prod_download"><button class="btn_dark"><a href="{{prod.pdf_file.url}}" download>Download</a></button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<section class="download_page">
-  <table class="download_table">
-    <thead>
-      <tr>
-        <th class="table_head">Newsletter</th>
-        <th class="table_head">Edition</th>
-        <th class="table_head table_head_price">Price</th>
-        <th class="table_head">Download</th>
-      </tr>
-    </thead>
-    <tbody>
+<section class="mobile_success_section">
+  <h1 class="section_title_blue">Your Payment Was Successful</h1>
+  <h4 class="all_posts_slug">Thank you for your purchase</h4>
+  <div class="container mobile_success_container">
       {% for prod in products %}
-      <tr class="table_row">
-        <td class="table_data download_pic"><img id="download_pic" src="{{ prod.image.url }}"></td>
-        <td class="table_data table_data_prod_name">{{ prod.name }}</td>
-        <td class="table_data">${{prod.price}}</td>
-    
-        <td class="table_data table_data_prod_download"><button class="table_data_button"><a href="{{prod.pdf_file.url}}" download>Download</a></button></td>
-      </tr>
+        <div class="mobile_success_table">
+          <picture class="mobile_image">
+            <img src="{{ prod.image.url }}" alt="mobile product image" class="mobile_prod_img">
+          </picture>
+          <div class="mobile_details_container">
+            <h2 class="mobile_prod_name">{{ prod.name }}</h2>
+            <p class="mobile_prod_price"><strong>${{ prod.price}}</strong></p>
+            <button class="btn_dark"><a href="{{prod.pdf_file.url}}" download>Download</a></button>
+          </div>
+        </div>
       {% endfor %}
-    </tbody>
-  </table>
+  </div> 
 </section>
 {% endblock %}

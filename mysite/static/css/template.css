@@ -13,9 +13,10 @@
     --color-site-grey: #5C5757;
     --color-site-light_grey: #9F9F9F;
 
+
     --color-bg-secondary: #ecf0f2;
     --color-table-grey: #EEECEC;
-    
+
     --color-primary-font: #ffffff;
     --color-secondary-font: #000000;
 
@@ -99,6 +100,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border: 2px solid var(--color-site-blue);
     border-radius: 8px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     color: var(--color-primary-font);
     cursor: pointer;
     font-size: 1rem;
@@ -106,6 +108,7 @@ a:hover {
     padding: .25rem .50rem .25rem .50rem;
     text-shadow: none;
     text-transform: capitalize;
+    transition: var(--transition);
     user-select: none;
     white-space: nowrap;
 }
@@ -127,10 +130,15 @@ a:hover {
 
 }
 
+
 .btn_dark:hover, .btn_light:hover {
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
     transform: scale(1.02) translate(2px);
 }
+
+
+
+
 
 .social_block_link_white {
     color:  var(--color-primary-font);

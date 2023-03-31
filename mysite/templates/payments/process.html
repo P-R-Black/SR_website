@@ -2,19 +2,8 @@
 
 {% block main %}
 <section class="checkout_section">
-  <h1 class="checkout_title">Checkout</h1>
-    <div class="order_info">
-      <h3>Your Order</h3>
-      <ul>
-        {% for item in cart %}
-        <li>
-          {{ item.quantity }} x {{ item.product.name }} | <span>${{ item.total_price }}</span>
-        </li>
-      {% endfor %}
-      </ul>
-      <p class="order_box_total">Total: ${{ cart.get_total_price }}</p>
-    </div>
-
+  <h1 class="section_title_blue">Checkout</h1>
+  <div class="container pre_check_container">
     <div class="payment_form">
       <div class="order_form">
         <div class="order_inputs">
@@ -29,12 +18,26 @@
           <label class="form_label" for="first_name">Email Address</label>
           <input name="email" type="text" class="form_control" id="customer_email" placeholder="" required />
         </div>
-        <button onclick="buy(event)" >
+        <button onclick="buy(event)" class="btn_none" >
           <p><input type="submit" value="Place Order"></p>
         </button>
         {% csrf_token %} 
       </div>
     </div>
+
+    <div class="order_info">
+      <h3>Your Order</h3>
+      <ul>
+        {% for item in cart %}
+        <li>
+          {{ item.quantity }} x {{ item.product.name }} | <span>${{ item.total_price }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+      <p class="order_box_total">Total: ${{ cart.get_total_price }}</p>
+    </div>
+  </div>
+    
 </section>
 {% endblock %}
 

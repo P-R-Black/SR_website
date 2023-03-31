@@ -24,18 +24,19 @@
     }
 
     .mobile_prod_img{
-        height: 8rem;
-        width: 6rem; 
+        height: 10rem;
+        width: 8rem; 
     }
 
     .mobile_prod_name{
-        font-size: .85rem;
+        font-size: 1.15rem;
+        font-weight: 100;
         margin-bottom: .5rem;
     }
 
     .mobile_prod_price, .mobile_total_price{
         font-size: 1rem;
-        margin-bottom: .25rem;
+        margin-bottom: .5rem;
 
     }
 

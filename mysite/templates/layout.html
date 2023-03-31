@@ -22,21 +22,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/template.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index_mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index/index_mobile.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/store.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mobile_store.css' %}">
+    <link rel="stylesheet" href="{% static 'css/store/store.css' %}">
+    <link rel="stylesheet" href="{% static 'css/store/mobile_store.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mobile_cart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cart/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cart/mobile_cart.css' %}">
     
     
-    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mobile_payment.css' %}">
+    <link rel="stylesheet" href="{% static 'css/payments/payment.css' %}">
+    <link rel="stylesheet" href="{% static 'css/payments/mobile_payment.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mobile_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/mobile_blog.css' %}">
  
 </head>
 <body>
@@ -72,6 +72,22 @@
     </div>
 </nav>
 <hr>
+
+{% with total_items=cart|length %}
+{% if total_items > 0 %}
+<div id="subheader">
+    <div class="container sticky_cart_container">
+        <div class="site_cart">
+        <a href="{% url 'cart:cart_detail' %}">{{ total_items }}
+            <i class="fa-solid fa-laptop"></i>
+        </a>
+    </div>
+</div>
+</div>
+{% else %}
+{% endif %}
+{% endwith %}
+
 {% block main %}
 
 {% endblock %}

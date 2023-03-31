@@ -4,6 +4,5 @@
 - how to add google ads
 
 
-- explore putting cart/computer into nav bar, so that it's on all screens if in use and hidden if not
 - create sitemap
 - search feature / change db to postgres. DO THIS CLOSE TO THE END.

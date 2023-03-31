@@ -1,0 +1,111 @@
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px){
+
+     /* * * * * * * * * * * * Detailed * * * * * * * * * * * */
+     .product_details_container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .curr_newsletter {
+        height: 19rem;
+        margin-top: 1rem;
+        width: 16rem;
+    }
+
+    .description_block{
+        align-items: center;
+    }
+
+    .description_block h1, .description_block h2{
+        text-align: center;
+    }
+
+    .description_block div p {
+        text-align: justify;
+    }
+
+    .title_block {
+        font-size: 2rem;  
+    }
+
+    .product_description{
+        font-size: 1rem;
+    }
+
+    .product_price {
+        align-items: center;
+    }
+
+    /* * * * * * * * * * * * Detailed * * * * * * * * * * * */
+   
+}
+
+/* =============== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px){
+     /* * * * * * * * * * * * List HTML * * * * * * * * * * * */
+     .library_container {
+        align-items: center;
+        flex-direction: column;
+        
+     }
+
+    #sidebar{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        text-align: center;
+        
+    }
+
+    .product_list .item img {
+        height: 12rem;
+        width: 8rem;
+    }
+
+
+     /* * * * * * * * * * * * List HTML * * * * * * * * * * * */
+    
+    /* * * * * * * * * * * * Detailed * * * * * * * * * * * */
+    .product_details_container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .curr_newsletter {
+        height: 16rem;
+        margin-top: 1rem;
+        width: 13rem;
+    }
+
+    .description_block{
+        align-items: center;
+    }
+
+    .description_block h1, .description_block h2{
+        text-align: center;
+    }
+
+    .description_block div p {
+        text-align: justify;
+    }
+
+    .title_block {
+        font-size: 1.75rem;  
+    }
+
+    .product_description{
+        font-size: .95rem;
+    }
+
+    .product_price {
+        align-items: center;
+    }
+
+    /* * * * * * * * * * * * Detailed * * * * * * * * * * * */
+    
+
+}
+
+    

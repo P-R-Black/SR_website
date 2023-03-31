@@ -87,7 +87,25 @@ def payment_process(request):
 
 
 def payment_canceled(request):
-    return render(request, 'payments/canceled.html')
+    cart = Cart(request)
+
+    order = Order.objects.values()
+    current_order = order[0]
+    first_name = current_order['first_name']
+    email = current_order['email']
+
+    products = {}
+    for c in cart:
+        product = c['product']
+        price = c['price']
+
+        products[product] = price
+
+    purchased_products = products
+
+    return render(request, 'payments/canceled.html', {'products': purchased_products, 'name': first_name})
+
+
 
 
 def payment_done(request):
@@ -107,11 +125,9 @@ def payment_done(request):
 
     purchased_products = products
 
-    for product in purchased_products:
-        file = product.pdf_file.url
-        
-        template = render_to_string('payments/email_template.html', {'name': first_name, 'file': file})
+    template = render_to_string('payments/email_template.html', {'name': first_name})
 
+    try:
         email = EmailMessage(
             'Thank You!',
             template,
@@ -122,5 +138,8 @@ def payment_done(request):
         email.fail_silently=False
         email.send()
 
-    cart.clear()
-    return render(request, 'payments/done.html', {'products':purchased_products})
+        cart.clear()
+    except Exception as e:
+        print(f'Exection {e}')
+    finally:
+        return render(request, 'payments/done.html', {'products':purchased_products})
