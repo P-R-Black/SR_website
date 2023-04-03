@@ -14,7 +14,7 @@
                 <div class="inner_home_box">
                     <h1 class="home_title">Where are your investments taking you?</h1>
                     <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
-                    <a href="{% url 'store:product_detail' 1 'the-seville-report-investment-newsletter-september-2022' %}" aria-label="to newsletter" tabindex="7"><button class="btn_dark">newsletter</button></a> 
+                    <a href="{% url 'store:product_detail' 1 'the-seville-report-investment-newsletter-sept-2022' %}" aria-label="to newsletter" tabindex="7"><button class="btn_dark">newsletter</button></a> 
                 </div>
                 <div class="social_media_block">
                     <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -80,8 +80,13 @@
         </div>
         <div class="news_right">
             <div class="newsletter_image">
-                <img src="{{ current_news.image.url }}" alt="picture of newsletter cover" class="curr_newsletter">
-                <a href="{{ current_news.get_absolute_url }}"><button class="btn_light">Purchase Now</button></a>
+                <img src="{% static 'img/SR_Sept_22.jpeg' %}" alt="picture of newsletter cover" class="curr_newsletter">
+
+                {% comment %}
+                <img src="{{ product.image.url }}" alt="picture of newsletter cover" class="curr_newsletter">
+                {% endcomment %}
+
+                <a href="{% url 'store:product_detail' 1 'the-seville-report-investment-newsletter-sept-2022' %}"><button class="btn_light">Purchase Now</button></a>
             </div> 
 
         </div>

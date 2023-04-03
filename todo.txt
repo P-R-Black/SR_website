@@ -1,8 +1,13 @@
 
 - add hashtags
 - set up social media links
-- how to add google ads
 
 
-- create sitemap
+
+- sitemap done. once in production, register with google at https://search.google.com/search-console/welcome and add
+"ping_google" function
+
 - search feature / change db to postgres. DO THIS CLOSE TO THE END.
+
+
+- how to add google ads <- will need to do once site is live.

@@ -48,8 +48,13 @@ INSTALLED_APPS = [
     'taggit_templatetags2',
     'ckeditor',
     'ckeditor_uploader',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'django.contrib.postgres'
     
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,8 +93,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blog_database',
+        'USER': 'blog_database_user',
+        'PASSWORD': 'paulblack123',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 
