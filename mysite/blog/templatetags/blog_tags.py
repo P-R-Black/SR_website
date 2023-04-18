@@ -2,6 +2,10 @@ from django import template
 from ..models import Post
 from collections import Counter
 from taggit.models import Tag
+from django.utils.safestring import mark_safe
+import markdown
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from blog.forms import SearchForm
 
 
 register = template.Library()
@@ -41,5 +45,6 @@ def all_categories():
     return Tag.published.all()
 
 
-
-
+@register.filter(name='markdown')
+def markdown_format(text):
+    mark_safe(markdown.markdown(text))

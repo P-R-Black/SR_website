@@ -15,6 +15,8 @@
     </h4>
         {% endfor %}
     <h4 class="categories"><a href="{% url 'blog:all_categories' %}">More</a></h4>
+    <a href="{% url 'blog:post_search' %}"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href="{% url 'blog:post_feed' %}"><i class="fa-solid fa-square-rss"></i></a>
 </div>
 </aside> 
 <section class="blog_page_body">

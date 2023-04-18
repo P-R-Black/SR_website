@@ -49,8 +49,8 @@ logo {
     display: block;
     height: 3px;
     margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
     width: 2rem;
 
 }
@@ -480,12 +480,21 @@ hr {
 .hidden_text {
     display: none;
     margin-top: .5rem;
-    
+}
+
+.about_li::before {
+    content: "+ ";
+}
+
+.about_li:hover::before {
+    content: "- "
 }
 
 .about_li:hover {
     color: #ecf0f2;
 }
+
+
 
 .about_li:hover .hidden_text {
     animation: fadeIn 1.5s;

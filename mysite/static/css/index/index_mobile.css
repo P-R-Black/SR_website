@@ -61,7 +61,10 @@
 
 
     /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
-
+    .newsletter_section {
+        min-height: fit-content;
+       
+    }
     .news_container{
         display: flex;
         flex-direction: column;
@@ -74,9 +77,14 @@
 
 
     .news_desc {
-        font-size: 1.40rem;
+        font-size: 1.35rem;
         line-height: 1.15em;
         margin-bottom: 1rem;
+        margin-top: -1.25rem;
+    }
+
+    .news_right {
+        margin-bottom: 2rem;
     }
 
     .news_block {

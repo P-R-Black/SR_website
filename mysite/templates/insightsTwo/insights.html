@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Insights
+{% endblock %}
+
+{% block main %}
+<section class="insights_section">
+    <h1 class="section_title_blue">Insights</h1>
+    <div class="container insights_container">
+        <div class="pic_sector_container">
+            
+            <div class="sect_img_box">
+                <img id="sector_image" class="sector_image overlay" src="" alt="">
+               <div class="text_on_picture">
+                    <h1>S&P 500 <span class="sector_title"></span></h1>
+                    <div class="sect_box">
+                        <div class="sect_boxes">
+                            <h2 class="stat_label">P/E</h2>
+                            <h3 id="price_earnings_forward" class="sect_stat"></h3>
+                        </div>
+                        <div class="sect_boxes">
+                            <h2 class="stat_label">P/S</h2>
+                            <h3 id="price_sales_forward" class="sect_stat"></h3>
+                        </div>
+                        <div class="sect_boxes">
+                            <h2 class="stat_label">P/B</h2>
+                            <h3 id="price_book_mrq" class="sect_stat"></h3>
+                        </div>
+                        <div class="sect_boxes">
+                            <h2 class="stat_label">P/CF</h2>
+                            <h3 id="price_cashflow" class="sect_stat"></h3>
+                        </div>
+                    </div>
+                    <div class="date_box">
+                        <h4>On <span class="as_of_date" id="as_of_date"></span></h4>
+                    </div>
+               </div>
+            </div>
+           
+            <div class="sectors_box">
+                <h1>S&P 500</h1>
+                <h2>Sectors</h2>
+                <ul>
+                    {% for s in sector %}{% if s.pk != 13 %}
+                    <li class="sect_names">{{ s }}</li>
+                    {% endif %}
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="snp_stats">
+            {% for s in sector %}{% if s.pk == 13 %}
+            <h1>{{ s.sector_name }}</h1>
+            {% endif %} {% endfor %}
+
+            <div class="snp_box">
+                <div class="snp_stat">
+                    <h2>P/E</h2>
+                    <h3 >{{ snp.forward_pe }}x<h3>
+                </div>
+                <div class="snp_stat">
+                    <h2>P/S</h2>
+                    <h3>{{ snp.forward_ps }}x<h3>
+                </div>
+                <div class="snp_stat">
+                    <h2>P/B</h2>
+                    <h3>{{ snp.mrq_pb }}x<h3>
+                </div>
+                <div class="snp_stat">
+                    <h2>P/CF</h2>
+                    <h3>{{ snp.pcf }}x<h3>
+                </div>
+                <div class="snp_stat">
+                    <h2>ROE</h2>
+                    <h3>{{ snp.roe }}%<h3>
+                </div>
+                <div class="snp_stat">
+                    <h2>ROA</h2>
+                    <h3>{{ snp.roa }}%<h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    const the_weekly_stats = JSON.parse('{{weekly_stats|safe}}')
+    const the_sector_names = JSON.parse('{{sector_names|safe}}')
+</script>
+{% endblock %}

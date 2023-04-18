@@ -35,6 +35,7 @@ urlpatterns = [
     path('orders/', include('orders.urls', namespace='orders')),
     path('cart/', include('cart.urls', namespace='cart')),
     path('store/', include('store.urls', namespace='store')),
+    path('insightsTwo/',include('insightsTwo.urls', namespace='insightsTwo')),
     path('', include('home_page.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
 

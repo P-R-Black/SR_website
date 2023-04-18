@@ -44,13 +44,15 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payments.apps.PaymentsConfig',
     'blog.apps.BlogConfig',
+    'insightsTwo.apps.InsightstwoConfig',
     'taggit',
     'taggit_templatetags2',
     'ckeditor',
     'ckeditor_uploader',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'django.contrib.postgres'
+    'django.contrib.postgres',
+    'storages',
     
 ]
 
@@ -71,7 +73,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('templates'))], #new 
+        'DIRS': [str(BASE_DIR.joinpath('templates'))], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,6 +104,22 @@ DATABASES = {
     }
 }
 
+# Redis Cashe
+# https://github.com/jazzband/django-redis
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -127,7 +145,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
@@ -141,13 +159,50 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/'))]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
+DEVELOPMENT = False
+if DEVELOPMENT:
+    STATIC_URL = 'static/'
+    # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+else:
+    AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+    }
+    AWS_STORAGE_BUCKET_NAME = 'sevtestbucket'
+    AWS_S3_REGION_NAME = 'us-east-1'
+    AWS_ACCESS_KEY_ID = 'AKIA3AWV4G72DOWNETEN'
+    AWS_SECRET_ACCESS_KEY = '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'
+
+
+    AWS_S3_CUSTOM_DOMAIN =  f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    STATICFILES_STORAGE = 'custom_storage.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+
+    DEFAULT_FILE_STORAGE = 'custom_storage.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+    # AWS_DEFAULT_ACL = 'public-read'
+
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_QUERYSTRING_AUTH = False
+    AWS_S3_SIGNATURE_VERSION = "s3v4"
+
+
+STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/'))]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
 

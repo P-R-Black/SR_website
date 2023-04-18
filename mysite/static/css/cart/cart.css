@@ -1,15 +1,17 @@
 /* * * * * * * *  Shopping Cart * * * * * * * */
 .shop_cart_section{
     height: auto;
+    
+}
+.shop_cart_container {
+    min-height: 100vh;
 }
 
-.shop_cart_container{
-    height: 100vh;
-}
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    
 }
 
 table th, table td {
@@ -92,7 +94,7 @@ a.button.dark {
 #subheader {
     position: relative;
     background: var(--color-bg-secondary);
-    height: 3rem;
+    height: fit-content;
     padding: .5rem 0;
     overflow:auto;
 }
@@ -107,7 +109,7 @@ a.button.dark {
     font-size: .75rem;
     height: 1rem;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 1rem;
 }
 

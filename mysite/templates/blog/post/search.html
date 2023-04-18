@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load blog_tags %}
+{% block title %}Search{% endblock %}
+
+{% block main %}
+{% if query %}
+<section class="search_section">
+    <main class="container search_container">
+        <h1 class="section_title_blue">Post Containing "{{ query }}"</h1>
+        <h3 class="search_result">{% with results.count as total_results %} Found {{ total_results }} 
+            Result {{ total_results|pluralize }}{% endwith %}
+        </h3>
+        {% for post in results %}
+            <h4 class="search_result_blog_title"><a href="{{ post.get_absolute_url}}">{{ post.title }}</a></h4>
+               {{ post.body|safe|truncatewords_html:50 }}
+                {% empty %}
+            <p>There are no results for your query</p>
+            {% endfor %}
+            <p class="search_again"><a href="{% url 'blog:post_search' %}">Search Again</a></p>
+    </main>
+            {% else %}
+    <main class="container search_container">
+        <h1 class="search_page_title">Search for Posts</h1>
+        <form method="get" action="">{{ form.as_p }}
+            <input type="submit" value="Search">
+        </form>
+        <div class="container all_cats_section">
+            {% for k, v in all_cats.items %}
+            <button class="cat_button"><a href="{% url 'blog:by_categories' v %}">{{ k }}</a></button>
+            {% endfor %}
+        </div>
+        
+    </main>
+    {% endif %}
+    {% endblock %}
+
+       
+</section>

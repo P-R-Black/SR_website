@@ -1,5 +1,3 @@
-
-
 // Hamburger Menu
 const hamburger = document.querySelector('#mobile_menu');
 const navElements = document.querySelector('.navbar_menu');

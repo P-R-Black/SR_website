@@ -81,7 +81,7 @@ form p label {
 }
 
 .success_section{
-    height: auto;  
+    min-height: 100vh;
 }
 
 .success_container {

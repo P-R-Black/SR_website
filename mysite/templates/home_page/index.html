@@ -14,7 +14,7 @@
                 <div class="inner_home_box">
                     <h1 class="home_title">Where are your investments taking you?</h1>
                     <p class="home_paragraph">The Seville Report Newsletter helps investors reach new<br>heights by spotlighting long-term investment ideas.</p>
-                    <a href="{% url 'store:product_detail' 1 'the-seville-report-investment-newsletter-sept-2022' %}" aria-label="to newsletter" tabindex="7"><button class="btn_dark">newsletter</button></a> 
+                    <a href="{% url 'store:product_detail' 1 'the-seville-report-investment-newsletter-sept-2022' %}" aria-label="to current newsletter" tabindex="7"><button class="btn_dark">newsletter</button></a> 
                 </div>
                 <div class="social_media_block">
                     <a href="https://www.facebook.com/SevilleReport" class="social_block_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -43,7 +43,7 @@
             <div class="rec_desc">+35%</div>
         </div>
         <div class="recommend_items">
-            <img class="recom_photo" src="media/products/2022/09/24/SR_March_22_Image.001.jpeg" alt="">
+            <img class="recom_photo" src="media/products/2022/09/24/SR_March_22_Image.001.jpeg" alt="image of March 2022 mewsletter cover ">
             <h3 class="recom_date">Recommended<br>March 2022</h3>
         </div>
     </div>
@@ -56,7 +56,7 @@
     </div>
 </aside>
 <hr>
-<!-- ========== THE NEWSLETTER ==========-->
+
 
 <section class="newsletter_section"  id="bg_two">
         <h1 class="section_title_white">The Seville Report Newsletter</h1>
@@ -83,24 +83,23 @@
                 <img src="{% static 'img/SR_Sept_22.jpeg' %}" alt="picture of newsletter cover" class="curr_newsletter">
 
                 {% comment %}
-                <img src="{{ product.image.url }}" alt="picture of newsletter cover" class="curr_newsletter">
+                <img src="{{ product.image.url }}" alt="picture of current newsletter cover" class="curr_newsletter">
                 {% endcomment %}
 
                 <a href="{% url 'store:product_detail' 1 'the-seville-report-investment-newsletter-sept-2022' %}"><button class="btn_light">Purchase Now</button></a>
             </div> 
-
         </div>
     </div> 
 </section>
 <hr>
-<!-- ========== SR BLOG ==========-->
+
 <section class="blog_section">
     <h1 class="section_title_blue">The SR Blog</h1>
     <div class="container card_container">
         {% for post in last_three_post %}
         <div class="card">
             <a href="{{ post.get_absolute_url }}">
-                <div class="card_image"><img class="blog_card_image" src="{{ post.post_header_image.url }}" alt=""></div>
+                <div class="card_image"><img class="blog_card_image" src="{{ post.post_header_image.url }}" alt="blog cover image"></div>
                 <div class="card_text">
                     <div class="date">{{ post.publish|date:"M d, Y " }}<span>|{{ post.publish|date:" f A" }}</span></div>
                     <h2>{{ post.title|title }}</h2>
@@ -129,5 +128,4 @@
             <a href="https://twitter.com/SevilleReport" class="blue_social_block_link" target="_blank"><i class="fab fa-twitter-square"></i></a>
         </div>
 </section>
-
 {% endblock %}

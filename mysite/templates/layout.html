@@ -16,11 +16,14 @@
     <meta name="keywords" content="Investments, Investing, Stocks, Stock Market, Wall Street">
     <meta name="author" content="Paul Black">
 
+   
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="/{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
     <link rel="mask-icon" href="{% static 'img/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -28,7 +31,8 @@
     <script src="https://js.stripe.com/v3/"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
-
+    
+   
     <link rel="stylesheet" href="{% static 'css/template.css' %}">
     <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/index/index_mobile.css' %}">
@@ -45,7 +49,10 @@
 
     <link rel="stylesheet" href="{% static 'css/blog/blog.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog/mobile_blog.css' %}">
- 
+
+    <link rel="stylesheet" href="{% static 'css/insights/insights.css' %}">
+    <link rel="stylesheet" href="{% static 'css/insights/mobile_insights.css' %}">
+    
 </head>
 <body>
 
@@ -66,7 +73,7 @@
                 <a href="{% url 'blog:post_list' %}" class="navbar_links" id="blog_page" aria-label="blog">Blog</a>
             </li>
             <li class="navbar_items">
-                <a href="#insights" class="navbar_links" id="insights_page" aria-label="insights">Insights</a>
+                <a href="{% url 'insightsTwo:insights_two_home' %}" class="navbar_links" id="insights_page" aria-label="insights">Insights</a>
             </li>
             <li class="navbar_items">
                 <a href="{% url 'home_page:about_us_page_view' %}" class="navbar_links" id="about_page" aria-label="About">About Us</a>
@@ -95,7 +102,6 @@
 {% else %}
 {% endif %}
 {% endwith %}
-
 {% block main %}
 
 {% endblock %}
@@ -128,7 +134,7 @@
                 <a href="#" id="footer_logo_top">The Seville Report</a>
                 <a href="#" id="footer_logo_bottom">The Investment Newsletter</a>
             </div>
-            <p class="website_rights">&copy; The Seville Report 2022. All Rights Reserved</p>
+            <p class="website_rights">&copy; The Seville Report 2023. All Rights Reserved</p>
             <div class="social_icons">
                 <a href="https://www.facebook.com/SevilleReport" class="social_icon_link" target="_blank"><i class="fab fa-facebook-square"></i></a>
                 <a href="https://www.instagram.com/the_seville_report/" class="social_icon_link" target="_blank"><i class="fab fa-instagram-square"></i></a>
@@ -137,7 +143,9 @@
         </div>
     </aside>
 </footer>
-<script src="{% static 'js/MobileMenu.js' %}"></script>
+
+<script src="{% static 'js/mobileMenu.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/insights.js' %}"></script>
 </body>
 </html>
