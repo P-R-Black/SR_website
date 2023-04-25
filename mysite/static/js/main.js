@@ -1,17 +1,34 @@
+console.log('sanity check Main.js')
 function validateForm(data) {
   let errors = []
 
   if (data.first_name === '') {
-      errors.push('First name is empty')
+      errors.push('First Name is Empty')
   }
 
   if (data.last_name === '') {
-      errors.push('Last name is empty')
+      errors.push('Last Name is Empty')
   }
 
   if (data.email === '') {
-      errors.push('Email is empty')
+      errors.push('Email Address is Empty')
   }
+
+  let html = ''
+  let errorsElement = document.getElementById('errors');
+
+  for (let i = 0; i < errors.length; i++){
+    html += errors[i] + '<br>';
+  }
+
+  
+  if (errors.length){
+    errorsElement.classList.remove('hidden')
+    errorsElement.innerHTML = html
+  } else {
+    errorsElement.classList.add('hidden')
+  }
+
 
   return errors
 }
@@ -30,6 +47,7 @@ function buy(event) {
 
   if (errors.length) {
       console.log('Errors', errors)
+    
   } else {
       var stripe = Stripe('pk_test_AGjSQt22JrGKa4oNjln8Bqyw')
 
@@ -56,7 +74,7 @@ function buy(event) {
           }
       })
       .catch(function(error) {
-          console.log('Errors', error)
+          console.log('Errors 2', error)
       })
   }
   

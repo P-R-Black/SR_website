@@ -18,10 +18,12 @@
           <label class="form_label" for="first_name">Email Address</label>
           <input name="email" type="text" class="form_control" id="customer_email" placeholder="" required />
         </div>
+
         <button onclick="buy(event)" class="btn_none" >
           <p><input type="submit" value="Place Order"></p>
         </button>
-        {% csrf_token %} 
+        {% csrf_token %}
+        <div class="hidden" id="errors"></div>
       </div>
     </div>
 

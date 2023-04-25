@@ -71,6 +71,19 @@ form p label {
     padding-bottom: 1px;
     text-transform: capitalize;
 }
+
+.hidden {
+    display: none;
+}
+
+#errors {
+    background: rgb(255, 232, 236);
+    border-radius: 8px;
+    color: red;
+    padding: 1rem 1rem;
+    width: 100%;
+}
+
 /* * * * * * * *  Checkout Section / payment/process.html * * * * * * * */ 
 
 

@@ -20,8 +20,18 @@
     height: 29rem;
     position: absolute;
     width: 45rem;
+    animation: zoom-in-zoom-out 35s infinite ;
 }
 
+
+@keyframes zoom-in-zoom-out {
+    0% {
+    transform: scale(1.15, 1.15);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
+    }
 
 .text_on_picture {
     align-items: center;

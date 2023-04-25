@@ -4,7 +4,12 @@ django_ckeditor==6.5.1
 django-redis==5.2.0
 django_storages==1.13.2
 django_taggit==3.1.0
+django-taggit-templatetags2
 Markdown==3.4.3
 pandas==2.0.0
 Pillow==9.2.0
+python-dotenv==1.0.0
+psycopg2
+psycopg2-binary
 stripe==4.2.0
+

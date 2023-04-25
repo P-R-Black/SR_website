@@ -20,7 +20,11 @@ from django.conf.urls.static import static
 
 from django.contrib.sitemaps.views import sitemap
 from home_page.sitemaps import PostSitemap
+from django.views.generic.base import TemplateView
+import environ
 
+env = environ.Env()
+environ.Env.read_env()
 
 sitemaps = {
     'posts': PostSitemap,
@@ -28,7 +32,8 @@ sitemaps = {
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(env('SECRET_ADMIN_URL') + '/admin/', admin.site.urls),
+    path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     path('blog/', include('blog.urls', namespace='blog')),
     path('ckeditor', include('ckeditor_uploader.urls')),
     path('payments/', include('payments.urls', namespace='payments')),

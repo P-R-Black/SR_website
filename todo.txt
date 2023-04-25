@@ -1,4 +1,5 @@
 
+- in home page, newsletter section, fix height issue, that section gets out of whack when the page shrinks vertically
 - add hashtags
 - set up social media links
 

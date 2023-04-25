@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i$y92e7$@n0j+l)c#yyw%pqh5po5^h2o#xl72a409^(xxbmj2+'
+SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,7 +78,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('templates'))], 
+        'DIRS': [str(BASE_DIR.joinpath('../templates'))], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,11 +100,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blog_database',
-        'USER': 'blog_database_user',
-        'PASSWORD': 'paulblack123',
-        'HOST': 'localhost',
+         'ENGINE': os.environ.get('DEV_DB_ENGINE'),
+        'NAME': os.environ.get('DEV_DB_NAME'),
+        'USER': os.environ.get('DEV_DB_USER'),
+        'PASSWORD': os.environ.get('DEV_DB_PASSWORD'),
+        'HOST': os.environ.get('DEV_DB_HOST'),
         'PORT': ''
     }
 }
@@ -155,24 +160,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/'))]
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/'))]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-DEVELOPMENT = False
-if DEVELOPMENT:
-    STATIC_URL = 'static/'
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+if DEBUG:
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [(os.path.join(BASE_DIR, '../static/'))]
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, '../media/')   
 else:
     AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
     'CacheControl': 'max-age=94608000',
     }
-    AWS_STORAGE_BUCKET_NAME = 'sevtestbucket'
+
+    AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_REGION_NAME = 'us-east-1'
-    AWS_ACCESS_KEY_ID = 'AKIA3AWV4G72DOWNETEN'
-    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_ACCESS_KEY_ID=os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY=os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 
     AWS_S3_CUSTOM_DOMAIN =  f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
@@ -192,9 +201,10 @@ else:
     AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 
-STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static/'))]
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# STATICFILES_DIRS = [(os.path.join(BASE_DIR, '../static/'))]
+# MEDIA_URL = '../media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, '../media/')
+
 
 
 # Default primary key field type
@@ -208,21 +218,21 @@ CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-STRIPE_PUBLIC_KEY = "pk_test_AGjSQt22JrGKa4oNjln8Bqyw"
-STRIPE_SECRET_KEY = "sk_test_VmpbnhQIjrod258uv0LA20m6"
-STRIPE_WEBHOOK_SECRET = ""
-STRIPE_ENDPOINT_SECRET = 'whsec_8dafad77f335c5a42ea353d7ba5d537bf62c989854ee32dfd9854218ac965eb3'
+STRIPE_PUBLIC_KEY=os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY=os.environ.get('STRIPE_SECRET_KEY')
+#STRIPE_WEBHOOK_SECRET = ""
+STRIPE_ENDPOINT_SECRET=os.environ.get('STRIPE_ENDPOINT_SECRET')
 
 
 #SMTP Configuratoin
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'pblack@sevillereport.com'
-EMAIL_HOST_PASSWORD = 'wqcjpjgbogxwppim'
-EMAIL_PORT = 587 #465
+
+EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT=os.environ.get("'EMAIL_PORT'")
 EMAIL_USE_TLS = True
 
-# smtp.login("sevillereport@gmail.com", "erpylyugqnmbnxjf")
 
 
 

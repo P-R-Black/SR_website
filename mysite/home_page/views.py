@@ -4,7 +4,8 @@ from store.models import Product
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
-
+import environ
+import os
 
 # Create your views here.
 def home_page_view(request):
@@ -31,9 +32,10 @@ def contact(request):
                 'message': form.cleaned_data['message'],
             }
             message = '\n'.join(body.values())
-
+            from_email_address=os.environ.get('EMAIL_HOST_USER')
             try:
-                send_mail(subject, message, 'pblack@sevillereport.com', ['pblack@sevillereport.com'])
+                send_mail(subject, message, from_email_address, [from_email_address])
+                print('from_email_address', from_email_address)
                 print('subject:', subject, 'message:', message )
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')

@@ -87,6 +87,8 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
 } 
 
 
@@ -215,8 +217,7 @@ hr {
 
 /* ==================  Newsletter Section ================== */
 .newsletter_section {
-    height: 100vh;
-   
+    height: auto;
 }
 
 #bg_two {
@@ -227,11 +228,17 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     margin: 0;
     padding-top: 2rem;
-    
 }
 
+.news_container {   
+    min-height: 85vh;
+    margin-bottom: 0;
+
+}   
 
 .news_container{
     display: flex;
@@ -247,7 +254,7 @@ hr {
 
 
 .news_desc {
-    font-size: 1.75rem;
+    font-size: 2vw;
     line-height: 1.25em;
     text-align: justify;
 }
@@ -281,9 +288,17 @@ hr {
     gap: 1rem;
 }
 
+.newsletter_image a {
+    margin-bottom: 2rem;
+}
+
 .newsletter_image .curr_newsletter {
     height: 28rem;
     width: 20rem;
+}
+
+#newsletter_news_block {
+    margin-bottom: 2rem;
 }
 
 
