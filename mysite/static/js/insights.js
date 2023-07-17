@@ -121,6 +121,16 @@ const updateImage = (sectorInPlay) => {
     })
 }
 
+// UPDATES THE IMAGE THAT IS ASSIGNED TO THE INDUSTRY NAME
+const indUpdateImage = (industryInPlay) => {
+    the_industry_names.filter(image => {
+        if (image['pk'] === industryInPlay){
+            industryImage.src = 'media/' + image['fields']['sector_image'];
+
+        }
+    })
+}
+
 
 // CHANGES SECTOR NAME, STATS, AND IMAGE AFTER 60 SECONDS
 const carouselStats = () => {
