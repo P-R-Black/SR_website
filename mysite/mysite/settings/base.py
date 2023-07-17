@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = True # os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-         'ENGINE': os.environ.get('DEV_DB_ENGINE'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # os.environ.get('DEV_DB_ENGINE'),
         'NAME': os.environ.get('DEV_DB_NAME'),
         'USER': os.environ.get('DEV_DB_USER'),
         'PASSWORD': os.environ.get('DEV_DB_PASSWORD'),
@@ -177,7 +177,6 @@ else:
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
     'CacheControl': 'max-age=94608000',
     }
-
     AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_REGION_NAME = 'us-east-1'
     AWS_ACCESS_KEY_ID=os.environ.get('AWS_ACCESS_KEY_ID')

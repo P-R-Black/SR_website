@@ -43,3 +43,6 @@ def contact(request):
 
     form = ContactForm()
     return render(request, 'home_page/contact.html', {'form': form})
+
+def attributes(request):
+    return render(request, 'home_page/attributes.html')

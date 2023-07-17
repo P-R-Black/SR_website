@@ -9,11 +9,11 @@ from dotenv import load_dotenv
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DEV_DB_ENGINE'),
-        'NAME': os.environ.get('DEV_DB_NAME'),
-        'USER': os.environ.get('DEV_DB_USER'),
-        'PASSWORD': os.environ.get('DEV_DB_PASSWORD'),
-        'HOST': os.environ.get('DEV_DB_HOST'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # os.environ.get('DEV_DB_ENGINE'),
+        'NAME': 'blog_database', # os.environ.get('DEV_DB_NAME'),
+        'USER': 'blog_database_user', # os.environ.get('DEV_DB_USER'),
+        'PASSWORD': 'paulblack123', # os.environ.get('DEV_DB_PASSWORD'),
+        'HOST': 'localhost', # os.environ.get('DEV_DB_HOST'),
         'PORT': ''
     }
 }
