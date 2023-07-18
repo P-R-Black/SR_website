@@ -1,4 +1,3 @@
-console.log('sanity check Main.js')
 function validateForm(data) {
   let errors = []
 

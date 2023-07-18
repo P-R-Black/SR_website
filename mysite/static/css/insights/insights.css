@@ -1,70 +1,71 @@
 .insights_section{
     height: auto;
 }
-
-.pic_sector_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-around;
-}
-
-
-.sect_img_box {
-    height: auto;
-    width: auto;
-    
-}   
-.sector_image{
-    filter: sepia(100%) saturate(200%) brightness(40%) hue-rotate(150deg);
-    height: 29rem;
-    position: absolute;
-    width: 45rem;
-    animation: zoom-in-zoom-out 35s infinite ;
-}
-
-
-@keyframes zoom-in-zoom-out {
-    0% {
-    transform: scale(1.15, 1.15);
-    }
-    100% {
-    transform: scale(1, 1);
-    }
-    }
-
-.text_on_picture {
+.insights_container {
     align-items: center;
-    color: var(--color-primary-font);
     display: flex;
     flex-direction: column;
-    height: 29rem;
+    justify-content: center;
+    
+}
+
+.pic_sector_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     justify-content: center;
     position: relative;
-    transition: var(--transition);
-    width: 45rem;
+    width: 100%;
 }
 
-.text_on_picture h3 {
-    margin-top: .5rem;
-    transition: var(--transition);
+.sect_img_box {
+    aspect-ratio: 1.75/1; 
+    position: relative;
+    width: 60%;
+    display: inline-block;
+    overflow: hidden;
+
 }
 
-.text_on_picture h4 {
-    bottom: 0;
-    font-size: .75rem;
-    margin-right: 1rem;
+.sector_image{
+    animation: zoom-in-zoom-out 35s infinite;
+    filter: sepia(100%) saturate(200%) brightness(40%) hue-rotate(150deg);
+    height: auto;
+    width: 100%;     
+    
+}
+
+
+.text_on_picture {
+    color: var(--color-primary-font);
     position: absolute;
-    right: 0;
-    transition: var(--transition);
+    top: 30%;
+    width: 100%;
 }
 
+.text_on_picture h1 {
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    text-align: center;
+}
+
+.text_on_picture p{
+    font-size: clamp(.75rem, 4vw, 1.5rem);
+    font-weight: 600;
+    margin-top: .25rem;
+}
+
+.date_box h4 {
+    font-size: clamp(.5rem, 4vw, 1rem);
+    opacity: .5;
+    text-align: center;  
+}
 
 
 .sect_box{
-    color: var(--color-table-grey);
     display: flex;
     justify-content: space-evenly;
+    margin: 1rem 0 clamp(1rem, 4vw, 5rem) 0;
     width: 100%;
 }
 
@@ -72,40 +73,58 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -2rem;
+}
+
+.sect_boxes h2{
+    font-size: clamp(1rem, 4vw, 1.75rem);
 }
 
 
 .sectors_box{
+    align-items: center;
     background-color: var(--color-bg-secondary);
     border: 2px solid var(--color-site-blue);
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .75rem;
+    width: 60%;
     
 }
 
-.sectors_box h1, .sectors_box h2 {
+.sectors_box ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+    width: 95%;
+}
+
+.sectors_box h1{
     color: var(--color-site-blue);
-    margin: 0;
-    text-align: center;
+
 }
 
 .sectors_box h2 {
+    color: var(--color-site-blue);
+    margin-top: -3rem;
     text-shadow: .70px .70px rgba(0, 0, 0.1);
 }
 
 .sect_names {
     cursor: pointer;
-    margin-top: .75rem;
-    text-align: center;
-}
-
-.sect_names:last-child{
-    margin-bottom: 1rem;
+    font-size: clamp(.9rem, 4vw, 1.25rem);
+    font-weight: 500;
+    list-style: circle;
+    margin-right: 0.75rem;
+    text-align: left;
 }
 
 .snp_stats {
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 4rem;
-    width: 50rem;
+    width: 70%;
 }
 
 .snp_stats h1 {
@@ -126,4 +145,64 @@
     justify-content: space-evenly;
     text-align: center;
 
+}
+
+.as_of_date_two {
+    color: var(--color-secondary-font);
+}
+
+.snp_box .snp_stat h2{
+    font-size: clamp(1rem, 4vw, 1.75rem);
+}
+
+.snp_box .snp_stat h3 {
+    font-size: clamp(.75rem, 4vw, 1.5rem);
+
+}
+/*
+.med_time_graph {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+*/
+
+/* ============ YOY CHART ============*/
+
+.yoy_section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.yoy_box {
+    aspect-ratio: 2/.9;
+    background: transparent;
+    border: 2px solid var(--color-site-blue);
+    margin: 1rem 1rem;
+    padding: 20px;
+    width: 60%;
+}
+
+.yoy_comp_title {
+    color: #000000;
+    text-align: center;
+}
+
+.yoy_section h2{
+    text-align: center;
+}
+
+/* ============ YOY CHART ============*/
+
+
+@keyframes zoom-in-zoom-out {
+    0% {
+    transform: scale(1.15, 1.15);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
 }

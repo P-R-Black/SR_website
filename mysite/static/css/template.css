@@ -105,11 +105,13 @@ a:hover {
     font-size: 1rem;
     margin-top: 1.5rem;
     padding: .25rem .50rem .25rem .50rem;
+    text-align: center;
     text-shadow: none;
     text-transform: capitalize;
     transition: var(--transition);
     user-select: none;
     white-space: nowrap;
+    width: 10rem;
 }
 
 .btn_dark {
@@ -121,21 +123,27 @@ a:hover {
     cursor: pointer;
     font-size: 1rem;
     padding: .25rem .50rem .25rem .50rem;
+    text-align: center;
     text-shadow: none;
     text-transform: capitalize;
     transition: var(--transition);
     user-select: none;
     white-space: nowrap;
+    width: 10rem;
 
 }
 
 
-.btn_dark:hover, .btn_light:hover {
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+.btn_dark:hover {
     transform: scale(1.02) translate(2px);
 }
 
 
+.btn_light:hover {
+    border: 1px solid var(--color-primary-font);
+    color: var(--color-site-blue);
+    transform: scale(1.02) translate(2px);
+}
 
 
 
@@ -173,7 +181,4 @@ a:hover {
     .section_title_blue, .section_title_white {
         font-size: 1.75rem;
     }
-
-    
-
 }

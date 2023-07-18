@@ -11,7 +11,7 @@
         <div class="pic_sector_container">
             
             <div class="sect_img_box">
-                <img id="sector_image" class="sector_image overlay" src="" alt="">
+                <img id="sector_image" class="sector_image overlay" src="%20" alt="">
                <div class="text_on_picture">
                     <h1>S&P 500 <span class="sector_title"></span></h1>
                     <div class="sect_box">
@@ -81,11 +81,39 @@
                     <h3>{{ snp.roa }}%<h3>
                 </div>
             </div>
+            <div class="date_box">
+                <h4>
+                    <span class="as_of_date as_of_date_two" id="as_of_date"></span>
+                </h4>
+            </div>
         </div>
+    </div>
+</section>
+<section class="yoy_section container">
+    <h1 class="section_title_blue">Year-Over-Year Comparison</h1>
+    <h2>S&P 500 <span class="yoy_comp_title"></span>Y-o-Y</h2>
+    <div class="yoy_box">
+        <canvas id="yoy_chart"></canvas>
+    </div>
+    <div class="sectors_box">
+        <h1>S&P 500</h1>
+        <h2>Sectors</h2>
+        <ul>
+            {% for s in sector %}{% if s.pk != 13 %}
+            <li class="sect_names">{{ s }}</li>
+            {% endif %}
+            {% endfor %}
+            
+        </ul>
     </div>
 </section>
 <script type="text/javascript">
     const the_weekly_stats = JSON.parse('{{weekly_stats|safe}}')
     const the_sector_names = JSON.parse('{{sector_names|safe}}')
+    const the_industry_names = JSON.parse('{{industry_names|safe}}')
+    const the_weekly_y_o_y = JSON.parse('{{weekly_y_o_y|safe}}')
 </script>
 {% endblock %}
+
+
+
