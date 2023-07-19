@@ -62,21 +62,21 @@
 }
 
 
-.sect_box{
+.sect_box, .ind_box{
     display: flex;
     justify-content: space-evenly;
     margin: 1rem 0 clamp(1rem, 4vw, 5rem) 0;
     width: 100%;
 }
 
-.sect_boxes {
+.sect_boxes, .ind_boxes{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -2rem;
 }
 
-.sect_boxes h2{
+.sect_boxes h2, .ind_boxes h2{
     font-size: clamp(1rem, 4vw, 1.75rem);
 }
 
@@ -92,7 +92,7 @@
     
 }
 
-.sectors_box ul {
+.sectors_box ul, .industry_box ul {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -101,18 +101,18 @@
     width: 95%;
 }
 
-.sectors_box h1{
+.sectors_box h1,  .industry_box h1{
     color: var(--color-site-blue);
 
 }
 
-.sectors_box h2 {
+.sectors_box h2, .industry_box h2 {
     color: var(--color-site-blue);
     margin-top: -3rem;
     text-shadow: .70px .70px rgba(0, 0, 0.1);
 }
 
-.sect_names {
+.sect_names, .ind_names {
     cursor: pointer;
     font-size: clamp(.9rem, 4vw, 1.25rem);
     font-weight: 500;
@@ -196,6 +196,82 @@
 }
 
 /* ============ YOY CHART ============*/
+
+/* ============ S&P500 INDUSTRIES ============*/
+.ind_insights_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 5rem;
+}
+
+
+
+.pic_industry_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.ind_img_box {
+    aspect-ratio: 1.75/1; 
+    position: relative;
+    width: 60%;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+#industry_image{
+    animation: zoom-in-zoom-out 35s infinite;
+    filter: sepia(100%) saturate(200%) brightness(40%) hue-rotate(150deg);
+    height: auto;
+    width: 100%;     
+    
+}
+
+.ind_text_on_picture {
+    color: var(--color-primary-font);
+    position: absolute;
+    top: 30%;
+    width: 100%;
+   
+}
+
+.ind_text_on_picture h1 {
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    text-align: center;
+}
+
+.ind_text_on_picture p{
+    font-size: clamp(.75rem, 4vw, 1.5rem);
+    font-weight: 600;
+    margin-top: .25rem;
+}
+
+.ind_date_box h4 {
+    font-size: clamp(.5rem, 4vw, 1rem);
+    opacity: .5;
+    text-align: center;  
+}
+
+.industry_box{
+    align-items: center;
+    background-color: var(--color-bg-secondary);
+    border: 2px solid var(--color-site-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 0 .75rem;
+    width: 60%;
+    
+}
+
+/* ============ S&P500 INDUSTRIES ============*/
 
 
 @keyframes zoom-in-zoom-out {
