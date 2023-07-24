@@ -14,7 +14,7 @@ class IndustryNameAdmin(admin.ModelAdmin):
 
 @admin.register(WeeklyStats)
 class WeeklyStatsAdmin(admin.ModelAdmin):
-    list_display = ['sector_name', 'price', 'trailing_pe', 'forward_pe', 'trailing_ps', 'forward_ps', 'mrq_pb', 'pcf',
+    list_display = ['sector_name', 'industry_name', 'price', 'trailing_pe', 'forward_pe', 'trailing_ps', 'forward_ps', 'mrq_pb', 'pcf',
                     'quick_ratio', 'current_ratio', 'total_debt_to_equity', 'total_debt_to_capital', 'roe', 'roa',
                     'roic', 'bv_mv', 'ass_turnover', 'inv_trnover', 'op_margin', 'prof_margin', 'gross_margin',
                     'ev_revenue', 'ev_ebitda', 'date_created', 'date_updated',

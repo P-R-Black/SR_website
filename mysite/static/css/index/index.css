@@ -631,15 +631,44 @@ hr {
 /* * * * * * * * * * *  Contact Section * * * * * * * * * * */
 
 
+/* * * * * * * * * * *  Attributes Section * * * * * * * * * * */
+.attribute_section{
+    height: auto;
+}
 
+.attributes_container{
+    height: auto;
+}
 
+.attr_bx_title{
+    text-align: center;
+}
 
+.image_attributes {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-around;
+    margin: 5rem 0 5rem 0;
+    padding: 0;
+}
+
+.img_attr a {
+    color: black;
+    font-size: clamp(.80rem, 2vw, 1rem);
+}
+
+.img_attr{
+    margin-top: .75rem;
+}
+
+/* * * * * * * * * * *  Attributes Section * * * * * * * * * * */
 
 
 /* * * * * * * * * * * * Footer Section * * * * * * * * * * * */ 
 .section_foot {
     background-color: var(--color-site-blue);
     margin-top: 2.5rem;
+    bottom: 0;
     width: 100vw;
 
 }
@@ -667,7 +696,6 @@ hr {
     color: var(--color-primary-font);
     font-size: 1.25rem;
     margin-bottom: .3rem;
-
 }
 
 
@@ -705,7 +733,6 @@ hr {
     font-size: .96rem;
     margin-top: -3px; 
     text-decoration: none;
-    
 }
 
 .social_icon_link {
@@ -722,8 +749,6 @@ hr {
     align-items: center;
     display: flex;
     justify-content: space-between;
-   
-   
 }
 
 .social_icons {

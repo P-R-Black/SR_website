@@ -114,11 +114,6 @@
     /* * * * * * * * * *  Newsletter Section * * * * * * * * * * */
 
 
-
-
-    
-   
-
 }
 
 
@@ -281,6 +276,19 @@
 
     /* * * * * * * * * * *  About Us Section * * * * *  * * * * * */
 
+    /* * * * * * * * * * *  Attributes Section * * * * * * * * * * */
+     
+    .image_attributes {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    .img_attr a{
+        display: block;
+        text-align: left;
+
+    }
+
+    /* * * * * * * * * * *  Attributes Section * * * * * * * * * * */
 
 
     /* * * * * * * * * *  Footer  * * * * * * * * * * */
@@ -288,10 +296,15 @@
         flex-direction: column;
     }
 
+    .footer_links_wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
 
-    .footer_link_items h2 {
-        
+    }
+
+    .footer_link_items h2{
         font-size: 1rem;
+        text-align: center;
     }
 
     .footer_link_items a {

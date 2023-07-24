@@ -32,7 +32,7 @@
     animation: zoom-in-zoom-out 35s infinite;
     filter: sepia(100%) saturate(200%) brightness(40%) hue-rotate(150deg);
     height: auto;
-    width: 100%;     
+    width: 100%;    
     
 }
 
@@ -45,18 +45,19 @@
 }
 
 .text_on_picture h1 {
-    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    font-size: clamp(1.25rem, 3vw, 2.25rem);
+    margin: 0;
     text-align: center;
 }
 
 .text_on_picture p{
-    font-size: clamp(.75rem, 4vw, 1.5rem);
+    font-size: clamp(.75rem, 3vw, 1.5rem);
     font-weight: 600;
     margin-top: .25rem;
 }
 
 .date_box h4 {
-    font-size: clamp(.5rem, 4vw, 1rem);
+    font-size: clamp(.75rem, 2vw, 1rem);
     opacity: .5;
     text-align: center;  
 }
@@ -65,7 +66,7 @@
 .sect_box, .ind_box{
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem 0 clamp(1rem, 4vw, 5rem) 0;
+    margin: 3.5rem 0 clamp(1rem, 1.5vh, 3rem) 0;
     width: 100%;
 }
 
@@ -77,7 +78,7 @@
 }
 
 .sect_boxes h2, .ind_boxes h2{
-    font-size: clamp(1rem, 4vw, 1.75rem);
+    font-size: clamp(1rem, 3vw, 1.75rem);
 }
 
 
@@ -238,24 +239,32 @@
 .ind_text_on_picture {
     color: var(--color-primary-font);
     position: absolute;
-    top: 30%;
+    top: 25%;
     width: 100%;
    
 }
 
+.ind_text_on_picture_titles{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .ind_text_on_picture h1 {
-    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    font-size: clamp(1.25rem, 3vw, 2.25rem);
+    margin: 0;
     text-align: center;
+
 }
 
 .ind_text_on_picture p{
-    font-size: clamp(.75rem, 4vw, 1.5rem);
+    font-size: clamp(.75rem, 3vw, 1.5rem);
     font-weight: 600;
     margin-top: .25rem;
 }
 
 .ind_date_box h4 {
-    font-size: clamp(.5rem, 4vw, 1rem);
+    font-size: clamp(.75rem, 2vw, 1rem);
     opacity: .5;
     text-align: center;  
 }

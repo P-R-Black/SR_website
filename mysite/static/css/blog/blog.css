@@ -303,7 +303,7 @@ a .fa-square-rss, a .fa-magnifying-glass{
 /* * * * * * * * * * * * Blog Post By Category * * * * * * * * * * * */ 
 
 .blogs_by_tag_section {
-    height: auto;
+    min-height: 100%;
 }
 
 .all_cats_section {

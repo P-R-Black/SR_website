@@ -98,7 +98,6 @@ const setPicChartStats = () => {
 // SETS INDUSTRY DEFAULT STATS AND IMAGE ON PAGE LOAD SO THAT DIVS AREN'T EMPTY
 const indSetPicChartStats = () => {
     the_weekly_stats.filter((tats) => {
-        console.log('tats', tats )
         if (tats['fields']['industry_name'] == 29){
             indPictureTitle.innerHTML = "Aerospace and Defense"
             indPriceEarnings.innerHTML = tats['fields']['forward_pe'] + 'x'
@@ -118,18 +117,15 @@ const indSetPicChartStats = () => {
     })
 
     the_industry_names.filter(image => {
-        // console.log('image', image)
         if (image['pk'] === 29){
-            console.log('image', image)
             industryImage.src = 'media/' + image['fields']['industry_image'];
-            console.log('indSetPicChartStats | industryImage.src', industryImage.src)
         }
     })
 
     // the_weekly_y_o_y.filter((tats) => {
     //     console.log('tats', tats)
-    //     if(tats['fields']['sector_name'] == 3){
-    //         chartTitle.innerHTML = "Communication Services"
+    //     if(tats['fields']['industry_name'] == 29){
+    //         chartTitle.innerHTML = "Aerospace and Defense"
     //         yearAgoPriceEarnings = tats['fields']['forward_pe']
     //         yearAgoPriceSales = tats['fields']['forward_ps']
     //         yearAgoPriceBook = tats['fields']['mrq_pb']
@@ -221,13 +217,16 @@ const getIndustryId = () => {
                 case "Capital Markets":
                     industryInPlay = 21;
                     break
-                case "Commercial Services & Supplies":
+                case "Chemicals":
+                    industryInPlay = 47;
+                    break
+                case "Commercial Services and Supplies":
                     industryInPlay = 33;
                     break
                 case "Communication Equipment":
                     industryInPlay = 41;
                     break
-                case "Construction & Engineering":
+                case "Construction and Engineering":
                     industryInPlay = 34;
                     break
                 case "Construction Materials":
@@ -236,7 +235,7 @@ const getIndustryId = () => {
                 case "Consumer Finance":
                     industryInPlay = 22;
                     break
-                case "Container and Packaging":
+                case "Containers and Packaging":
                     industryInPlay = 49;
                     break
                 case "Diversified Telecom":
@@ -266,7 +265,7 @@ const getIndustryId = () => {
                 case "Food Staples":
                     industryInPlay = 61;
                     break
-                case "Freight & Logistics":
+                case "Freight and Logistics":
                     industryInPlay = 30;
                     break
                 case "Healthcare Equipment Supplies":
@@ -350,7 +349,7 @@ const getIndustryId = () => {
                 case "Tobacco":
                     industryInPlay = 67;
                     break
-                case "Trading Companies & Distributors":
+                case "Trading Companies and Distributors":
                     industryInPlay = 40;
                     break
             }
@@ -393,7 +392,8 @@ const statUpdate = (sectorInPlay) => {
 // DISPLAYS INDUSTRY STATS ON IMAGE WHEN USER SELECTS INDUSTRY
 const indStatUpdate = (industryInPlay) => {
     the_weekly_stats.forEach(stats => {
-        if (stats['fields']['sector_name'] === industryInPlay){
+        console.log('stats', stats)
+        if (stats['fields']['industry_name'] === industryInPlay){
             indPriceEarnings.innerHTML = stats['fields']['forward_pe'] + 'x'
             indPriceSales.innerHTML = stats['fields']['forward_ps'] + 'x'
             indPriceBook.innerHTML = stats['fields']['mrq_pb'] + 'x'

@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 import pandas as pd
-from insightsTwo.models import SectorName, WeeklyStats
+from insightsTwo.models import SectorName, WeeklyStats, IndustryName
 import sqlite3
 from django.core import serializers
 import json
@@ -164,59 +164,69 @@ class Command(BaseCommand):
         """
         Adding data from CSV to Database  
         """
+        # sector_dict = {'SP500 Communication Serv Mean': 3, 'Consumer Staples Mean': 4, 'Consumer Disc Mean': 2,
+        # 'SP500 Energy Mean': 1, 'Finance Sector Mean': 5, 'SP500 Health Care Mean': 6,
+        # 'Industrial Sector Mean': 7, 'SP500 IT Mean': 8, 'SP500 Materials Mean': 9,
+        # 'SP500 Real Estate Mean': 10, 'SP500 Utilities Mean': 11, 'S&P 500 Mean':13,}
 
-        # pk_num = 13
-        # sec_name = SectorName.objects.get(pk=pk_num)
-        # print('sec_name', sec_name)
-        # df = pd.read_csv('new_sp_500.csv')
-        # # df.replace("nan", 0.00)
-        # trav_file = df.T
-        # the_price = trav_file.loc['Price']
-        # the_forward_pe = trav_file.loc['Forward P/E']
-        # the_trailing_pe = trav_file.loc['Trailing P/E']
-        # the_forward_ps = trav_file.loc['Forward Price/Sales']
-        # the_trailing_ps = trav_file.loc['Price/Sales (ttm)']
-        # the_mrq_pb = trav_file.loc['Price/Book (mrq)']
-        # the_price_to_cash = trav_file.loc['Price/CashFlow']
-        # the_quick_ratio = trav_file.loc['Quick Ratio']
-        # the_current_ratio = trav_file.loc['Current Ratio']
-        # the_total_debt_to_eq = trav_file.loc['Total Debt to Equity (mrq)']
-        # the_total_debt_to_cap = trav_file.loc['Total Debt to Capital']
-        # the_roe = trav_file.loc['Return on Equity']
-        # the_roa = trav_file.loc['Return on Assets']
-        # the_roic = trav_file.loc['Return on Invested Capital (ttm)']
-        # the_bv_mv = trav_file.loc['Book Value/Market Value']
-        # the_ass_turnover = trav_file.loc['Asset Turnover']
-        # the_inv_turnover = trav_file.loc['Inventory Turnover (ttm)']
-        # the_op_margin = trav_file.loc['Operating Margin']
-        # the_prof_margin = trav_file.loc['Profit Margin']
-        # the_gross_margin = trav_file.loc['Gross Margin ttm']
-        # the_ev_rev = trav_file.loc['Enterprise Value/Revenue']
-        # the_ev_ebitda = trav_file.loc['Enterprise Value/EBITDA']
-        # the_date = trav_file.loc['Date']
+        pk_num = 7
+        sec_name = SectorName.objects.get(pk=pk_num)
+
+        ind_num = 40
+        indus_name = IndustryName.objects.get(pk=ind_num)
+        
+
+        df = pd.read_csv('trading_companies_distr.csv')
+        df.replace("nan", 0.00)
+        trav_file = df.T
+        the_price = trav_file.loc['Price']
+        the_forward_pe = trav_file.loc['Forward P/E']
+        the_trailing_pe = trav_file.loc['Trailing P/E']
+        the_forward_ps = trav_file.loc['Forward Price/Sales']
+        the_trailing_ps = trav_file.loc['Price/Sales (ttm)']
+        the_mrq_pb = trav_file.loc['Price/Book (mrq)']
+        the_price_to_cash = trav_file.loc['Price/CashFlow']
+        the_quick_ratio = trav_file.loc['Quick Ratio']
+        the_current_ratio = trav_file.loc['Current Ratio']
+        the_total_debt_to_eq = trav_file.loc['Total Debt to Equity (mrq)']
+        the_total_debt_to_cap = trav_file.loc['Total Debt to Capital']
+        the_roe = trav_file.loc['Return on Equity']
+        the_roa = trav_file.loc['Return on Assets']
+        the_roic = trav_file.loc['Return on Invested Capital (ttm)']
+        the_bv_mv = trav_file.loc['Book Value/Market Value']
+        the_ass_turnover = trav_file.loc['Asset Turnover']
+        the_inv_turnover = trav_file.loc['Inventory Turnover (ttm)']
+        the_op_margin = trav_file.loc['Operating Margin']
+        the_prof_margin = trav_file.loc['Profit Margin']
+        the_gross_margin = trav_file.loc['Gross Margin ttm']
+        the_ev_rev = trav_file.loc['Enterprise Value/Revenue']
+        the_ev_ebitda = trav_file.loc['Enterprise Value/EBITDA']
+        the_date = trav_file.loc['Date']
 
 
 
-        # for a, b, c, d, e, f, g, h, i, j, k, l ,m, n, o, p, q, r, s, t, u, v, w in zip(the_price, the_forward_pe, 
-        #                                                                                the_trailing_pe, the_forward_ps,
-        #                                                                                the_trailing_ps, the_mrq_pb,
-        #                                                                                the_price_to_cash, the_quick_ratio, 
-        #                                                                                the_current_ratio, the_total_debt_to_eq,
-        #                                                                                the_total_debt_to_cap, the_roe, 
-        #                                                                                the_roa, the_roic, the_bv_mv, 
-        #                                                                                the_ass_turnover, the_inv_turnover,
-        #                                                                                the_op_margin, the_prof_margin, 
-        #                                                                                the_gross_margin, the_ev_rev, 
-        #                                                                                the_ev_ebitda, the_date):
+        for a, b, c, d, e, f, g, h, i, j, k, l ,m, n, o, p, q, r, s, t, u, v, w in zip(the_price, the_forward_pe, 
+                                                                                       the_trailing_pe, the_forward_ps,
+                                                                                       the_trailing_ps, the_mrq_pb,
+                                                                                       the_price_to_cash, the_quick_ratio, 
+                                                                                       the_current_ratio, the_total_debt_to_eq,
+                                                                                       the_total_debt_to_cap, the_roe, 
+                                                                                       the_roa, the_roic, the_bv_mv, 
+                                                                                       the_ass_turnover, the_inv_turnover,
+                                                                                       the_op_margin, the_prof_margin, 
+                                                                                       the_gross_margin, the_ev_rev, 
+                                                                                       the_ev_ebitda, the_date):
             
-        #     new_d = str(d).replace("nan", '0.00')
-        #     d = float(new_d)
-        #     models = WeeklyStats(sector_name=SectorName.objects.get(pk=pk_num), price=a, forward_pe=b, trailing_pe=c, 
-        #                          forward_ps=d, trailing_ps=e, mrq_pb=f, pcf=g, quick_ratio=h, current_ratio=i, 
-        #                          total_debt_to_equity=j, total_debt_to_capital=k, roe=l, roa=m, roic=n, bv_mv=o, 
-        #                          ass_turnover=p, inv_trnover=q, op_margin=r, prof_margin=s, gross_margin=t, 
-        #                          ev_revenue=u, ev_ebitda=v, date_created=w)
-        #     models.save()
+            new_d = str(d).replace('nan', '0.00')
+            d = float(new_d)
+            models = WeeklyStats(
+                industry_name=IndustryName.objects.get(pk=ind_num), sector_name_id=pk_num, 
+                price=a, forward_pe=b, trailing_pe=c, forward_ps=d, trailing_ps=e, mrq_pb=f, pcf=g, quick_ratio=h, 
+                current_ratio=i, total_debt_to_equity=j, total_debt_to_capital=k, roe=l, roa=m, roic=n, bv_mv=o, 
+                ass_turnover=p, inv_trnover=q, op_margin=r, prof_margin=s, gross_margin=t, ev_revenue=u, ev_ebitda=v, 
+                date_created=w)
+            models.save()
+            print('indus_name', indus_name)
 
 
    
