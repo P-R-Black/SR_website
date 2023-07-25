@@ -15,7 +15,7 @@ def insights_two_home(request):
 
     the_weekly_stats = serializers.serialize('json', the_stats)
     
-    print('the_weekly_stats', the_weekly_stats)
+    sector_to_industry = SectorName.objects.filter()
 
     the_sector_names = serializers.serialize('json', the_sector)
     the_industry_names = serializers.serialize('json', the_industry)
@@ -80,6 +80,7 @@ def insights_two_home(request):
                    'industry': industry,
                    'industry_names': industry_names,
                    'weekly_stats': weekly_stats, 
-                   'snp': snp, 'weekly_y_o_y': weekly_y_o_y
+                   'snp': snp, 'weekly_y_o_y': weekly_y_o_y,
+                   'sector_to_industry': sector_to_industry,
                    }
                 )

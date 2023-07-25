@@ -2,7 +2,7 @@ const sectNames = document.querySelectorAll('.sect_names');
 const pictureTitle = document.querySelector('.sector_title');
 const sectorImage = document.getElementById('sector_image');
 
-const indNames = document.querySelectorAll('.ind_names');
+const indNames = document.querySelectorAll('.select_industry');
 const indPictureTitle = document.querySelector('.industry_title');
 const industryImage = document.getElementById('industry_image');
 
@@ -24,6 +24,91 @@ const indDateCreated = document.getElementById('ind_as_of_date');
 var yearAgoPriceEarnings, yearAgoPriceSales, yearAgoPriceBook, yearAgoPriceCashFlow;
 var currentPriceEarnings, currentPriceSales, currentPriceBook, currentPriceCashFlow;
 var indCurrentPriceEarnings, indCurrentPriceSales, indCurrentPriceBook, indCurrentPriceCashFlow;
+
+const industrySelector = document.querySelectorAll('.show_industry')
+
+const serviceSector = document.querySelector('.services_sector')
+const serviceSectorContainer = document.querySelector('.services_sector_container')
+
+const discretionarySector = document.querySelector('.discretionary_sector')
+const discretionarySectorContainer = document.querySelector('.discretionary_sector_container')
+
+const consumerStaplesSector = document.querySelector('.staples_sector')
+const consumerStaplesSectorContainer = document.querySelector('.staples_sector_container')
+
+const energySector = document.querySelector('.energy_sector')
+const energySectorContainer = document.querySelector('.energy_sector_container')
+
+const financeSector = document.querySelector('.finance_sector')
+const financeSectorContainer = document.querySelector('.finance_sector_container')
+
+const healthCareSector = document.querySelector('.healthcare_sector')
+const healthCareSectorContainer = document.querySelector('.healthcare_sector_container')
+
+const industrialSector = document.querySelector('.industrial_sector')
+const industrialSectorContainer = document.querySelector('.industrial_sector_container')
+
+const technologySector = document.querySelector('.technology_sector')
+const technologySectorContainer = document.querySelector('.technology_sector_container')
+
+const materialsSector = document.querySelector('.materials_sector')
+const materialsSectorContainer = document.querySelector('.materials_sector_container')
+
+const realEstateSector = document.querySelector('.estate_sector')
+const realEstateSectorContainer = document.querySelector('.estate_sector_container')
+
+const utilitiesSector = document.querySelector('.utilities_sector')
+const utilitiesSectorContainer = document.querySelector('.utilities_sector_container')
+
+
+// OPEN AND CLOSE INDUSTRY SELECTOR
+const openCloseIndustryModal = () => {
+    serviceSector.addEventListener('click', () =>{
+        serviceSectorContainer.classList.toggle('show')
+    })
+
+    discretionarySector.addEventListener('click', () =>{
+        discretionarySectorContainer.classList.toggle('show')
+    })
+
+    consumerStaplesSector.addEventListener('click', () =>{
+        consumerStaplesSectorContainer.classList.toggle('show')
+    })
+
+    energySector.addEventListener('click', () =>{
+        energySectorContainer.classList.toggle('show')
+    })
+
+    financeSector.addEventListener('click', () =>{
+        financeSectorContainer.classList.toggle('show')
+    })
+
+    healthCareSector.addEventListener('click', () =>{
+        healthCareSectorContainer.classList.toggle('show')
+    })
+
+    industrialSector.addEventListener('click', () =>{
+        industrialSectorContainer.classList.toggle('show')
+    })
+
+    technologySector.addEventListener('click', () =>{
+        technologySectorContainer.classList.toggle('show')
+    })
+
+    materialsSector.addEventListener('click', () =>{
+        materialsSectorContainer.classList.toggle('show')
+    })
+
+    realEstateSector.addEventListener('click', () =>{
+        realEstateSectorContainer.classList.toggle('show')
+    })
+
+    utilitiesSector.addEventListener('click', () =>{
+        utilitiesSectorContainer.classList.toggle('show')
+    })
+
+}
+
 
 
 
@@ -80,7 +165,8 @@ const setPicChartStats = () => {
 
     the_sector_names.filter(image => {
         if (image['pk'] === 3){
-            sectorImage.src = 'media/' + image['fields']['sector_image']; 
+            sectorImage.src = 'media/' + image['fields']['sector_image'];
+            // production code: sectorImage.src = 'https://sevtestbucket.s3.amazonaws.com/media/' + image['fields']['sector_image']; 
         }
     })
 
@@ -119,6 +205,7 @@ const indSetPicChartStats = () => {
     the_industry_names.filter(image => {
         if (image['pk'] === 29){
             industryImage.src = 'media/' + image['fields']['industry_image'];
+            //production code: industryImage.src = 'https://sevtestbucket.s3.amazonaws.com/media/' + image['fields']['industry_image'];
         }
     })
 
@@ -337,17 +424,11 @@ const getIndustryId = () => {
                 case "Software":
                     industryInPlay = 45;
                     break
-                case "Solar":
-                    industryInPlay = 46;
-                    break
                 case "Specialty Retail":
                     industryInPlay = 16;
                     break
                 case "Textiles, Apparel, and Luxury Goods":
                     industryInPlay = 17;
-                    break
-                case "Tobacco":
-                    industryInPlay = 67;
                     break
                 case "Trading Companies and Distributors":
                     industryInPlay = 40;
@@ -578,6 +659,8 @@ window.onload = function() {
 
 }
     
+
+
     
     
     setInterval(carouselStats,  35000);
@@ -590,3 +673,5 @@ window.onload = function() {
 
     getSectorId()
     getIndustryId()
+
+    openCloseIndustryModal()

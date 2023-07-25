@@ -143,15 +143,20 @@
                     </div>
                </div>
             </div>
-           
             <div class="industry_box">
-                <h1>S&P 500</h1>
-                <h2>Industries</h2>
-                <ul>
-                    {% for i in industry %}
-                    <li class="ind_names">{{ i }}</li>
+                <div class="sect_ind_box">
+                    {% for ss in sector_to_industry %}{% if ss.pk != 13 %}
+                    <button class="show_industry {{ ss|lower }}_sector"
+                        id="{{ ss|lower }}_sector" name="the_sector">{{ ss }} +
+                    </button>
+                    <div class="{{ ss|lower }}_sector_container" id="{{ ss|lower }}_sector_container">
+                        {% for s in ss.sector_to_industry.all %}
+                        <button class="select_industry">{{ s }}</button>
+                        {% endfor%}
+                    </div>
+                    {% endif %}
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </div>
 </section>

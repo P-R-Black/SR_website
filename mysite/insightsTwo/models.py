@@ -14,6 +14,8 @@ class SectorName(models.Model):
     class Meta:
         ordering = ('sector_name',)
         index_together = (('id', 'slug'))
+        verbose_name = 'sector_name'
+        verbose_name_plural = 'sector_names'
 
     def __str__(self):
         return self.sector_name
@@ -22,14 +24,16 @@ class SectorName(models.Model):
         return reverse('insightsTwo:insights_two_home', args=[self.slug, self.sector_name])
 
 class IndustryName(models.Model):
-    industry_name = models.CharField(max_length=150)
-    sector_name = models.ForeignKey(SectorName, related_name='industry_name', on_delete=models.CASCADE)
+    industry_name = models.CharField(max_length=150, unique=True)
+    sector_name = models.ForeignKey(SectorName, on_delete=models.CASCADE, related_name='sector_to_industry',)
     slug = models.SlugField(max_length=150, unique=True)
     industry_image = models.ImageField(upload_to='industry_images', blank=True)
 
     class Meta:
         ordering = ('industry_name',)
         index_together = (('id', 'slug'))
+        verbose_name = 'industry_name'
+        verbose_name_plural = 'industry_names'
 
     def __str__(self):
         return self.industry_name
