@@ -184,6 +184,7 @@ const setPicChartStats = () => {
 // SETS INDUSTRY DEFAULT STATS AND IMAGE ON PAGE LOAD SO THAT DIVS AREN'T EMPTY
 const indSetPicChartStats = () => {
     the_weekly_stats.filter((tats) => {
+        console.log('tats', tats)
         if (tats['fields']['industry_name'] == 29){
             indPictureTitle.innerHTML = "Aerospace and Defense"
             indPriceEarnings.innerHTML = tats['fields']['forward_pe'] + 'x'
@@ -473,7 +474,6 @@ const statUpdate = (sectorInPlay) => {
 // DISPLAYS INDUSTRY STATS ON IMAGE WHEN USER SELECTS INDUSTRY
 const indStatUpdate = (industryInPlay) => {
     the_weekly_stats.forEach(stats => {
-        console.log('stats', stats)
         if (stats['fields']['industry_name'] === industryInPlay){
             indPriceEarnings.innerHTML = stats['fields']['forward_pe'] + 'x'
             indPriceSales.innerHTML = stats['fields']['forward_ps'] + 'x'
@@ -551,6 +551,59 @@ const carouselStats = () => {
     last_years_stats(random);
     lastRandomNum = random;  
 }
+
+// CHANGES INDUSTRY NAME, STATS, AND IMAGE AFTER 60 SECONDS
+const indCarouselStats = () => {
+    let selectedIndustryName;
+    let lastRandomNum;
+    const namesOfIndustry = [
+        {name: 'Aerospace and Defense', index: 29}, {name: 'Airlines', index: 31}, 
+        {name: 'Auto Components', index: 55}, {name: 'Automobile', index: 56}, {name: 'Bank Industry', index: 20},
+        {name: 'Beverages', index: 57}, {name: 'Biotechnology', index: 24}, {name: 'Building Products', index: 32},
+        {name: 'Capital Markets', index: 21}, {name: 'Chemicals', index: 47},
+        {name: 'Commercial Services and Supplies', index: 33}, {name: 'Communication Equipment', index: 41}, 
+        {name: 'Construction Materials', index: 48}, {name: 'Construction and Engineering', index: 34},
+        {name: 'Consumer Finance', index: 22}, {name: 'Containers and Packaging', index: 49}, 
+        {name: 'Diversified Telecom', index: 58}, {name: 'Diversified Utilities', index: 52}, {name: 'Electrical Equipment', index: 35}, 
+        {name: 'Electronic Equipment and Instrument Components', index: 42}, {name: 'Energy Equipment Services', index: 18}, 
+        {name: 'Entertainment', index: 59}, {name: 'Equity Real Estate', index: 51},
+        {name: 'Food Products', index: 60}, {name: 'Food Staples', index: 61},
+        {name: 'Freight and Logistics', index: 30}, {name: 'Healthcare Equipment Supplies', index: 25}, 
+        {name: 'Healthcare Provider Services', index: 26}, {name: 'Hotels Restaurants and Leisure', index: 62}, 
+        {name: 'Household Durables', index: 63}, {name: 'Household Products', index: 64}, 
+        {name: 'Industrial Conglomerates', index: 36}, 
+        {name:'Information Technology Services', index: 43}, {name: 'Insurance', index: 23},
+        {name: 'Interactive Media', index: 65}, {name: 'Internet Retail', index: 14},
+        {name: 'Life Science Tools and Services', index: 27}, {name: 'Machinery', index: 37}, 
+        {name: 'Media', index: 66}, {name: 'Metals and Mining', index: 50}, {name: 'Multiline Retail', index: 15}, 
+        {name: 'Oil Gas Consumable Fuels', index: 19}, {name: 'Pharmaceuticals', index: 28}, 
+        {name: 'Professional Services', index: 38}, {name: 'Regulated Electric', index: 53},
+        {name: 'Regulated Gas', index: 54}, {name: 'Road and Rail', index: 39},
+        {name: 'Semiconductors and Semiconductor Equipment', index: 44}, {name: 'Software', index: 45}, 
+        {name: 'Finance', index: 5}, {name: 'Healthcare', index: 6}, {name: 'Industrial', index: 7}, 
+        {name: 'Specialty Retail', index: 16}, {name: 'Textiles, Apparel, and Luxury Goods', index: 17},
+        {name: 'Trading Companies and Distributors', index: 40},
+    ]
+        const random = Math.floor(Math.random() * namesOfIndustry.length)
+        
+        if (lastRandomNum != random){
+            namesOfIndustry.filter(names => {
+                if (names.index === random){
+                    selectedIndustryName = names.name
+                }
+            })
+        } else {
+            const random = Math.floor(Math.random() * namesOfIndustry.length)
+        }
+       
+    indUpdateTitle(selectedIndustryName)
+    indStatUpdate(random)
+    indUpdateImage(random)
+    // last_years_stats(random);
+    lastRandomNum = random;  
+}
+
+
 
 const last_years_stats = (sectorInPlay) => {
     const aYearAgoData = [yearAgoPriceEarnings, yearAgoPriceSales, yearAgoPriceBook, yearAgoPriceCashFlow]
@@ -664,6 +717,8 @@ window.onload = function() {
     
     
     setInterval(carouselStats,  35000);
+    setInterval(indCarouselStats, 35000)
+    
 
     setPicChartStats()
     indSetPicChartStats()
