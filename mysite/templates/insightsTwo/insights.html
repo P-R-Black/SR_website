@@ -94,7 +94,7 @@
 </section>
 <section class="yoy_section container">
     <h1 class="section_title_blue">Year-Over-Year Comparison</h1>
-    <h2>S&P 500 <span class="yoy_comp_title"></span>Y-o-Y</h2>
+    <h2>S&P 500 <span class="yoy_comp_title"></span> Y-o-Y</h2>
     <div class="yoy_box">
         <canvas id="yoy_chart"></canvas>
     </div>
@@ -159,6 +159,28 @@
                 </div>
             </div>
         </div>
+</section>
+<section class="yoy_section ind_section_margin container">
+    <h1 class="section_title_blue">Industry Year-Over-Year Comparison</h1>
+    <h2>S&P 500 <span class="ind_yoy_comp_title"></span> Y-o-Y</h2>
+    <div class="ind_yoy_box">
+        <canvas id="ind_yoy_chart"></canvas>
+    </div>
+    <div class="industry_box">
+        <div class="sect_ind_box">
+            {% for ss in sector_to_industry %}{% if ss.pk != 13 %}
+            <button class="show_industry_two {{ ss|lower }}_sector_two"
+                id="{{ ss|lower }}_sector_two" name="the_sector_two">{{ ss }} +
+            </button>
+            <div class="{{ ss|lower }}_sector_container_two" id="{{ ss|lower }}_sector_container_two">
+                {% for s in ss.sector_to_industry.all %}
+                <button class="select_industry">{{ s }}</button>
+                {% endfor%}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </section>
 <script type="text/javascript">
     const the_weekly_stats = JSON.parse('{{weekly_stats|safe}}')

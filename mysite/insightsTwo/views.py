@@ -9,14 +9,14 @@ from django.core.cache import cache
 def insights_two_home(request):
     
     the_sector = SectorName.objects.all()
+    sector_to_industry = SectorName.objects.filter()
     the_industry = IndustryName.objects.all()
     the_stats = WeeklyStats.objects.all()[:65] # [:12]
-    the_stats_a_year_ago = WeeklyStats.objects.all()[625:691] # [625:637]
+    the_stats_a_year_ago = WeeklyStats.objects.all()[3303:3366] # [625:637]
+
+
 
     the_weekly_stats = serializers.serialize('json', the_stats)
-    
-    sector_to_industry = SectorName.objects.filter()
-
     the_sector_names = serializers.serialize('json', the_sector)
     the_industry_names = serializers.serialize('json', the_industry)
     the_weekly_stats_a_year_ago = serializers.serialize('json', the_stats_a_year_ago)

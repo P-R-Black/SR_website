@@ -183,7 +183,7 @@
     height: auto;
 }
 
-.yoy_box {
+.yoy_box, .ind_yoy_box {
     aspect-ratio: 2/.9;
     background: transparent;
     border: 2px solid var(--color-site-blue);
@@ -192,7 +192,7 @@
     width: 60%;
 }
 
-.yoy_comp_title {
+.yoy_comp_title, .ind_yoy_comp_title {
     color: #000000;
     text-align: center;
 }
@@ -292,15 +292,13 @@
     margin: 1rem 0;
 }
 
-.show_industry {
+.show_industry, .show_industry_two {
     background-color: transparent;
     cursor: pointer;
     font-size: clamp(1rem, 4vw, 1.5rem);
     font-weight: 900;
     
 }
-
-
 
 
 .services_sector_container, .discretionary_sector_container, .staples_sector_container,
@@ -331,7 +329,7 @@
     -webkit-animation: fadeIn 1s;
 }
 
-.select_industry{
+.select_industry, .select_industry_two{
     background-color: transparent;
     border: 1px solid var(--color-site-blue);
     border-radius: 8px;
@@ -343,12 +341,61 @@
 
 }
 
-.select_industry:hover{
+.select_industry:hover, .select_industry_two:hover{
     background-color: var(--color-site-blue);
     color: var(--color-primary-font);
 }
 /* ============ S&P500 INDUSTRIES ============*/
 
+/* ============ S&P500 INDUSTRIES Y-o-Y ============*/
+
+.ind_section_margin{
+    margin-top: 4rem;
+
+}
+
+
+.services_sector_container_two, .discretionary_sector_container_two, 
+.staples_sector_container_two,.energy_sector_container_two, 
+.finance_sector_container_two, .healthcare_sector_container_two, 
+.industrial_sector_container_two, .technology_sector_container_two, 
+.materials_sector_container_two, .estate_sector_container_two, 
+.utilities_sector_container_two {
+    display: none;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem 1rem;
+
+}
+
+.services_sector_container_two.show,
+.discretionary_sector_container_two.show, 
+.staples_sector_container_two.show,
+.energy_sector_container_two.show,
+.finance_sector_container_two.show,
+.healthcare_sector_container_two.show,
+.industrial_sector_container_two.show,
+.technology_sector_container_two.show,
+.materials_sector_container_two.show,
+.estate_sector_container_two.show,
+.utilities_sector_container_two.show{
+    animation: fadeIn 1s;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    pointer-events: auto;
+    -webkit-animation: fadeIn 1s;
+}
+
+/* ============ S&P500 INDUSTRIES Y-o-Y ============*/
+
+@-webkit-keyframes zoom-in-zoom-out {
+    0% {
+    transform: scale(1.15, 1.15);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
+}
 
 @keyframes zoom-in-zoom-out {
     0% {
