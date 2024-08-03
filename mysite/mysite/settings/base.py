@@ -60,12 +60,14 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.postgres',
     'storages',
+    'debug_toolbar',
     
 ]
 
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -103,10 +105,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',  # os.environ.get('DEV_DB_ENGINE'),
-        'NAME': os.environ.get('DEV_DB_NAME'),
-        'USER': os.environ.get('DEV_DB_USER'),
-        'PASSWORD': os.environ.get('DEV_DB_PASSWORD'),
-        'HOST': os.environ.get('DEV_DB_HOST'),
+        'NAME': 'blog_database', #os.environ.get('DEV_DB_NAME'),
+        'USER': 'blog_database_user', #os.environ.get('DEV_DB_USER'),
+        'PASSWORD': 'paulblack123', # os.environ.get('DEV_DB_PASSWORD'),
+        'HOST': 'localhost', # os.environ.get('DEV_DB_HOST'),
         'PORT': ''
     }
 }
@@ -221,6 +223,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 STRIPE_PUBLIC_KEY=os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY=os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 #STRIPE_WEBHOOK_SECRET = ""
 STRIPE_ENDPOINT_SECRET=os.environ.get('STRIPE_ENDPOINT_SECRET')
 
@@ -301,3 +304,16 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
+
+# In your Django settings.py
+CSP_SCRIPT_SRC = (
+    "'self'",
+    "https://js.stripe.com",
+    "https://m.stripe.network",
+    "https://q.stripe.com",
+    # "'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls='",  # Add this if you use inline scripts
+)

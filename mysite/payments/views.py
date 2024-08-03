@@ -30,7 +30,7 @@ def start_order(request):
     data = json.loads(request.body)
     total_price = 0
     items = []
-    
+
 
     for item in cart: 
         product = item['product']
@@ -77,12 +77,11 @@ def start_order(request):
 
         item = OrderItem.objects.create(order=order, product=product, price=price, quantity=quantity)
     
-
     return JsonResponse({'session': session, 'payments': payment_intent})
 
 
 def payment_process(request):
-    pub_key = settings.STRIPE_PUBLIC_KEY 
+    pub_key = settings.STRIPE_PUBLISHABLE_KEY 
     return render(request, 'payments/process.html', {'pub_key': pub_key})
 
 
@@ -104,9 +103,6 @@ def payment_canceled(request):
     purchased_products = products
 
     return render(request, 'payments/canceled.html', {'products': purchased_products, 'name': first_name})
-
-
-
 
 def payment_done(request):
     cart = Cart(request)

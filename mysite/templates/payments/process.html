@@ -7,8 +7,8 @@
     <div class="payment_form">
       <div class="order_form">
         <div class="order_inputs">
-            <label class="form_label" for="first_name">First Name</label>
-            <input name="first_name" type="text" class="form_control" id="customer_first_name" placeholder="" required />
+          <label class="form_label" for="first_name">First Name</label>
+          <input name="first_name" type="text" class="form_control" id="customer_first_name" placeholder="" required />
         </div>
         <div class="order_inputs">
           <label class="form_label" for="first_name">Last Name</label>
@@ -19,7 +19,7 @@
           <input name="email" type="text" class="form_control" id="customer_email" placeholder="" required />
         </div>
 
-        <button onclick="buy(event)" class="btn_none" >
+        <button onclick="buy(event)" class="btn_none">
           <p><input type="submit" value="Place Order"></p>
         </button>
         {% csrf_token %}
@@ -34,12 +34,15 @@
         <li>
           {{ item.quantity }} x {{ item.product.name }} | <span>${{ item.total_price }}</span>
         </li>
-      {% endfor %}
+        {% endfor %}
       </ul>
       <p class="order_box_total">Total: ${{ cart.get_total_price }}</p>
     </div>
   </div>
-    
-</section>
-{% endblock %}
 
+</section>
+<script>
+
+  const thePublishableKey = '{{pub_key|safe}}'
+</script>
+{% endblock %}
